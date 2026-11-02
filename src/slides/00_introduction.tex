@@ -1,0 +1,82 @@
+% ==============================================================================
+% 00_introduction.tex - Introduction & Cadrage de la Journée
+% ==============================================================================
+
+\section{Introduction \& Cadrage Pédagogique}
+
+\begin{frame}{ANF ArchiDrone 2026}
+  \begin{columns}
+    \begin{column}{0.85\textwidth}
+      \textbf{Contexte de la formation} :
+      \begin{itemize}
+        \item Action Nationale de Formation (ANF) organisée pour les réseaux \textbf{Drone\&Cap'} et \textbf{2RM} (Réseau Métier des Roboticiens et Mécatroniciens).
+        \item Public : chercheurs, ingénieurs et techniciens déployant des capteurs pour les géosciences, l'écologie, l'océanographie et l'archéologie.
+      \end{itemize}
+
+      \vspace{0.5em}
+      \begin{block}{Le Fil Conducteur de l'ANF}
+        \begin{itemize}
+          \item \textbf{Jour 1 (Hier)} : Vecteurs aériens (UAV),
+          \item \textbf{Jour 2 (Aujourd'hui)} : \tech{Vecteurs marins (USV) \& sous-marins (UUV)},
+          \item \textbf{Jour 3 (Demain)} : Vecteurs terrestre (UGV) et réseau GNSS Centipede.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Programme de la Journée (04 Novembre 2026)}
+  \begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{p{2.2cm} X p{3.2cm}}
+      \toprule
+      \textbf{Horaire} & \textbf{Module \& Thématique} & \textbf{Format} \\
+      \midrule
+      \rowcolor{OceanGray}
+      08h30 -- 10h00 & \textbf{Module 1} : Vecteurs marins : \tech{similitudes aérien \& réglementation} & Mécatronique \& Réglementation \\
+      10h00 -- 10h30 & \textit{Pause café} & Échanges informels \\
+      \rowcolor{OceanGray}
+      10h30 -- 12h00 & \textbf{Module 2} : Présentation d'un drone sous-marin : \alertw{différences avec l'aérien} & Hydrostatique, Étanchéité \& Navigation \\
+      \midrule
+      12h00 -- 13h30 & \textit{Pause déjeuner} & Réseautage \\
+      \midrule
+      \rowcolor{OceanGray}
+      13h30 -- 15h00 & \textbf{Module 3} : \tech{Communications et programmation} d'un drone sous-marin & Acoustique, ArduSub, ROS 2, Fail-safes \\
+      15h00 -- 15h30 & \textit{Pause café} & Échanges informels \\
+      \rowcolor{OceanGray}
+      15h30 -- 16h30 & \textbf{Module 4} : \succw{Capteurs \& mesures spécifiques} : de la collecte à la donnée & CTD, Sonars, Imagerie \& Data Science \\
+      16h30 -- 17h30 & \textbf{Module 5} : \textbf{Questions / discussions \& Table ronde} & Études de cas \& Projets des Participants \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Objectif Général : Démystifier le Vecteur pour Valoriser la Donnée}
+  \begin{alertblock}{Le défi récurrent en recherche scientifique}
+    \textit{"Acheter un drone marin clé en main ne garantit ni le succès d'une campagne en mer, ni la validité métrologique des données récoltées."}
+  \end{alertblock}
+
+  \vspace{0.5em}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Ce que ce cours vous apporte}
+        \begin{itemize}
+          \item Comprendre les \tech{lois physiques} régissant le vecteur marin,
+          \item Choisir une plateforme adaptée aux besoin de collecte de données,
+          \item Éviter les \alertw{erreurs critiques de terrain} (noyades de caissons, pertes d'engins, corrosion).
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Pour le Data Scientist}
+        \begin{itemize}
+          \item Connaître les \tech{capacités des vecteurs} mis en \oe uvre pour récupérer de la donnée,
+          \item Comment \tech{interfacer un nouveau capteur} sur un drone,
+          \item Comment utiliser des outils ouverts et interopérables (\code{NetCDF}, \code{ROS 2}, ...).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+

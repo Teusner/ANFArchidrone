@@ -1,0 +1,214 @@
+% ==============================================================================
+% 05_synthese_discussion.tex - Module 5 (16h30 - 17h30)
+% Question / discussion & Atelier d'ingénierie projet
+% Cas concrets : BlueROV2 échantillonneur, BlueBoat bathymétrique, budget labo, règles d'or
+% ==============================================================================
+
+\section{Module 5 : Retours d'Expérience, Cas Concrets \& Atelier Projets}
+
+\begin{frame}{5.1 Cas Pratique 1 : Le BlueROV2 Échantillonneur Benthique}
+  \begin{columns}[c]
+    \begin{column}{0.35\textwidth}
+      \begin{center}
+        \includegraphics[height=2.0cm, keepaspectratio]{bluerov2.jpg}\\
+        \vspace{0.15em}
+        \includegraphics[height=1.7cm, keepaspectratio]{newton_gripper.jpg}\\
+        \vspace{0.1em}
+        \scriptsize\textbf{BlueROV2 Heavy} + \textbf{Pince Newton}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.62\textwidth}
+      \textbf{Architecture pour le laboratoire} :
+      \scriptsize
+      \begin{itemize}
+        \item \textbf{Châssis 8 propulseurs (Heavy)} : contrôle complet à 6 DDL, assiette inclinée maintenue vers le fond.
+        \item \textbf{Pince Newton Gripper} : préhension d'échantillons géologiques, macroalgues ou pose d'instruments.
+        \item \succw{Astuce Caisson Auxiliaire 3"} : caisson 4" réservé à la navigation (jamais ouvert en mer), charge utile scientifique logée dans un caisson 3" dédié.
+        \item 4 projecteurs Lumens ($6000\,\text{lm}$) pour vidéo benthique HD.
+      \end{itemize}
+
+      \vspace{0.3em}
+      \begin{block}{Budget Estimatif Recherche}
+        \scriptsize
+        BlueROV2 Heavy ($\approx 5\text{--}7\,\text{k€}$) + Pince Newton ($\approx 400\,\text{€}$) + DVL-A50 optionnel ($\approx 6\text{--}8\,\text{k€}$).\\
+        \textbf{Total} : $\approx 6\text{--}15\,\text{k€}$ contre $>40\,\text{k€}$ pour un ROV industriel fermé !
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.2 Cas Pratique 2 : Le BlueBoat Hydrographe \& Qualité d'Eau}
+  \begin{columns}[c]
+    \begin{column}{0.35\textwidth}
+      \begin{center}
+        \includegraphics[height=2.0cm, keepaspectratio]{blueboat.jpg}\\
+        \vspace{0.15em}
+        \includegraphics[height=1.7cm, keepaspectratio]{cerulean_surveyor_mbes.jpg}\\
+        \vspace{0.1em}
+        \scriptsize\textbf{BlueBoat} + \textbf{MBES Surveyor 240-16}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.62\textwidth}
+      \textbf{Cartographie bathymétrique \& physico-chimique} :
+      \scriptsize
+      \begin{itemize}
+        \item Coque catamaran BlueBoat pilotée par \tech{ArduRover}.
+        \item \textbf{Positionnement centimétrique} : GNSS RTK connecté au réseau public \succw{Centipede RTK}.
+        \item \textbf{Sondeur sous coque} : Ping Sonar ou Cerulean Surveyor (MBES multifaisceaux) pour MNT 3D haute résolution.
+        \item \textbf{Mission type} : tracé de transects parallèles espacés de $5\,\text{m}$, quadrillage automatique à $1.5\,\text{m/s}$ pendant 6 heures.
+      \end{itemize}
+
+      \vspace{0.3em}
+      \begin{block}{Atouts Opérationnels}
+        \scriptsize
+        Déploiement par 1 seule personne sans grue, zéro risque d'immersion caisson, rapatriement WiFi/4G en direct au labo.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.2b Cas Pratique 3 : Le Micro-AUV YUCO Océanographe Côtier}
+  \begin{columns}[c]
+    \begin{column}{0.35\textwidth}
+      \begin{center}
+        \includegraphics[height=1.9cm, keepaspectratio]{seaber_yuco.jpg}\\
+        \vspace{0.15em}
+        \includegraphics[height=1.5cm, keepaspectratio]{dvl_a50.jpg}\\
+        \vspace{0.1em}
+        \scriptsize\textbf{Seaber YUCO} + \textbf{DVL-A50 / CTD}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.62\textwidth}
+      \textbf{Campagne hydrologique \& acoustique autonome} :
+      \scriptsize
+      \begin{itemize}
+        \item Micro-AUV Seaber YUCO programmé par l'outil de mission \tech{SEAPLAN}.
+        \item \textbf{Navigation inertielle INX / DVL} : tenue de route sous-marine autonome sans ombilical jusqu'à $300\,\text{m}$ de profondeur.
+        \item \textbf{Profils en yo-yo} : ondulations continues pour cartographier la thermocline, la salinité et la turbidité, ou suivi de fond pour sonar latéral.
+        \item \textbf{Mission type} : transect de $15\text{--}25\,\text{km}$ à $3\text{--}4\,\text{kts}$, immersion automatique et ralliement de surface avec relèvement GPS/Iridium.
+      \end{itemize}
+
+      \vspace{0.3em}
+      \begin{block}{Budget Estimatif Recherche}
+        \scriptsize
+        YUCO équipé CTD/Scan ($\approx 35\text{--}65\,\text{k€}$) vs $>200\,\text{k€}$ for un AUV lourd classique.\\
+        \succw{Gain opérationnel} : transportable par 1 seule personne (caisse rigide dédiée $<15\,\text{kg}$), mis à l'eau sans grue depuis un zodiac ou la côte.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.2c Cas Pratique 4 : Équipe Mixte ASV-ROV (BlueBoat + BlueROV2)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.8cm, keepaspectratio]{blueboat.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=1.8cm, keepaspectratio]{bluerov2.jpg}\\
+        \vspace{0.2em}
+        \tech{Drone de Surface ASV (BlueBoat)} + \succw{ROV Subaquatique (BlueROV2)}
+      \end{center}
+      \scriptsize
+      \begin{block}{Le Cœur du Concept : La Passerelle de Surface}
+        \begin{itemize}
+          \item Le **BlueBoat** (ASV) navigue de façon autonome sur la zone d'étude grâce au positionnement **Centipede RTK**.
+          \item Il transporte l'enrouleur d'ombilical Fathom-X, l'antenne Wi-Fi/4G et un modem acoustique USBL.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.50\textwidth}
+      \begin{exampleblock}{Avantages de l'Équipe Mixte Air-Surface-Fond}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Déploiement à grande élongation} : l'ASV amène le ROV sur site sans mobiliser de navire de recherche lourd avec équipage.
+          \item \textbf{Relais de données haut débit} : le BlueBoat sert de répéteur radio/4G vers le laboratoire à terre.
+          \item \textbf{Recalage absolu} : l'ASV injecte sa position GNSS RTK par USBL dans l'estime du BlueROV2.
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.2d Cas Pratiques Innovants : MAUV \& Flagelator}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\tech{Micro-AUVs (MAUV / Essaims)}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Concept MAUV (Micro-AUV)} : vecteurs sous-marins ultra-léger ($<5\text{--}10\,\text{kg}$) déployés simultanément en essaim.
+          \item \textbf{Couverture spatio-temporelle dytique} : profilage multi-points synchrone de la colonne d'eau pour les panaches de pollution ou d'effluents.
+          \item Coût réduit permettant la redondance et la tolérance aux pertes.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.50\textwidth}
+      \begin{block}{\alertw{Le Projet Bio-inspiré Flagelator}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Propulsion biomimétique flagellaire} : vecteur sous-marin se déplaçant par ondulation d'une nageoire/flagelle souple.
+          \item \textbf{Intérêts écologiques \& scientifiques} :
+            \begin{itemize}\scriptsize
+              \item Zéro hélice rotative contondante $\rightarrow$ sécurité absolue près de la faune fragile (récifs, cétacés).
+              \item Faible traînée hydrodynamique et très faible signature acoustique.
+            \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.3 Les 10 Règles d'Or de Terrain pour Chercheurs}
+  \footnotesize
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\tech{Avant le Déploiement}}
+        \begin{enumerate}
+          \item \textbf{Veille PING \& Légalité} : vérifier les AVURNAV sur PING et valider le cadre (ROV captif ou Capitaine 200).
+          \item \textbf{Joints toriques \& WetLink} : loupe, zéro poussière, graissage fin et serrage des bagues.
+          \item \textbf{Test de vide} : maintenir $-0.5\,\text{bar}$ au manomètre pendant 15 minutes.
+          \item \textbf{Lestage / Assiette} : équilibrer en bac ($B$ au-dessus de $G$, flottabilité $+300\,\text{g}$).
+          \item \textbf{Horloge} : synchroniser le Raspberry Pi sur le top GNSS avant de fermer le caisson.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\succw{Après la Récupération}}
+        \begin{enumerate}
+          \setcounter{enumi}{5}
+          \item \textbf{Rinçage immédiat à l'eau douce} : faire tourner les moteurs T200 30 secondes dans un bac d'eau douce pour chasser le sel des paliers PEEK.
+          \item \textbf{Séchage externe intégral} avant toute ouverture de flasque (zéro goutte à l'intérieur).
+          \item \textbf{Contrôle de l'anode sacrificielle} en zinc.
+          \item \textbf{Sauvegarde double} des fichiers de logs et des données capteurs.
+          \item Stockage des batteries Li-ion à tension de stockage ($3.85\,\text{V/cellule}$) en caisse ignifugée.
+        \end{enumerate}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{5.4 Atelier Collaboratif : À Vous la Parole !}
+  \begin{block}{Tour de table des projets scientifiques Drone\&Cap' \& 2RM}
+    Présentez en 2 minutes votre problématique d'instrumentation :
+    \begin{itemize}
+      \item Quel est votre \textbf{milieu d'étude} ? (lagune côtière, récif corallien, fleuve turbide, lac de haute montagne).
+      \item Quelles sont les \textbf{grandeurs physiques} à mesurer ? (bathymétrie, herbiers, turbidité, traceurs chimiques, profils CTD).
+      \item Quel est le compromis optimal : \textbf{ROV filaire}, \textbf{AUV autonome} ou \textbf{ASV de surface} ?
+    \end{itemize}
+  \end{block}
+
+  \vspace{0.6em}
+  \begin{exampleblock}{Questions \& Réponses Ouvertes}
+    \begin{itemize}
+      \item Conseils sur l'approvisionnement et l'intégration mécanique/logicielle.
+      \item Retours d'expérience sur les pièges à éviter lors des premières campagnes en mer.
+      \item Partage de briques logicielles au sein des réseaux Drone\&Cap' et 2RM.
+    \end{itemize}
+  \end{exampleblock}
+
+\end{frame}

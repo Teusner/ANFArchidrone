@@ -1,0 +1,135 @@
+% ==============================================================================
+% Préambule LaTeX Beamer - ANF ArchiDrone 2026 (Drone&Cap' / 2RM)
+% Auteur : Quentin Brateau
+% Thématique : Drones Marins & Sous-Marins pour la Recherche Scientifique
+% ==============================================================================
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\graphicspath{{../../imgs/}{../imgs/}{imgs/}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, shapes.geometric, backgrounds, decorations.pathmorphing, shadows}
+
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{microtype}
+\usepackage{hyperref}
+
+% ------------------------------------------------------------------------------
+% Palette de couleurs océanographiques modernes
+% ------------------------------------------------------------------------------
+\definecolor{OceanDeep}{HTML}{0A2240}      % Bleu profond abyssal
+\definecolor{OceanMedium}{HTML}{0E4D7A}    % Bleu pélagique
+\definecolor{OceanLight}{HTML}{1976D2}     % Bleu clair / surface
+\definecolor{OceanCyan}{HTML}{00A8B5}      % Cyan lagon / accents
+\definecolor{OceanCoral}{HTML}{FF6B6B}     % Corail (alertes, fail-safes)
+\definecolor{OceanGreen}{HTML}{10B981}     % Vert posidonie (validations)
+\definecolor{OceanGray}{HTML}{F0F4F8}      % Fond clair blocs
+\definecolor{DarkSlate}{HTML}{1E293B}      % Texte sombre
+\hypersetup{colorlinks=true, urlcolor=OceanLight, linkcolor=OceanMedium}
+
+% ------------------------------------------------------------------------------
+% Configuration du thème Beamer (Metropolis / mtheme)
+% ------------------------------------------------------------------------------
+\usetheme[
+  progressbar=frametitle,
+  block=fill,
+  numbering=fraction
+]{metropolis}
+
+
+\setbeamercolor{palette primary}{bg=OceanDeep, fg=white}
+\setbeamercolor{palette secondary}{bg=OceanMedium, fg=white}
+\setbeamercolor{palette tertiary}{bg=OceanCyan, fg=white}
+\setbeamercolor{structure}{fg=OceanMedium}
+
+% Couleurs du texte et titres Metropolis
+\setbeamercolor{normal text}{fg=DarkSlate, bg=white}
+\setbeamercolor{title}{fg=OceanDeep}
+\setbeamercolor{subtitle}{fg=OceanMedium}
+\setbeamercolor{author}{fg=DarkSlate}
+\setbeamercolor{date}{fg=DarkSlate}
+\setbeamercolor{institute}{fg=DarkSlate}
+\setbeamercolor{frametitle}{bg=OceanDeep, fg=white}
+\setbeamercolor{section title}{fg=OceanDeep}
+
+% Barres de progression et séparateurs Metropolis
+\setbeamercolor{progress bar}{fg=OceanCyan, bg=OceanDeep!20}
+\setbeamercolor{progress bar in head/foot}{fg=OceanCyan, bg=OceanDeep!20}
+\setbeamercolor{progress bar in section page}{fg=OceanCyan, bg=OceanDeep!20}
+\setbeamercolor{title separator}{fg=OceanCyan}
+
+% Alertes et exemples
+\setbeamercolor{alerted text}{fg=OceanCoral}
+\setbeamercolor{example text}{fg=OceanGreen}
+
+% Blocs personnalisés
+\setbeamercolor{block title}{bg=OceanMedium, fg=white}
+\setbeamercolor{block body}{bg=OceanGray, fg=DarkSlate}
+\setbeamercolor{block title example}{bg=OceanGreen, fg=white}
+\setbeamercolor{block body example}{bg=OceanGray, fg=DarkSlate}
+\setbeamercolor{block title alerted}{bg=OceanCoral, fg=white}
+\setbeamercolor{block body alerted}{bg=OceanCoral!10, fg=DarkSlate}
+\setbeamerfont{block body}{size=\footnotesize}
+
+% Table des matières (TOC)
+\setbeamercolor{section in toc}{fg=OceanDeep}
+\setbeamercolor{section in toc shaded}{fg=DarkSlate!30}
+
+% Pied de page natif Metropolis
+\setbeamertemplate{frame footer}{ANF ArchiDrone 2026 (Drone\&Cap' / 2RM)}
+
+% Slide de transition à chaque nouvelle section (Style Standout)
+\AtBeginSection[]{
+  \begin{frame}[standout]
+    \centering
+    {\hypersetup{linkcolor=white}\LARGE\bfseries\textcolor{white}{\secname}\par}
+    \vspace{-1.2em}
+    {\color{OceanCyan}\rule{0.5\textwidth}{1.5pt}\par}
+  \end{frame}
+}
+
+% ------------------------------------------------------------------------------
+% Raccourcis et macros utiles
+% ------------------------------------------------------------------------------
+\newcommand{\tech}[1]{\textbf{\textcolor{OceanMedium}{#1}}}
+\newcommand{\alertw}[1]{\textbf{\textcolor{OceanCoral}{#1}}}
+\newcommand{\succw}[1]{\textbf{\textcolor{OceanGreen}{#1}}}
+\newcommand{\code}[1]{\texttt{\small\textcolor{OceanDeep}{#1}}}
+
+% Adaptation de \tech dans les titres de blocs pour conserver une parfaite lisibilité
+\newcommand{\techinblock}[1]{\textbf{\textcolor{OceanCyan}{#1}}}
+\newcommand{\techinblockwhite}[1]{\textbf{\textcolor{white}{#1}}}
+\addtobeamertemplate{block begin}{\let\tech\techinblock}{}
+\addtobeamertemplate{block alerted begin}{\let\tech\techinblockwhite}{}
+\addtobeamertemplate{block example begin}{\let\tech\techinblockwhite}{}
+
+% Ajustement fin des marges et du pied de page pour un rendu équilibré sans débordement
+\makeatletter
+\setlength{\metropolis@frametitle@padding}{1.5ex}
+\setbeamertemplate{footline}{%
+  \ifbool{metropolis@standout}{}{%
+    \begin{beamercolorbox}[wd=\textwidth, sep=1.2ex]{footline}%
+      \usebeamerfont{page number in head/foot}%
+      \usebeamertemplate*{frame footer}%
+      \hfill%
+      \usebeamertemplate*{frame numbering}%
+    \end{beamercolorbox}%
+  }%
+}
+\makeatother
+
+\newcommand{\ROV}{\textbf{ROV} (\textit{Remotely Operated Vehicle})}
+\newcommand{\AUV}{\textbf{AUV} (\textit{Autonomous Underwater Vehicle})}
+\newcommand{\ASV}{\textbf{ASV} (\textit{Autonomous Surface Vehicle})}
+\newcommand{\USBL}{\textbf{USBL} (\textit{Ultra-Short BaseLine})}
+\newcommand{\DVL}{\textbf{DVL} (\textit{Doppler Velocity Log})}
+\newcommand{\CTD}{\textbf{CTD} (\textit{Conductivity-Temperature-Depth})}
+

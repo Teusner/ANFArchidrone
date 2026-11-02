@@ -1,0 +1,51 @@
+\documentclass[aspectratio=169, 10pt]{beamer}
+
+\input{preambule.tex}
+
+\title[Robotique Marine \& Sous-Marine]{Conception \& Exploitation de Drones Sous-Marins\\pour la Collecte de Données Scientifiques}
+\subtitle{ANF ArchiDrone 2026 --- Réseaux Drone\&Cap' \& 2RM\\[0.4em]\normalfont\footnotesize\textcolor{OceanMedium}{\textbf{De la physique du milieu subaquatique à la valorisation pour les data scientists}}}
+\author[Quentin Brateau]{Quentin \textsc{Brateau}}
+\institute[Drone\&Cap' / 2RM]{
+  Réseaux Technologiques Drone\&Cap' \& 2RM\\
+  Journée 2 : Milieu Marin \& Sous-Marin
+}
+\date{04 Novembre 2026}
+
+\begin{document}
+
+% Page de titre
+\begin{frame}[plain]
+  \titlepage
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[anchor=south east, xshift=-1.6cm, yshift=0.55cm] at (current page.south east) {%
+      \href{https://drones-cap.cnrs.fr/}{\includegraphics[height=0.85cm]{logos/logo_drone_cap.png}}%
+      \hspace{0.65cm}%
+      \href{https://2rm.cnrs.fr/}{\includegraphics[height=1.05cm]{logos/logo_2rm.png}}%
+    };
+  \end{tikzpicture}
+\end{frame}
+
+% Sommaire général
+\begin{frame}{Plan de la Journée}
+  \tableofcontents[hideallsubsections]
+\end{frame}
+
+% Inclusion des modules
+\input{00_introduction.tex}
+\input{01_similitudes_aerien.tex}
+\input{02_differences_milieu.tex}
+\input{03_comms_autonomie.tex}
+\input{04_capteurs_donnees.tex}
+\input{05_synthese_discussion.tex}
+
+% Slide de fin / remerciements (Standout Metropolis)
+\begin{frame}[standout]
+  \textbf{\Large Merci pour votre attention !}\\[1.2em]
+  {\normalsize Place aux échanges et discussions pour vos projets.}\\[2em]
+  {\scriptsize
+  \textbf{Quentin Brateau} --- ANF ArchiDrone 2026\\
+  \textit{Réseaux Drone\&Cap' \& 2RM (Réseau Métier des Roboticiens et Mécatroniciens)}}
+\end{frame}
+
+\end{document}
+

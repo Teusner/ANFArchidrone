@@ -1,0 +1,2061 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.21)  14 OCT 2026 14:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamer.cls
+Document Class: beamer 2026/08/20 v3.78 A class for typesetting presentations
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasemod
+es.sty (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count276
+)
+\beamer@tempbox=\box53
+\beamer@tempcount=\count277
+\c@beamerpauses=\count278
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasedec
+ode.sty
+\beamer@slideinframe=\count279
+\beamer@minimum=\count280
+\beamer@decode@box=\box54
+)
+\beamer@commentbox=\box55
+\beamer@modecount=\count281
+) (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+\headdp=\dimen150
+\footheight=\dimen151
+\sidebarheight=\dimen152
+\beamer@tempdim=\dimen153
+\beamer@finalheight=\dimen154
+\beamer@animht=\dimen155
+\beamer@animdp=\dimen156
+\beamer@animwd=\dimen157
+\beamer@leftmargin=\dimen158
+\beamer@rightmargin=\dimen159
+\beamer@leftsidebar=\dimen160
+\beamer@rightsidebar=\dimen161
+\beamer@boxsize=\dimen162
+\beamer@vboxoffset=\dimen163
+\beamer@descdefault=\dimen164
+\beamer@descriptionwidth=\dimen165
+\beamer@lastskip=\skip49
+\beamer@areabox=\box56
+\beamer@animcurrent=\box57
+\beamer@animshowbox=\box58
+\beamer@sectionbox=\box59
+\beamer@logobox=\box60
+\beamer@linebox=\box61
+\beamer@sectioncount=\count282
+\beamer@subsubsectionmax=\count283
+\beamer@subsectionmax=\count284
+\beamer@sectionmax=\count285
+\beamer@totalheads=\count286
+\beamer@headcounter=\count287
+\beamer@partstartpage=\count288
+\beamer@sectionstartpage=\count289
+\beamer@subsectionstartpage=\count290
+\beamer@animationtempa=\count291
+\beamer@animationtempb=\count292
+\beamer@xpos=\count293
+\beamer@ypos=\count294
+\beamer@ypos@offset=\count295
+\beamer@showpartnumber=\count296
+\beamer@currentsubsection=\count297
+\beamer@coveringdepth=\count298
+\beamer@sectionadjust=\count299
+\beamer@toclastsection=\count300
+\beamer@tocsectionnumber=\count301
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbaseopt
+ions.sty (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2026-05-17 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+))
+\beamer@paperwidth=\skip50
+\beamer@paperheight=\skip51
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.st
+y
+Package: geometry 2026/03/07 v6.0 Page Geometry
+ (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count302
+\Gm@cntv=\count303
+\c@Gm@tempcnt=\count304
+\Gm@bindingoffset=\dimen166
+\Gm@wd@mp=\dimen167
+\Gm@odd@mp=\dimen168
+\Gm@even@mp=\dimen169
+\Gm@layoutwidth=\dimen170
+\Gm@layoutheight=\dimen171
+\Gm@layouthoffset=\dimen172
+\Gm@layoutvoffset=\dimen173
+\Gm@dimlist=\toks18
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cf
+g)) (C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks19
+\pgfutil@tempdima=\dimen174
+\pgfutil@tempdimb=\dimen175
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box62
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2026-08-01 v3.1.12 (3.1.12)
+))
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks20
+\pgfkeys@temptoks=\toks21
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
+tex
+\pgfkeys@tmptoks=\toks22
+))) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex
+\pgf@x=\dimen176
+\pgf@xa=\dimen177
+\pgf@xb=\dimen178
+\pgf@xc=\dimen179
+\pgf@y=\dimen180
+\pgf@ya=\dimen181
+\pgf@yb=\dimen182
+\pgf@yc=\dimen183
+\c@pgf@counta=\count305
+\c@pgf@countb=\count306
+\c@pgf@countc=\count307
+\c@pgf@countd=\count308
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen184
+\pgfmath@count=\count309
+\pgfmath@box=\box63
+\pgfmath@toks=\toks23
+\pgfmath@stack@operand=\toks24
+\pgfmath@stack@operation=\toks25
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.co
+de.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.
+tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
+cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
+) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count310
+)))
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2026-05-17 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2026-05-17 v1.4h Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen185
+\Gin@req@width=\dimen186
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2026-08-01 v3.1.12 (3.1.12)
+\pgf@x=\dimen187
+\pgf@y=\dimen188
+\pgf@xa=\dimen189
+\pgf@ya=\dimen190
+\pgf@xb=\dimen191
+\pgf@yb=\dimen192
+\pgf@xc=\dimen193
+\pgf@yc=\dimen194
+\pgf@xd=\dimen195
+\pgf@yd=\dimen196
+\w@pgf@writea=\write3
+\r@pgf@reada=\read2
+\c@pgf@counta=\count311
+\c@pgf@countb=\count312
+\c@pgf@countc=\count313
+\c@pgf@countd=\count314
+\t@pgf@toka=\toks26
+\t@pgf@tokb=\toks27
+\t@pgf@tokc=\toks28
+\pgf@sys@id@count=\count315
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2026-08-01 v3.1.12 (3.1.12)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2026-08-01 v3.1.12 (3.1.12)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfsyssoftpath@smallbuffer@items=\count316
+\pgfsyssoftpath@bigbuffer@items=\count317
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2026-08-01 v3.1.12 (3.1.12)
+))
+(C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@picminx=\dimen197
+\pgf@picmaxx=\dimen198
+\pgf@picminy=\dimen199
+\pgf@picmaxy=\dimen256
+\pgf@pathminx=\dimen257
+\pgf@pathmaxx=\dimen258
+\pgf@pathminy=\dimen259
+\pgf@pathmaxy=\dimen260
+\pgf@xx=\dimen261
+\pgf@xy=\dimen262
+\pgf@yx=\dimen263
+\pgf@yy=\dimen264
+\pgf@zx=\dimen265
+\pgf@zy=\dimen266
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
+ex
+File: pgfcorepathconstruct.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@path@lastx=\dimen267
+\pgf@path@lasty=\dimen268
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@shorten@end@additional=\dimen269
+\pgf@shorten@start@additional=\dimen270
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfpic=\box64
+\pgf@hbox=\box65
+\pgf@layerbox@main=\box66
+\pgf@picture@serial@count=\count318
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
+x
+File: pgfcoregraphicstate.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgflinewidth=\dimen271
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
+.tex
+File: pgfcoretransformations.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@pt@x=\dimen272
+\pgf@pt@y=\dimen273
+\pgf@pt@temp=\dimen274
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2026-08-01 v3.1.12 (3.1.12)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.
+tex
+File: pgfcorepathprocessing.code.tex 2026-08-01 v3.1.12 (3.1.12)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfarrowsep=\dimen275
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@max=\dimen276
+\pgf@sys@shading@range@num=\count319
+\pgf@shadingcount=\count320
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfexternal@startupbox=\box67
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.te
+x
+File: pgfcoretransparency.code.tex 2026-08-01 v3.1.12 (3.1.12)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2026-08-01 v3.1.12 (3.1.12)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)))
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\xxcolor.sty
+Package: xxcolor 2003/10/24 ver 0.1
+\XC@nummixins=\count321
+\XC@countmixins=\count322
+)
+(C:\Program Files\MiKTeX\tex/latex/base\atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2026-06-17 v7.01r Hypertext links for LaTeX
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.
+sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/kvdefinekeys\kvdef
+inekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/pdfescape\pdfescap
+e.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/ltxcmds\ltxcmds.st
+y
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+) (C:\Program Files\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/infwarerr\infwarer
+r.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Program Files\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/refcount\refcount.st
+y
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/gettitlestring\get
+titlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/kvoptions\kvoptions.
+sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count323
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringen
+c.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen277
+\Hy@linkcounter=\count324
+\Hy@pagecounter=\count325
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2026-06-17 v7.01r Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.st
+y
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count326
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2026-06-17 v7.01r Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `bookmarks' set `true' on input line 4070.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 4070.
+Package hyperref Info: Option `implicit' set `false' on input line 4070.
+Package hyperref Info: Hyper figures OFF on input line 4199.
+Package hyperref Info: Link nesting OFF on input line 4204.
+Package hyperref Info: Hyper index ON on input line 4207.
+Package hyperref Info: Plain pages OFF on input line 4214.
+Package hyperref Info: Backreferencing OFF on input line 4219.
+Package hyperref Info: Implicit mode OFF; no redefinition of LaTeX internals.
+Package hyperref Info: Bookmarks ON on input line 4466.
+\c@Hy@tempcnt=\count327
+
+(C:\Program Files\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4805.
+\XeTeXLinkMargin=\dimen278
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/bigintcalc\bigintc
+alc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count328
+\Field@Width=\dimen279
+\Fld@charsize=\dimen280
+Package hyperref Info: Hyper figures OFF on input line 6091.
+Package hyperref Info: Link nesting OFF on input line 6096.
+Package hyperref Info: Hyper index ON on input line 6099.
+Package hyperref Info: backreferencing OFF on input line 6106.
+Package hyperref Info: Link coloring OFF on input line 6111.
+Package hyperref Info: Link coloring with OCG OFF on input line 6116.
+Package hyperref Info: PDF/A mode OFF on input line 6121.
+\Hy@abspage=\count329
+
+
+Package hyperref Message: Stopped early.
+
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (C:\Program Files\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2026-06-17 v7.01r Hyperref driver for pdfTeX
+\Fld@listcount=\count330
+\c@bookmark@seq@number=\count331
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerun
+filecheck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniq
+uecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasereq
+uires.sty
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasecom
+patibility.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasefon
+t.sty (C:\Program Files\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks29
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/sansmathaccent\sansm
+athaccent.sty
+Package: sansmathaccent 2020/01/31
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlfile
+.sty
+Package: scrlfile 2026/02/02 v3.49.2 KOMA-Script package (file load hooks)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlfile
+-hook.sty
+Package: scrlfile-hook 2026/02/02 v3.49.2 KOMA-Script package (using LaTeX hook
+s)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/koma-script\scrlogo.
+sty
+Package: scrlogo 2026/02/02 v3.49.2 KOMA-Script package (logo)
+)))))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasetra
+nslator.sty
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasemis
+c.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasetwo
+screens.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbaseove
+rlay.sty
+\beamer@argscount=\count332
+\beamer@lastskipcover=\skip52
+\beamer@trivlistdepth=\count333
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasetit
+le.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasesec
+tion.sty
+\c@lecture=\count334
+\c@part=\count335
+\c@section=\count336
+\c@subsection=\count337
+\c@subsubsection=\count338
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasefra
+me.sty
+\beamer@framebox=\box68
+\beamer@frametitlebox=\box69
+\beamer@zoombox=\box70
+\beamer@zoomcount=\count339
+\beamer@zoomframecount=\count340
+\beamer@frametextheight=\dimen281
+\c@subsectionslide=\count341
+\beamer@frametopskip=\skip53
+\beamer@framebottomskip=\skip54
+\beamer@frametopskipautobreak=\skip55
+\beamer@framebottomskipautobreak=\skip56
+\beamer@envbody=\toks30
+\framewidth=\dimen282
+\c@framenumber=\count342
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasever
+batim.sty
+\beamer@verbatimfileout=\write4
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasefra
+mesize.sty
+\beamer@splitbox=\box71
+\beamer@autobreakcount=\count343
+\beamer@autobreaklastheight=\dimen283
+\beamer@frametitletoks=\toks31
+\beamer@framesubtitletoks=\toks32
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasefra
+mecomponents.sty
+\beamer@colheight=\skip57
+\beamer@footins=\box72
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasecol
+or.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasenot
+es.sty
+\beamer@frameboxcopy=\box73
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasetoc
+.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasetem
+plates.sty
+\beamer@sbttoks=\toks33
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbaseaux
+templates.sty
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasebox
+es.sty
+\bmb@box=\box74
+\bmb@colorbox=\box75
+\bmb@boxwidth=\dimen284
+\bmb@boxheight=\dimen285
+\bmb@prevheight=\dimen286
+\bmb@temp=\dimen287
+\bmb@dima=\dimen288
+\bmb@dimb=\dimen289
+\bmb@prevheight=\dimen290
+)
+\beamer@blockheadheight=\dimen291
+))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbaseloc
+alstructure.sty (C:\Program Files\MiKTeX\tex/latex/tools\enumerate.sty
+Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
+\@enLab=\toks34
+)
+\beamer@bibiconwidth=\skip58
+\c@figure=\count344
+\c@table=\count345
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasenav
+igation.sty
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasenav
+igationsymbols.tex)
+\beamer@section@min@dim=\dimen292
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasethe
+orems.sty (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2026/05/19 v2.18d AMS math features
+\@mathmargin=\skip61
+
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks35
+\ex@=\dimen293
+))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen294
+)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count346
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count347
+\leftroot@=\count348
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count349
+\DOTSCASE@=\count350
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box76
+\strutbox@=\box77
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen295
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count351
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count352
+\dotsspace@=\muskip18
+\c@parentequation=\count353
+\dspbrk@lvl=\count354
+\tag@help=\toks36
+\row@=\count355
+\column@=\count356
+\maxfields@=\count357
+\andhelp@=\toks37
+\eqnshift@=\dimen296
+\alignsep@=\dimen297
+\tagshift@=\dimen298
+\tagwidth@=\dimen299
+\totwidth@=\dimen300
+\lineht@=\dimen301
+\@envbody=\toks38
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks39
+LaTeX Info: Redefining \[ on input line 2965.
+LaTeX Info: Redefining \] on input line 2966.
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks40
+\thm@bodyfont=\toks41
+\thm@headfont=\toks42
+\thm@notefont=\toks43
+\thm@headpunct=\toks44
+\thm@preskip=\skip64
+\thm@postskip=\skip65
+\thm@headsep=\skip66
+\dth@everypar=\toks45
+)
+\c@theorem=\count358
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerbasethe
+mes.sty))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerthemede
+fault.sty
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerfontthe
+medefault.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamercolorth
+emedefault.sty)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerinnerth
+emedefault.sty
+\beamer@dima=\dimen302
+\beamer@dimb=\dimen303
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamer\beamerouterth
+emedefault.sty))) (preambule.tex
+(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks46
+\inpenc@posthook=\toks47
+)
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2026/09/09 v26.12 The multilingual framework for LuaLaTeX, pdfLa
+TeX and XeLaTeX
+\babel@savecnt=\count359
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
+ne 2095.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
+ne 2097.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
+e 2099.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
+e 2100.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
+on input line 2101.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
+on input line 2103.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
+on input line 2128.
+\U@D=\dimen304
+\l@unhyphenated=\language79
+
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read3
+LaTeX Info: Redefining \textlatin on input line 4078.
+\bbl@dirlevel=\count360
+Package babel Info: Configuration files are deprecated, as
+(babel)             they can break document portability.
+(babel)             Reported on input line 4331.
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/fr\babel-french.tex)
+Package babel Info: Importing font and identification data for 'french'
+(babel)             from babel-fr.ini. Reported on input line 4459.
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/babel-french\frenc
+h.ldf
+Language: french 2026-06-06 v4.1a French support from the babel system
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/generic/babel-french\frenc
+h3.ldf
+Language: french 2026-06-06 v3.7f French support from the babel system
+\FB@stdchar=\count361
+Package babel Info: Making : an active character on input line 266.
+Package babel Info: Making ; an active character on input line 267.
+Package babel Info: Making ! an active character on input line 268.
+Package babel Info: Making ? an active character on input line 269.
+\FBguill@level=\count362
+\FBold@everypar=\toks48
+\FB@Mht=\dimen305
+\mc@charclass=\count363
+\mc@charfam=\count364
+\mc@charslot=\count365
+\std@mcc=\count366
+\dec@mcc=\count367
+\listindentFB=\dimen306
+\descindentFB=\dimen307
+\labelwidthFB=\dimen308
+\labelfullwidthFB=\dimen309
+\FB@pardim=\dimen310
+\parindentFFN=\dimen311
+\FBfnindent=\dimen312
+)))
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/carlisle\scalefnt.st
+y)
+Package french3.ldf Info: No list customisation for the beamer class,
+(french3.ldf)             reported on input line 10.
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.st
+y
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen313
+\lightrulewidth=\dimen314
+\cmidrulewidth=\dimen315
+\belowrulesep=\dimen316
+\belowbottomsep=\dimen317
+\aboverulesep=\dimen318
+\abovetopsep=\dimen319
+\cmidrulesep=\dimen320
+\cmidrulekern=\dimen321
+\defaultaddspace=\dimen322
+\@cmidla=\count368
+\@cmidlb=\count369
+\@aboverulesep=\dimen323
+\@belowrulesep=\dimen324
+\@thisruleclass=\count370
+\@lastruleclass=\count371
+\@thisrulewidth=\dimen325
+) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2026/02/24 v2.7b Tabular extension package (FMi)
+\col@sep=\dimen326
+\ar@mcellbox=\box78
+\extrarowheight=\dimen327
+\NC@list=\toks49
+\extratabsurround=\skip67
+\backup@length=\skip68
+\ar@cellbox=\box79
+)
+\TX@col@width=\dimen328
+\TX@old@table=\dimen329
+\TX@old@col=\dimen330
+\TX@target=\dimen331
+\TX@delta=\dimen332
+\TX@cols=\count372
+\TX@ftn=\toks50
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/colortbl\colortbl.st
+y
+Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
+
+new hooks used!!
+\minrowclearance=\skip69
+\rownum=\count373
+) (C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+Package: pgf 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfnodeparttextbox=\box80
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2026-08-01 v3.1.12 (3.1.12)
+\pgf@nodesepstart=\dimen333
+\pgf@nodesepend=\dimen334
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2026-08-01 v3.1.12 (3.1.12)
+)) (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2026-08-01 v3.1.12 (3.1.12)
+\pgffor@iter=\dimen335
+\pgffor@skip=\dimen336
+\pgffor@stack=\toks51
+\pgffor@toks=\toks52
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
+tex
+File: pgflibraryplothandlers.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@plot@mark@count=\count374
+\pgfplotmarksize=\dimen337
+)
+\tikz@lastx=\dimen338
+\tikz@lasty=\dimen339
+\tikz@lastxsaved=\dimen340
+\tikz@lastysaved=\dimen341
+\tikz@lastmovetox=\dimen342
+\tikz@lastmovetoy=\dimen343
+\tikzleveldistance=\dimen344
+\tikzsiblingdistance=\dimen345
+\tikz@figbox=\box81
+\tikz@figbox@bg=\box82
+\tikz@tempbox=\box83
+\tikz@tempbox@bg=\box84
+\tikztreelevel=\count375
+\tikznumberofchildren=\count376
+\tikznumberofcurrentchild=\count377
+\tikz@fig@count=\count378
+ (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfmatrixcurrentrow=\count379
+\pgfmatrixcurrentcolumn=\count380
+\pgf@matrix@numberofcolumns=\count381
+)
+\tikz@expandcount=\count382
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.t
+ex
+File: pgflibraryarrows.meta.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgfarrowinset=\dimen346
+\pgfarrowlength=\dimen347
+\pgfarrowwidth=\dimen348
+\pgfarrowlinewidth=\dimen349
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rycalc.code.tex
+File: tikzlibrarycalc.code.tex 2026-08-01 v3.1.12 (3.1.12)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geom
+etric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2026-08-01 v3.1.12 (3.1.12)
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rybackgrounds.code.tex
+File: tikzlibrarybackgrounds.code.tex 2026-08-01 v3.1.12 (3.1.12)
+\pgf@layerbox@background=\box85
+\pgf@layerboxsaved@background=\box86
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rydecorations.pathmorphing.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rydecorations.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen350
+\pgfdecoratedremainingdistance=\dimen351
+\pgfdecoratedinputsegmentcompleteddistance=\dimen352
+\pgfdecoratedinputsegmentremainingdistance=\dimen353
+\pgf@decorate@distancetomove=\dimen354
+\pgf@decorate@repeatstate=\count383
+\pgfdecorationsegmentamplitude=\dimen355
+\pgfdecorationsegmentlength=\dimen356
+)
+\tikz@lib@dec@box=\box87
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries/decorations\pgflibrarydecora
+tions.pathmorphing.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryshadows.code.tex
+File: tikzlibraryshadows.code.tex 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+ryfadings.code.tex
+File: tikzlibraryfadings.code.tex 2026-08-01 v3.1.12 (3.1.12)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryfadings.code.tex
+File: pgflibraryfadings.code.tex 2026-08-01 v3.1.12 (3.1.12)
+))) (C:\Program Files\MiKTeX\tex/latex/lm\lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count384
+\lst@gtempboxa=\box88
+\lst@token=\toks53
+\lst@length=\count385
+\lst@currlwidth=\dimen357
+\lst@column=\count386
+\lst@pos=\count387
+\lst@lostspace=\dimen358
+\lst@width=\dimen359
+\lst@newlines=\count388
+\lst@lineno=\count389
+\lst@maxwidth=\dimen360
+
+(C:\Program Files\MiKTeX\tex/latex/listings\lstpatch.sty
+File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+\c@lstnumber=\count390
+\lst@skipnumbers=\count391
+\lst@framebox=\box89
+)
+(C:\Program Files\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2025/11/14 1.11b listings configuration
+))
+Package: listings 2025/11/14 1.11b (Carsten Heinz)
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.
+sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+\MT@toks=\toks54
+\MT@tempbox=\box90
+\MT@count=\count392
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks55
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen361
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count393
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-
+pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip70
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.
+cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamertheme-metropol
+is\beamerthememetropolis.sty
+Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/pgfopts\pgfopts.sty
+Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
+\pgfopts@list@add@a@toks=\toks56
+\pgfopts@list@add@b@toks=\toks57
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamertheme-metropol
+is\beamerinnerthememetropolis.sty
+Package: beamerinnerthememetropolis 2017/01/23 Metropolis inner theme
+
+(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count394
+\calc@Bcount=\count395
+\calc@Adimen=\dimen362
+\calc@Bdimen=\dimen363
+\calc@Askip=\skip71
+\calc@Bskip=\skip72
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count396
+\calc@Cskip=\skip73
+)
+\metropolis@titleseparator@linewidth=\skip74
+\metropolis@progressonsectionpage=\skip75
+\metropolis@progressonsectionpage@linewidth=\skip76
+\metropolis@blocksep=\skip77
+\metropolis@blockadjust=\skip78
+\metropolis@parskip=\skip79
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamertheme-metropol
+is\beamerouterthememetropolis.sty
+Package: beamerouterthememetropolis 2017/01/23 Metropolis outer theme
+\metropolis@frametitle@padding=\skip80
+\metropolis@progressinheadfoot=\skip81
+\metropolis@progressinheadfoot@linewidth=\skip82
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamertheme-metropol
+is\beamercolorthememetropolis.sty
+Package: beamercolorthememetropolis 2017/01/23 Metropolis color theme
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/beamertheme-metropol
+is\beamerfontthememetropolis.sty
+Package: beamerfontthememetropolis 2017/01/23 Metropolis font theme
+
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+
+Package beamerthememetropolis Warning: You need to compile with XeLaTeX or LuaL
+aTeX to use the Fira fonts on input line 95.
+
+)))
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 1
+4.
+ (C:\Program Files\MiKTeX\tex/latex/lm\t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(C:\Program Files\MiKTeX\tex/latex/l3kernel\l3backend-pdftex.def
+File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count397
+) (main.aux
+Package babel Info: 'french' activates 'french' shorthands.
+(babel)             Reported on input line 11.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(28.45274pt, 398.3386pt, 28.45274pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=398.3386pt
+* \textheight=227.62207pt
+* \oddsidemargin=-43.81725pt
+* \evensidemargin=-43.81725pt
+* \topmargin=-72.26999pt
+* \headheight=14.22636pt
+* \headsep=0.0pt
+* \topskip=10.0pt
+* \footskip=14.22636pt
+* \marginparwidth=3.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count398
+\scratchdimen=\dimen364
+\scratchbox=\box91
+\nofMPsegments=\count399
+\nofMParguments=\count400
+\everyMPshowfont=\toks58
+\MPscratchCnt=\count401
+\MPscratchDim=\dimen365
+\MPnumerator=\count402
+\makeMPintoPDFobject=\count403
+\everyMPtoPDFconversion=\toks59
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package hyperref Info: Link coloring ON on input line 14.
+ (main.out)
+(main.out)
+\@outlinefile=\write5
+\openout5 = `main.out'.
+
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> OT1/cmss/m/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> OT1/cmss/b/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmss/b/n --> OT1/lmss/b/n on input line 14.
+\symnumbers=\mathgroup6
+\sympureletters=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmr/m/n on input line 14.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> T1/lmss/b/n on input line 14.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> T1/lmss/m/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> T1/lmss/m/n on input line 14.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/lmss/m/it on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/lmss/m/it on input line 14.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> T1/lmtt/m/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 14.
+LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
+(Font)                  OT1/lmss/b/n --> T1/lmr/b/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/lmss/b/n --> T1/lmss/b/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/lmss/m/n --> T1/lmss/b/n on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/lmss/m/it --> T1/lmss/b/it on input line 14.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/lmtt/m/n --> T1/lmtt/b/n on input line 14.
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-bibliography-dictionary-English.dict
+Dictionary: translator-bibliography-dictionary, Language: English 
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-environment-dictionary-English.dict
+Dictionary: translator-environment-dictionary, Language: English 
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-months-dictionary-English.dict
+Dictionary: translator-months-dictionary, Language: English 
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-numbers-dictionary-English.dict
+Dictionary: translator-numbers-dictionary, Language: English 
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/translator\translato
+r-theorem-dictionary-English.dict
+Dictionary: translator-theorem-dictionary, Language: English 
+)
+LaTeX Info: Redefining \degres on input line 14.
+\c@lstlisting=\count404
+LaTeX Info: Redefining \microtypecontext on input line 14.
+Package microtype Info: Applying patch `item' on input line 14.
+Package microtype Info: Applying patch `toc' on input line 14.
+Package microtype Info: Applying patch `eqnum' on input line 14.
+Package microtype Info: Applying patch `footnote' on input line 14.
+Package microtype Info: Applying patch `verbatim' on input line 14.
+LaTeX Info: Redefining \microtypesetup on input line 14.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (main.nav)
+Package babel Info: Main language set to 'french'.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 26
+.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 26.
+
+
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/9'.
+(microtype)             Ignoring protrusion settings for this character.
+<../../imgs/logos/logo_drone_cap.png, id=61, 463.7325pt x 150.5625pt>
+File: ../../imgs/logos/logo_drone_cap.png Graphic file (type png)
+<use ../../imgs/logos/logo_drone_cap.png>
+Package pdftex.def Info: ../../imgs/logos/logo_drone_cap.png  used on input lin
+e 26.
+(pdftex.def)             Requested size: 74.48882pt x 24.18501pt.
+<../../imgs/logos/logo_2rm.png, id=64, 123.3408pt x 96.1191pt>
+File: ../../imgs/logos/logo_2rm.png Graphic file (type png)
+<use ../../imgs/logos/logo_2rm.png>
+Package pdftex.def Info: ../../imgs/logos/logo_2rm.png  used on input line 26.
+(pdftex.def)             Requested size: 38.33687pt x 29.87547pt.
+
+Overfull \vbox (13.79993pt too high) detected at line 26
+ []
+
+[1
+
+{C:/Users/quentin.brateau/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/
+Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc} <../../imgs/logos/logo_drone
+_cap.png> <../../imgs/logos/logo_2rm.png>] (main.toc) [2
+
+]
+(00_introduction.tex [3
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
+26.
+ (C:\Program Files\MiKTeX\tex/latex/lm\ts1lmss.fd
+File: ts1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
+26.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+6.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+26.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+26.
+
+(C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
+
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
+
+ (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(C:\Users\quentin.brateau\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 26.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 26.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <5> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 26.
+ [4
+
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 53--53
+[]|\T1/lmss/m/n/9 (+20) Hydrostatique, Étan-
+ []
+
+
+Underfull \hbox (badness 8170) in paragraph at lines 53--53
+[]|\T1/lmss/m/n/9 (+20) Acoustique, Ar-du-Sub,
+ []
+
+[5
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 8
+1.
+ (C:\Program Files\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [6
+
+])
+(01_similitudes_aerien.tex [7
+
+]
+<../../imgs/bluerov2.jpg, id=125, 1606.0pt x 1606.0pt>
+File: ../../imgs/bluerov2.jpg Graphic file (type jpg)
+<use ../../imgs/bluerov2.jpg>
+Package pdftex.def Info: ../../imgs/bluerov2.jpg  used on input line 71.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+<../../imgs/seaber_yuco.jpg, id=126, 2055.68pt x 1542.76375pt>
+File: ../../imgs/seaber_yuco.jpg Graphic file (type jpg)
+<use ../../imgs/seaber_yuco.jpg>
+Package pdftex.def Info: ../../imgs/seaber_yuco.jpg  used on input line 71.
+(pdftex.def)             Requested size: 75.8143pt x 56.9055pt.
+<../../imgs/blueboat.jpg, id=127, 1606.0pt x 1606.0pt>
+File: ../../imgs/blueboat.jpg Graphic file (type jpg)
+<use ../../imgs/blueboat.jpg>
+Package pdftex.def Info: ../../imgs/blueboat.jpg  used on input line 71.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+<../../imgs/slocum_glider_clean.jpg, id=128, 803.0pt x 531.9875pt>
+File: ../../imgs/slocum_glider_clean.jpg Graphic file (type jpg)
+<use ../../imgs/slocum_glider_clean.jpg>
+Package pdftex.def Info: ../../imgs/slocum_glider_clean.jpg  used on input line
+ 71.
+(pdftex.def)             Requested size: 85.89197pt x 56.9055pt.
+
+Overfull \hbox (2.23819pt too wide) in paragraph at lines 71--71
+ [] 
+ []
+
+<../../imgs/argo_float_clean.jpg, id=129, 531.9875pt x 803.0pt>
+File: ../../imgs/argo_float_clean.jpg Graphic file (type jpg)
+<use ../../imgs/argo_float_clean.jpg>
+Package pdftex.def Info: ../../imgs/argo_float_clean.jpg  used on input line 71
+.
+(pdftex.def)             Requested size: 37.6975pt x 56.9055pt.
+[8
+
+ <../../imgs/bluerov2.jpg> <../../imgs/seaber_yuco.jpg> <../../imgs/blueboat.jp
+g> <../../imgs/slocum_glider_clean.jpg> <../../imgs/argo_float_clean.jpg>]
+File: ../../imgs/seaber_yuco.jpg Graphic file (type jpg)
+<use ../../imgs/seaber_yuco.jpg>
+Package pdftex.def Info: ../../imgs/seaber_yuco.jpg  used on input line 106.
+(pdftex.def)             Requested size: 113.70576pt x 85.33484pt.
+<../../imgs/seaber_yuco_diagram.png, id=136, 922.59575pt x 276.77872pt>
+File: ../../imgs/seaber_yuco_diagram.png Graphic file (type png)
+<use ../../imgs/seaber_yuco_diagram.png>
+Package pdftex.def Info: ../../imgs/seaber_yuco_diagram.png  used on input line
+ 106.
+(pdftex.def)             Requested size: 137.51057pt x 41.25316pt.
+
+[9
+
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiK
+TeX/fonts/enc/dvips/lm/lm-mathit.enc} <../../imgs/seaber_yuco_diagram.png>]
+File: ../../imgs/slocum_glider_clean.jpg Graphic file (type jpg)
+<use ../../imgs/slocum_glider_clean.jpg>
+Package pdftex.def Info: ../../imgs/slocum_glider_clean.jpg  used on input line
+ 140.
+(pdftex.def)             Requested size: 154.60555pt x 102.42616pt.
+
+Overfull \vbox (10.63579pt too high) detected at line 140
+ []
+
+[10
+
+]
+File: ../../imgs/argo_float_clean.jpg Graphic file (type jpg)
+<use ../../imgs/argo_float_clean.jpg>
+Package pdftex.def Info: ../../imgs/argo_float_clean.jpg  used on input line 17
+4.
+(pdftex.def)             Requested size: 84.81938pt x 128.02927pt.
+ [11
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 213.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <8> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 213.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <6> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 213.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 213.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 213.
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <12> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 213.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <12> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 213.
+ [12
+
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc}]
+LaTeX Font Info:    Font shape `T1/lmss/b/n' in size <10> not available
+(Font)              Font shape `T1/lmss/bx/n' tried instead on input line 245.
+ [13
+
+]
+File: ../../imgs/bluerov2.jpg Graphic file (type jpg)
+<use ../../imgs/bluerov2.jpg>
+Package pdftex.def Info: ../../imgs/bluerov2.jpg  used on input line 272.
+(pdftex.def)             Requested size: 119.48909pt x 119.48909pt.
+
+[14
+
+]
+<../../imgs/battery_pack.jpg, id=176, 1027.84pt x 474.77374pt>
+File: ../../imgs/battery_pack.jpg Graphic file (type jpg)
+<use ../../imgs/battery_pack.jpg>
+Package pdftex.def Info: ../../imgs/battery_pack.jpg  used on input line 318.
+(pdftex.def)             Requested size: 147.83319pt x 68.28622pt.
+ [15
+
+ <../../imgs/battery_pack.jpg>]
+<../../imgs/t200_thruster.png, id=185, 1027.84pt x 1027.84pt>
+File: ../../imgs/t200_thruster.png Graphic file (type png)
+<use ../../imgs/t200_thruster.png>
+Package pdftex.def Info: ../../imgs/t200_thruster.png  used on input line 352.
+(pdftex.def)             Requested size: 91.04303pt x 91.04872pt.
+ [16
+
+ <../../imgs/t200_thruster.png (PNG copy)>]
+File: ../../imgs/t200_thruster.png Graphic file (type png)
+<use ../../imgs/t200_thruster.png>
+Package pdftex.def Info: ../../imgs/t200_thruster.png  used on input line 404.
+(pdftex.def)             Requested size: 65.4318pt x 65.44142pt.
+<../../imgs/t500_thruster.jpg, id=191, 1606.0pt x 1606.0pt>
+File: ../../imgs/t500_thruster.jpg Graphic file (type jpg)
+<use ../../imgs/t500_thruster.jpg>
+Package pdftex.def Info: ../../imgs/t500_thruster.jpg  used on input line 404.
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+<../../imgs/newton_gripper.jpg, id=192, 1606.0pt x 1606.0pt>
+File: ../../imgs/newton_gripper.jpg Graphic file (type jpg)
+<use ../../imgs/newton_gripper.jpg>
+Package pdftex.def Info: ../../imgs/newton_gripper.jpg  used on input line 404.
+
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+ [17
+
+ <../../imgs/t500_thruster.jpg> <../../imgs/newton_gripper.jpg>]
+<../../imgs/pixhawk_autopilot.png, id=198, 381.425pt x 277.035pt>
+File: ../../imgs/pixhawk_autopilot.png Graphic file (type png)
+<use ../../imgs/pixhawk_autopilot.png>
+Package pdftex.def Info: ../../imgs/pixhawk_autopilot.png  used on input line 4
+41.
+(pdftex.def)             Requested size: 86.18358pt x 62.59596pt.
+<../../imgs/raspberry_pi_4.jpg, id=199, 1606.0pt x 944.52875pt>
+File: ../../imgs/raspberry_pi_4.jpg Graphic file (type jpg)
+<use ../../imgs/raspberry_pi_4.jpg>
+Package pdftex.def Info: ../../imgs/raspberry_pi_4.jpg  used on input line 441.
+
+(pdftex.def)             Requested size: 96.74792pt x 56.9055pt.
+<../../imgs/navigator_board.jpg, id=200, 1606.0pt x 1606.0pt>
+File: ../../imgs/navigator_board.jpg Graphic file (type jpg)
+<use ../../imgs/navigator_board.jpg>
+Package pdftex.def Info: ../../imgs/navigator_board.jpg  used on input line 441
+.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+
+[18
+
+ <../../imgs/pixhawk_autopilot.png> <../../imgs/raspberry_pi_4.jpg> <../../imgs
+/navigator_board.jpg>]
+<../../imgs/bar30_sensor.jpg, id=207, 1606.0pt x 1606.0pt>
+File: ../../imgs/bar30_sensor.jpg Graphic file (type jpg)
+<use ../../imgs/bar30_sensor.jpg>
+Package pdftex.def Info: ../../imgs/bar30_sensor.jpg  used on input line 474.
+(pdftex.def)             Requested size: 70.94847pt x 65.44142pt.
+ [19
+
+ <../../imgs/bar30_sensor.jpg>]
+Underfull \hbox (badness 5548) in paragraph at lines 495--495
+[]|\T1/lmss/m/n/9 (+20) Manual, Acro, \T1/lmss/bx/n/9 (+20) Auto
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--495
+[]|\T1/lmss/m/n/9 (+20) Architecture orien-tée micro-
+ []
+
+
+Underfull \hbox (badness 5578) in paragraph at lines 495--495
+\T1/lmss/m/n/9 (+20) services, pont micro-ROS /
+ []
+
+[20
+
+]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 544.
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 544.
+ [21
+
+] [22
+
+] [23
+
+] [24
+
+]) (02_differences_milieu.tex [25
+
+] [26
+
+]
+Overfull \vbox (11.67609pt too high) detected at line 73
+ []
+
+[27
+
+]
+<../../imgs/watertight_enclosure.jpg, id=267, 1204.5pt x 1204.5pt>
+File: ../../imgs/watertight_enclosure.jpg Graphic file (type jpg)
+<use ../../imgs/watertight_enclosure.jpg>
+Package pdftex.def Info: ../../imgs/watertight_enclosure.jpg  used on input lin
+e 106.
+(pdftex.def)             Requested size: 102.4271pt x 102.4271pt.
+ [28
+
+ <../../imgs/watertight_enclosure.jpg>]
+<../../imgs/wetlink_penetrator.jpg, id=273, 1606.0pt x 1606.0pt>
+File: ../../imgs/wetlink_penetrator.jpg Graphic file (type jpg)
+<use ../../imgs/wetlink_penetrator.jpg>
+Package pdftex.def Info: ../../imgs/wetlink_penetrator.jpg  used on input line 
+146.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+<../../imgs/wetlink_jpt.jpg, id=274, 1027.84pt x 1027.84pt>
+File: ../../imgs/wetlink_jpt.jpg Graphic file (type jpg)
+<use ../../imgs/wetlink_jpt.jpg>
+Package pdftex.def Info: ../../imgs/wetlink_jpt.jpg  used on input line 146.
+(pdftex.def)             Requested size: 56.89993pt x 56.9055pt.
+
+Overfull \vbox (1.8859pt too high) detected at line 146
+ []
+
+[29
+
+ <../../imgs/wetlink_penetrator.jpg> <../../imgs/wetlink_jpt.jpg>] [30
+
+]
+<../../imgs/bluetrail_cobalt.jpg, id=285, 301.125pt x 301.125pt>
+File: ../../imgs/bluetrail_cobalt.jpg Graphic file (type jpg)
+<use ../../imgs/bluetrail_cobalt.jpg>
+Package pdftex.def Info: ../../imgs/bluetrail_cobalt.jpg  used on input line 23
+0.
+(pdftex.def)             Requested size: 48.36937pt x 48.36958pt.
+<../../imgs/bluetrail_cobalt_pair.png, id=286, 282.05376pt x 268.00125pt>
+File: ../../imgs/bluetrail_cobalt_pair.png Graphic file (type png)
+<use ../../imgs/bluetrail_cobalt_pair.png>
+Package pdftex.def Info: ../../imgs/bluetrail_cobalt_pair.png  used on input li
+ne 230.
+(pdftex.def)             Requested size: 50.9052pt x 48.36958pt.
+<../../imgs/subconn_micro_circular.jpg, id=287, 1806.75pt x 2578.63374pt>
+File: ../../imgs/subconn_micro_circular.jpg Graphic file (type jpg)
+<use ../../imgs/subconn_micro_circular.jpg>
+Package pdftex.def Info: ../../imgs/subconn_micro_circular.jpg  used on input l
+ine 230.
+(pdftex.def)             Requested size: 33.88199pt x 48.36958pt.
+
+[31
+
+ <../../imgs/bluetrail_cobalt.jpg> <../../imgs/bluetrail_cobalt_pair.png> <../.
+./imgs/subconn_micro_circular.jpg>] [32
+
+] [33
+
+]
+File: ../../imgs/blueboat.jpg Graphic file (type jpg)
+<use ../../imgs/blueboat.jpg>
+Package pdftex.def Info: ../../imgs/blueboat.jpg  used on input line 322.
+(pdftex.def)             Requested size: 119.48909pt x 119.48909pt.
+ [34
+
+]
+Overfull \vbox (32.59729pt too high) detected at line 365
+ []
+
+[35
+
+{C:/Program Files/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [36
+
+]
+<../../imgs/dvl_a50.jpg, id=322, 1606.0pt x 1606.0pt>
+File: ../../imgs/dvl_a50.jpg Graphic file (type jpg)
+<use ../../imgs/dvl_a50.jpg>
+Package pdftex.def Info: ../../imgs/dvl_a50.jpg  used on input line 451.
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+ [37
+
+ <../../imgs/dvl_a50.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 470--470
+[]|\T1/lmss/bx/n/7 (+20) Principe géo-mé-
+ []
+
+
+Underfull \hbox (badness 6876) in paragraph at lines 470--470
+[]|\T1/lmss/bx/n/7 (+20) Logistique & Dé-
+ []
+
+[38
+
+]
+<../../imgs/lbl_nano_transponder.jpg, id=334, 1154.3125pt x 544.0325pt>
+File: ../../imgs/lbl_nano_transponder.jpg Graphic file (type jpg)
+<use ../../imgs/lbl_nano_transponder.jpg>
+Package pdftex.def Info: ../../imgs/lbl_nano_transponder.jpg  used on input lin
+e 504.
+(pdftex.def)             Requested size: 108.65686pt x 51.21504pt.
+<../../imgs/lbl_nano_beacon.jpg, id=335, 890.32625pt x 626.34pt>
+File: ../../imgs/lbl_nano_beacon.jpg Graphic file (type jpg)
+<use ../../imgs/lbl_nano_beacon.jpg>
+Package pdftex.def Info: ../../imgs/lbl_nano_beacon.jpg  used on input line 504
+.
+(pdftex.def)             Requested size: 72.78986pt x 51.21504pt.
+<../../imgs/seatrac_usbl_photo.jpg, id=336, 803.0pt x 578.16pt>
+File: ../../imgs/seatrac_usbl_photo.jpg Graphic file (type jpg)
+<use ../../imgs/seatrac_usbl_photo.jpg>
+Package pdftex.def Info: ../../imgs/seatrac_usbl_photo.jpg  used on input line 
+504.
+(pdftex.def)             Requested size: 71.12737pt x 51.21504pt.
+<../../imgs/waterlinked_ugps.jpg, id=337, 709.65125pt x 479.7925pt>
+File: ../../imgs/waterlinked_ugps.jpg Graphic file (type jpg)
+<use ../../imgs/waterlinked_ugps.jpg>
+Package pdftex.def Info: ../../imgs/waterlinked_ugps.jpg  used on input line 50
+4.
+(pdftex.def)             Requested size: 75.7446pt x 51.21504pt.
+ [39
+
+ <../../imgs/lbl_nano_transponder.jpg> <../../imgs/lbl_nano_beacon.jpg> <../../
+imgs/seatrac_usbl_photo.jpg> <../../imgs/waterlinked_ugps.jpg>]
+Overfull \vbox (30.53848pt too high) detected at line 567
+ []
+
+[40
+
+] [41
+
+]) (03_comms_autonomie.tex [42
+
+]
+<../../imgs/fathom_x.png, id=357, 1606.0pt x 1203.49625pt>
+File: ../../imgs/fathom_x.png Graphic file (type png)
+<use ../../imgs/fathom_x.png>
+Package pdftex.def Info: ../../imgs/fathom_x.png  used on input line 51.
+(pdftex.def)             Requested size: 68.32149pt x 51.21504pt.
+<../../imgs/fathom_tether.jpg, id=358, 1606.0pt x 1606.0pt>
+File: ../../imgs/fathom_tether.jpg Graphic file (type jpg)
+<use ../../imgs/fathom_tether.jpg>
+Package pdftex.def Info: ../../imgs/fathom_tether.jpg  used on input line 51.
+(pdftex.def)             Requested size: 51.1921pt x 51.21504pt.
+ [43
+
+ <../../imgs/fathom_x.png (PNG copy)> <../../imgs/fathom_tether.jpg>]
+<../../imgs/tether_standard_photo.jpg, id=365, 2569.6pt x 2569.6pt>
+File: ../../imgs/tether_standard_photo.jpg Graphic file (type jpg)
+<use ../../imgs/tether_standard_photo.jpg>
+Package pdftex.def Info: ../../imgs/tether_standard_photo.jpg  used on input li
+ne 100.
+(pdftex.def)             Requested size: 39.79701pt x 39.83368pt.
+<../../imgs/tether_slim_photo.jpg, id=366, 2697.07625pt x 3150.77126pt>
+File: ../../imgs/tether_slim_photo.jpg Graphic file (type jpg)
+<use ../../imgs/tether_slim_photo.jpg>
+Package pdftex.def Info: ../../imgs/tether_slim_photo.jpg  used on input line 1
+00.
+(pdftex.def)             Requested size: 34.07552pt x 39.83368pt.
+<../../imgs/slip_ring.jpg, id=367, 345.29pt x 255.95625pt>
+File: ../../imgs/slip_ring.jpg Graphic file (type jpg)
+<use ../../imgs/slip_ring.jpg>
+Package pdftex.def Info: ../../imgs/slip_ring.jpg  used on input line 100.
+(pdftex.def)             Requested size: 53.7354pt x 39.83368pt.
+<../../imgs/fathom_spool.jpg, id=368, 1384.17125pt x 1384.17125pt>
+File: ../../imgs/fathom_spool.jpg Graphic file (type jpg)
+<use ../../imgs/fathom_spool.jpg>
+Package pdftex.def Info: ../../imgs/fathom_spool.jpg  used on input line 100.
+(pdftex.def)             Requested size: 39.83368pt x 39.83368pt.
+ [44
+
+ <../../imgs/tether_standard_photo.jpg> <../../imgs/tether_slim_photo.jpg> <../
+../imgs/slip_ring.jpg> <../../imgs/fathom_spool.jpg>]
+<../../imgs/fxti_interface.jpg, id=375, 1204.5pt x 1204.5pt>
+File: ../../imgs/fxti_interface.jpg Graphic file (type jpg)
+<use ../../imgs/fxti_interface.jpg>
+Package pdftex.def Info: ../../imgs/fxti_interface.jpg  used on input line 145.
+
+(pdftex.def)             Requested size: 42.67642pt x 42.67912pt.
+<../../imgs/basestation_wifi.jpg, id=376, 1204.5pt x 1204.5pt>
+File: ../../imgs/basestation_wifi.jpg Graphic file (type jpg)
+<use ../../imgs/basestation_wifi.jpg>
+Package pdftex.def Info: ../../imgs/basestation_wifi.jpg  used on input line 14
+5.
+(pdftex.def)             Requested size: 42.67642pt x 42.67912pt.
+ [45
+
+ <../../imgs/fxti_interface.jpg> <../../imgs/basestation_wifi.jpg>]
+<../../imgs/otps_power_system.png, id=383, 1027.84pt x 398.48875pt>
+File: ../../imgs/otps_power_system.png Graphic file (type png)
+<use ../../imgs/otps_power_system.png>
+Package pdftex.def Info: ../../imgs/otps_power_system.png  used on input line 1
+85.
+(pdftex.def)             Requested size: 191.19821pt x 74.12665pt.
+ [46
+
+ <../../imgs/otps_power_system.png (PNG copy)>] [47
+
+] [48
+
+] [49
+
+]
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <8> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 313.
+ [50
+
+]
+[51
+
+] [52
+
+]
+<../../imgs/sos_leak_sensor.jpg, id=421, 2569.6pt x 2569.6pt>
+File: ../../imgs/sos_leak_sensor.jpg Graphic file (type jpg)
+<use ../../imgs/sos_leak_sensor.jpg>
+Package pdftex.def Info: ../../imgs/sos_leak_sensor.jpg  used on input line 396
+.
+(pdftex.def)             Requested size: 96.72832pt x 96.73918pt.
+ [53
+
+ <../../imgs/sos_leak_sensor.jpg>]) (04_capteurs_donnees.tex
+[54
+
+] [55
+
+]
+<../../imgs/camera_hd.jpg, id=437, 1899.095pt x 1892.06876pt>
+File: ../../imgs/camera_hd.jpg Graphic file (type jpg)
+<use ../../imgs/camera_hd.jpg>
+Package pdftex.def Info: ../../imgs/camera_hd.jpg  used on input line 72.
+(pdftex.def)             Requested size: 62.8239pt x 62.59596pt.
+<../../imgs/camera_4k.jpg, id=438, 1027.84pt x 1027.84pt>
+File: ../../imgs/camera_4k.jpg Graphic file (type jpg)
+<use ../../imgs/camera_4k.jpg>
+Package pdftex.def Info: ../../imgs/camera_4k.jpg  used on input line 72.
+(pdftex.def)             Requested size: 62.59306pt x 62.59596pt.
+ [56
+
+ <../../imgs/camera_hd.jpg> <../../imgs/camera_4k.jpg>]
+<../../imgs/lumen_light.jpg, id=444, 1027.84pt x 1027.84pt>
+File: ../../imgs/lumen_light.jpg Graphic file (type jpg)
+<use ../../imgs/lumen_light.jpg>
+Package pdftex.def Info: ../../imgs/lumen_light.jpg  used on input line 125.
+(pdftex.def)             Requested size: 62.59306pt x 62.59596pt.
+ [57
+
+ <../../imgs/lumen_light.jpg>]
+<../../imgs/ping_echosounder.jpg, id=450, 1606.0pt x 1606.0pt>
+File: ../../imgs/ping_echosounder.jpg Graphic file (type jpg)
+<use ../../imgs/ping_echosounder.jpg>
+Package pdftex.def Info: ../../imgs/ping_echosounder.jpg  used on input line 16
+0.
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+<../../imgs/ping360_sonar.jpg, id=451, 1606.0pt x 1606.0pt>
+File: ../../imgs/ping360_sonar.jpg Graphic file (type jpg)
+<use ../../imgs/ping360_sonar.jpg>
+Package pdftex.def Info: ../../imgs/ping360_sonar.jpg  used on input line 160.
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+ [58
+
+ <../../imgs/ping_echosounder.jpg> <../../imgs/ping360_sonar.jpg>]
+<../../imgs/cerulean_omniscan.jpg, id=457, 1606.0pt x 1606.0pt>
+File: ../../imgs/cerulean_omniscan.jpg Graphic file (type jpg)
+<use ../../imgs/cerulean_omniscan.jpg>
+Package pdftex.def Info: ../../imgs/cerulean_omniscan.jpg  used on input line 1
+96.
+(pdftex.def)             Requested size: 68.27248pt x 68.28644pt.
+<../../imgs/cerulean_surveyor_mbes.jpg, id=458, 1606.0pt x 1606.0pt>
+File: ../../imgs/cerulean_surveyor_mbes.jpg Graphic file (type jpg)
+<use ../../imgs/cerulean_surveyor_mbes.jpg>
+Package pdftex.def Info: ../../imgs/cerulean_surveyor_mbes.jpg  used on input l
+ine 196.
+(pdftex.def)             Requested size: 68.27248pt x 68.28644pt.
+ [59
+
+ <../../imgs/cerulean_omniscan.jpg> <../../imgs/cerulean_surveyor_mbes.jpg>]
+File: ../../imgs/dvl_a50.jpg Graphic file (type jpg)
+<use ../../imgs/dvl_a50.jpg>
+Package pdftex.def Info: ../../imgs/dvl_a50.jpg  used on input line 248.
+(pdftex.def)             Requested size: 65.42982pt x 65.44142pt.
+
+Overfull \vbox (29.63853pt too high) detected at line 248
+ []
+
+[60
+
+] [61
+
+]
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 316.
+
+ [62
+
+] [63
+
+] [64
+
+]) (05_synthese_discussion.tex [65
+
+]
+File: ../../imgs/bluerov2.jpg Graphic file (type jpg)
+<use ../../imgs/bluerov2.jpg>
+Package pdftex.def Info: ../../imgs/bluerov2.jpg  used on input line 39.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+File: ../../imgs/newton_gripper.jpg Graphic file (type jpg)
+<use ../../imgs/newton_gripper.jpg>
+Package pdftex.def Info: ../../imgs/newton_gripper.jpg  used on input line 39.
+(pdftex.def)             Requested size: 48.34946pt x 48.36958pt.
+ [66
+
+]
+File: ../../imgs/blueboat.jpg Graphic file (type jpg)
+<use ../../imgs/blueboat.jpg>
+Package pdftex.def Info: ../../imgs/blueboat.jpg  used on input line 70.
+(pdftex.def)             Requested size: 56.90189pt x 56.9055pt.
+File: ../../imgs/cerulean_surveyor_mbes.jpg Graphic file (type jpg)
+<use ../../imgs/cerulean_surveyor_mbes.jpg>
+Package pdftex.def Info: ../../imgs/cerulean_surveyor_mbes.jpg  used on input l
+ine 70.
+(pdftex.def)             Requested size: 48.34946pt x 48.36958pt.
+ [67
+
+]
+File: ../../imgs/seaber_yuco.jpg Graphic file (type jpg)
+<use ../../imgs/seaber_yuco.jpg>
+Package pdftex.def Info: ../../imgs/seaber_yuco.jpg  used on input line 102.
+(pdftex.def)             Requested size: 72.01888pt x 54.06006pt.
+File: ../../imgs/dvl_a50.jpg Graphic file (type jpg)
+<use ../../imgs/dvl_a50.jpg>
+Package pdftex.def Info: ../../imgs/dvl_a50.jpg  used on input line 102.
+(pdftex.def)             Requested size: 42.66417pt x 42.67912pt.
+ [68
+
+]
+File: ../../imgs/blueboat.jpg Graphic file (type jpg)
+<use ../../imgs/blueboat.jpg>
+Package pdftex.def Info: ../../imgs/blueboat.jpg  used on input line 134.
+(pdftex.def)             Requested size: 51.1921pt x 51.21504pt.
+File: ../../imgs/bluerov2.jpg Graphic file (type jpg)
+<use ../../imgs/bluerov2.jpg>
+Package pdftex.def Info: ../../imgs/bluerov2.jpg  used on input line 134.
+(pdftex.def)             Requested size: 51.1921pt x 51.21504pt.
+
+Overfull \vbox (7.02475pt too high) detected at line 134
+ []
+
+[69
+
+] [70
+
+] [71
+
+] [72
+
+])
+LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <7> not available
+(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 48.
+ [73
+
+]
+\tf@nav=\write6
+\openout6 = `main.nav'.
+
+\tf@toc=\write7
+\openout7 = `main.toc'.
+
+\tf@snm=\write8
+\openout8 = `main.snm'.
+
+ (main.aux)
+ ***********
+LaTeX2e <2026-06-01>
+L3 programming layer <2026-08-10>
+ ***********
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 81A43AF5A5B264ECE60C8A9479D44D23;2153.
+ ) 
+Here is how much of TeX's memory you used:
+ 34718 strings out of 467441
+ 701606 string characters out of 5417670
+ 13083066 words of memory out of 24000000
+ 62847 multiletter control sequences out of 15000+600000
+ 772474 words of font info for 293 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 128i,16n,123p,1887b,1117s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/lm/lmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmmi5.pfb><C:
+/Program Files/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/
+lmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/Program Files/MiKTeX/fonts/t
+ype1/public/lm/lmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmss9.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmssbo10.pfb><C:/Program File
+s/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type
+1/public/lm/lmsso10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsso8.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsso9.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/lm/lmsy5.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmsy6.pfb><C:/
+Program Files/MiKTeX/fonts/type1/public/lm/lmsy7.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/l
+msy9.pfb><C:/Program Files/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/symbols/msbm5.pfb>
+Output written on main.pdf (73 pages, 7812900 bytes).
+PDF statistics:
+ 697 PDF objects out of 1000 (max. 8388607)
+ 153 named destinations out of 1000 (max. 500000)
+ 103837 words of extra memory for PDF output out of 106986 (max. 10000000)
+

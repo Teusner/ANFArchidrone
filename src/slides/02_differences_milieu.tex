@@ -1,0 +1,609 @@
+% ==============================================================================
+% 02_differences_milieu.tex - Module 2 (10h30 - 12h00)
+% Présentation d'un drone sous-marin : différences avec le drone aérien
+% Fabrication réelle : Enceintes 3"/4", Pénétrateurs WetLink, Connecteurs Cobalt & SubConn, Test de vide, BlueBoat, DVL-A50
+% ==============================================================================
+
+\section{Module 2 : Ruptures Physiques, Fabrication \& Navigation Aveugle}
+
+\begin{frame}{2.1 Deux Mondes Physiques Opposés}
+  \begin{table}[h]
+    \centering
+    \small
+    \begin{tabularx}{\textwidth}{l X X}
+      \toprule
+      \textbf{Caractéristique} & \textbf{Milieu Aérien (UAV)} & \textbf{Milieu Marin (AUV / ROV)} \\
+      \midrule
+      \textbf{Masse volumique $\rho$} & $\approx 1.2\,\text{kg/m}^3$ & $\approx 1025\,\text{kg/m}^3$ \alertw{($\times 850$)} \\
+      \textbf{Génération de force} & Portance aérodynamique ($v^2$) & Poussée d'Archimède statique \\
+      \textbf{Stabilité naturelle} & Instable actif (quadrotor) & \succw{Stabilité statique passive ($B$ sur $G$)} \\
+      \textbf{Pression ambiante} & $\approx 1\,\text{bar}$ (décroît) & $+1\,\text{bar}$ tous les $10\,\text{m}$ \\
+      \textbf{Ondes radio / GNSS} & Propagation libre (GPS, 4G, WiFi) & \alertw{Absorption totale en qqs cm} \\
+      \textbf{Visibilité / Optique} & Kilométrique & Métrique ($1\text{--}15\,\text{m}$), turbidité \\
+      \textbf{Agression chimique} & Faible & Corrosion saline, conductivité \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}{2.2 Hydrostatique : Flottabilité et Stabilité Passive}
+  \begin{columns}[c]
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.95]
+          % Corps de drone sous-marin
+          \draw[thick, fill=OceanMedium!10, rounded corners=12pt] (-1.8,-1.8) rectangle (1.8,1.8);
+          
+          % Centre de carène B (haut)
+          \coordinate (B) at (0, 0.9);
+          \fill[OceanCyan] (B) circle (4pt);
+          \draw[->, line width=2pt, OceanCyan] (B) -- (0, 2.3) node[above] {Poussée d'Archimède $\vec{F}_B$};
+          \node[right=5pt of B] {\textbf{Centre de Carène $B$}};
+
+          % Centre de gravité G (bas)
+          \coordinate (G) at (0, -0.9);
+          \fill[OceanDeep] (G) circle (4pt);
+          \draw[->, line width=2pt, OceanCoral] (G) -- (0, -2.3) node[below] {Poids $\vec{P} = m\vec{g}$};
+          \node[right=5pt of G] {\textbf{Centre de Gravité $G$}};
+
+          % Bras de levier BG
+          \draw[<->, thick, dashed] (-0.3,-0.85) -- (-0.3,0.85) node[midway, left] {$\overline{BG} > 0$};
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      \textbf{Règle d'or de l'ingénierie sous-marine} :
+      \begin{itemize}
+        \item Placer les masses lourdes (batteries, caisson bas) \textbf{en bas}.
+        \item Placer les mousses flottantes (mousse syntactique PEHD) \textbf{en haut}.
+        \item Couple de rappel hydrostatique :
+        \[
+          C_{\text{rappel}} = m \cdot g \cdot \overline{BG} \cdot \sin(\theta)
+        \]
+        \item Le drone est \tech{naturellement auto-redressant} en roulis ($\phi$) et tangage ($\theta$). Zéro énergie de propulsion dépensée pour rester horizontal !
+      \end{itemize}
+
+      \vspace{0.4em}
+      \begin{block}{Flottabilité Positive de Sécurité}
+        Lestage réglé pour $+200$ à $+500\,\text{g}$ nets : en cas de coupure de batterie, le robot \succw{remonte seul en surface}.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.3 Conception Réelle des Caissons Étanches (Modulaire 2" à 8")}
+  \begin{columns}[c]
+    \begin{column}{0.56\textwidth}
+      \begin{block}{\tech{Gamme de Diamètres (2" à 8") \& Matériaux}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Diamètres modulaires} : du \textbf{2"} (capteurs/éclairages), \textbf{3"} (batteries) et \textbf{4"} (électronique) jusqu'au \textbf{6"} et \textbf{8"} (gros payloads / AUV / baies de puissance).
+          \item \textbf{Acrylique (PMMA)} : transparent, vue caméra \& voyants ($100\text{--}150\,\text{m}$).
+          \item \textbf{Alu 6061-T6 anodisé dur} : certifié \succw{$\mathbf{400\text{--}500\,\text{m}}$}, dissipation thermique active des ESC / processeurs.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\succw{Flasques, Bouchons \& Verrouillage}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Types d'embouts} : dômes optiques hémisphériques (caméras), flasques plates alu/acrylique (aveugles ou pré-percées 4 à 18 trous M10/M14).
+          \item \textbf{Systèmes de fermetures} : cordon de verrouillage (*Locking Cord*) sans vis traversantes ou brides boulonnées.
+          \item \textbf{Étanchéité} : double joint torique (*O-ring* radial + facial).
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth, height=3.6cm, keepaspectratio]{watertight_enclosure.jpg}\\
+        \vspace{0.2em}
+        \footnotesize\textbf{Caisson Étanche Modulaire (ex. 4")}\\
+        \scriptsize\textit{Tube alu/acrylique, flasques O-ring, locking cord \& dôme optique}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.4 Franchissement de Paroi : WetLink Standard vs Nouveau JPT}
+  \begin{columns}[c]
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[height=2.0cm, keepaspectratio]{wetlink_penetrator.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=2.0cm, keepaspectratio]{wetlink_jpt.jpg}\\
+        \vspace{0.2em}
+        \tech{WetLink Standard} \hspace{0.4cm} \succw{Nouveau WetLink JPT}\\
+        \tiny\textit{Dénudage gaine requis ($950\,\text{m}$)} \hspace{0.2cm} \textit{Jacket Pass-Through ($100\,\text{m}$)}
+      \end{center}
+      \scriptsize
+      \begin{block}{Fin du Potting Époxy}
+        L'ancienne coulée de résine époxy prenait 24h et était irréversible. WetLink s'installe en \succw{30 secondes} et reste 100\% réutilisable.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.56\textwidth}
+      \textbf{Deux philosophies selon le type de câble} :
+      \scriptsize
+      \begin{block}{\tech{1. WetLink Penetrator Standard (WLP)}}
+        \begin{itemize}
+          \item Principe : compression conique du joint élastomère \alertw{directement sur les isolants individuels}.
+          \item \textbf{Condition} : nécessite de \alertw{dénuder la gaine extérieure} du câble sur environ $15\,\text{mm}$.
+          \item Performance : certifié haute pression jusqu'à \textbf{$950\,\text{m}$}.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\succw{2. Nouveau WetLink JPT (Jacket Pass-Through)}}
+        \begin{itemize}
+          \item \succw{Zéro préparation de câble, zéro dénudage !}
+          \item Le câble complet traverse avec sa gaine protectrice.
+          \item Le joint élastomère comprime directement le diamètre extérieur de la gaine ($4.5$, $5.5$ ou $6.5\,\text{mm}$).
+          \item \textbf{Indispensable} pour les câbles coaxiaux d'antenne, câbles blindés et câbles capteurs dont la gaine assure l'intégrité structurelle. Certifié à \textbf{$100\,\text{m}$}.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.5 Pénétrateurs vs Connecteurs : Maintenance \& Modularité}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\alertw{Cas Concret : Moteur Défaillant en Manip}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Avec Pénétrateur Fixe (WetLink / Époxy)} :
+            \begin{enumerate}\tiny
+              \item Rinçage \& séchage intégral extérieur.
+              \item Ouvrir le caisson, extraire le tiroir électronique.
+              \item Dessouder/dévisser les 3 phases moteur.
+              \item Dévisser le contre-écrou interne M10.
+              \item Câbler le rechange, refermer, \alertw{refaire 15 min de vide}.
+            \end{enumerate}
+            $\rightarrow$ \textbf{1h30 d'arrêt}, impossible sur semi-rigide !
+          \item \textbf{Avec Connecteur Étanchéifié Externe} :
+            \begin{itemize}\tiny
+              \item Dévisser la bague, débrancher le moteur en panne.
+              \item Brancher le moteur de rechange, revisser la bague.
+              \item \succw{2 minutes chrono sans ouvrir le caisson !}
+              \item Vide intact, zéro risque d'embruns salés.
+            \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\succw{Modularité "À la Volée" des Capteurs}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Ports Auxiliaires Banalisés} :
+            \begin{itemize}\tiny
+              \item Embases traversée de coque pré-câblées (série, I2C, CAN, Ethernet, 12V/24V).
+              \item Port libre = scellé par un bouchon étanche (*dummy plug*).
+            \end{itemize}
+          \item \textbf{Flexibilité selon la mission du jour} :
+            \begin{itemize}\tiny
+              \item \textit{Matin (bathymétrie)} : échosondeur Ping / MBES.
+              \item \textit{Après-midi (physico-chimie)} : sonde CTD / fluorimètre.
+              \item \textit{Soir (prélèvements)} : pince Newton / phares Lumen.
+            \end{itemize}
+          \item Véhiculent signaux blindés ET forte puissance ($10\text{--}20\,\text{A}$).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.6 Standards de Connectique : Blue Trail Cobalt \& SubConn}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.7cm, keepaspectratio]{bluetrail_cobalt.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=1.7cm, keepaspectratio]{bluetrail_cobalt_pair.png}\\
+        \vspace{0.2em}
+        \tech{Blue Trail Engineering --- Série Cobalt}\\
+        \tiny\textit{Embase M10 compacte, PEEK / Inox 316, 600 m (60 bar)}
+      \end{center}
+      \scriptsize
+      \begin{itemize}
+        \item \textbf{Compatibilité native BlueRobotics} : filetage \textbf{M10} (Cobalt 10), remplace directement un WetLink sans usinage !
+        \item Coque inox 316L, inserts PEEK rigides, contacts or.
+        \item 3 à 8 pins (M10) et jusqu'à 12 pins / Ethernet (Cobalt 14, M14).
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.7cm, keepaspectratio]{subconn_micro_circular.jpg}\\
+        \vspace{0.2em}
+        \tech{SubConn (MacArtney) --- Micro Circular}\\
+        \tiny\textit{Standard mondial offshore \& océanographie, néoprène}
+      \end{center}
+      \scriptsize
+      \begin{itemize}
+        \item \textbf{Standard historique de l'industrie} : éprouvé depuis plus de 40 ans (Ifremer, navires océanographiques).
+        \item Corps surmoulé néoprène souple, bague de verrouillage (*locking sleeve*), haute résistance mécanique.
+        \item 2 à 21 contacts, haute tension ($600\,\text{V}$, $10\text{--}15\,\text{A}$).
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.6b Typologie Opérationnelle : Connectique Dry-Mate vs Wet-Mate}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\succw{1. Connecteurs Dry-Mate (Standard Drone)}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Principe} : accouplement et verrouillage effectués \textbf{au sec obligatoirement} sur le pont avant immersion.
+          \item Enduction d'un très léger film de graisse silicone sur les fiches.
+          \item Étanchéité parfaite jusqu'à 600--2000 m une fois verrouillé.
+          \item \succw{Économique, ultra-fiable} et parfaitement adapté aux ROVs/AUVs de laboratoire (Cobalt, SubConn).
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+      \begin{alertblock}{2. Connecteurs Wet-Mate (Haute Technicité)}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Principe} : connectable et déconnectable \textbf{directement sous l'eau} en pleine immersion.
+          \item Bain d'huile diélectrique interne et membranes racleuses chassant l'eau de mer salée lors de l'enfichage.
+          \item \alertw{Extrêmement onéreux} ($>3\,000$ à $8\,000$ € par connecteur).
+          \item Réservé aux observatoires fond de mer câblés (EMSO, KM3NeT) et stations d'accueil AUV sous-marines.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.7 Validation Pré-Vol : Le Test de Vide Terrain (Vacuum Test)}
+  \begin{alertblock}{La règle d'or absolue avant chaque mise à l'eau}
+    Ne jamais immerger un caisson sans avoir validé son étanchéité par dépression.
+  \end{alertblock}
+
+  \begin{columns}[c]
+    \begin{column}{0.55\textwidth}
+      \textbf{Procédure opératoire de terrain} :
+      \begin{enumerate}
+        \item Visser un \tech{bouchon d'évent avec raccord rapide (*Vent Plug*)} sur l'un des trous M10 du caisson.
+        \item Raccorder une pompe manuelle à dépression équipée d'un manomètre de précision.
+        \item Pomper pour descendre la pression interne à \succw{$\mathbf{-0.5\,\text{bar}}$ (50 kPa sous le vide relatif)}.
+        \item Patienter \textbf{15 minutes} en surveillant l'aiguille.
+        \item Si la pression remonte (même de 0.02 bar) : \alertw{fuite détectée !} Ne pas plonger.
+      \end{enumerate}
+    \end{column}
+
+    \begin{column}{0.45\textwidth}
+      \begin{block}{Causes typiques de fuite}
+        \begin{itemize}
+          \item Un cheveu ou un grain de sable sur le joint torique.
+          \item Excès de graisse silicone ayant piégé une impureté.
+          \item Pénétrateur WetLink ou embase connecteur mal serrée sur la flasque.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.8 Conception d'un Vecteur de Surface : Le BlueBoat (ASV)}
+  \begin{columns}[c]
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{blueboat.jpg}\\
+        \vspace{0.2em}
+        \small\textbf{BlueBoat} (BlueRobotics)\\
+        \scriptsize\textit{Catamaran PEHD rotomoulé, 2x T200, baie centrale d'instruments}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.56\textwidth}
+      \textbf{Architecture \& Caractéristiques} :
+      \scriptsize
+      \begin{itemize}
+        \item \textbf{Coque catamaran} en polyéthylène rotomoulé : quasi-insensible aux impacts contre roches et quais.
+        \item Tirant d'eau très faible ($\approx 15\,\text{cm}$) pour lagunes, estuaires et rivières.
+        \item \textbf{Propulsion différentielle (*skid-steering*)} : 2 propulseurs T200 avec grilles anti-algues.
+        \item \textbf{Baie centrale ouverte} : barres profilées pour fixer ADCP, échosondeurs, sondes CTD.
+        \item Bras démontables sans outil pour transport en break de labo.
+      \end{itemize}
+
+      \vspace{0.3em}
+      \begin{block}{Atouts pour la Recherche}
+        \scriptsize
+        \begin{itemize}
+          \item Autonomie : jusqu'à \textbf{8 à 10 heures} de levé continu ($14.8\,\text{V}$ $30\text{Ah}$).
+          \item \succw{GNSS RTK permanent} : liaison Centipede pour précision centimétrique.
+          \item Télémesure WiFi longue portée ($>1\,\text{km}$) ou lien 4G.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.9 Le Défi de la Localisation : Disparition du GNSS \& Fix Surface}
+  \begin{alertblock}{La rupture physique fondamentale sous la surface}
+    L'eau salée absorbe les ondes électromagnétiques GNSS ($1.5\,\text{GHz}$) en quelques millimètres ($\delta \approx 6\,\text{mm}$).
+  \end{alertblock}
+
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\tech{1. Le Fix GNSS Initial en Surface ($t_0$)}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Dernier point absolu} : acquis en surface avant immersion (coordonnées $(X_0, Y_0, Z_0)$, recalage de l'horloge système et cap initial).
+          \item Dès l'immersion : perte totale du signal satellite $\rightarrow$ le robot bascule en mode aveugle.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\alertw{2. Le Dead Reckoning (Navigation à l'Estime)}}
+        \scriptsize
+        \begin{itemize}
+          \item Reconstruction de la trajectoire par intégration temporelle continue depuis le point initial :
+          \[
+            \vec{x}(t) = \vec{x}_0 + \int_{t_0}^t \vec{v}(\tau) \, d\tau
+          \]
+          \item L'erreur s'accumule sans jamais se corriger seule !
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.5\textwidth}
+      \begin{block}{\succw{3. L'Axe Vertical $Z$ : Le Seul Axe Privilégié}}
+        \scriptsize
+        \begin{itemize}
+          \item Grâce au capteur de pression hydrostatique (\tech{Bar30}) :
+          \[
+            z = \frac{\Delta P}{\rho \cdot g}
+          \]
+          \item L'altitude / immersion $z(t)$ est \textbf{parfaitement connue et bornée} (résolution millimétrique, zéro dérive temporelle).
+          \item \alertw{Tout le problème de la localisation se concentre donc sur le plan horizontal $(X, Y)$}.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.10 L'Estime Inertielle (IMU) \& la Dérive Quadratique}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\tech{1. Gyromètres (Cap $\theta$)}}
+        \scriptsize
+        \begin{itemize}
+          \item Integration de la vitesse angulaire :
+          $\theta(t) = \theta_0 + \int_{t_0}^t \omega(\tau) d\tau$
+          \item Tout biais $\epsilon_\omega$ engendre une \alertw{dérive angulaire linéaire} :
+          $\Delta \theta(t) \propto \epsilon_\omega \cdot t$
+          \item Le robot tourne virtuellement par rapport au monde réel.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+      \begin{alertblock}{2. Accéléromètres (Position $\vec{x}$)}
+        \scriptsize
+        \begin{itemize}
+          \item Double intégration de l'accélération :
+          $\vec{v}(t) = \int \vec{a} dt \implies \vec{x}(t) = \iint \vec{a} dt^2$
+          \item Tout biais $\epsilon_a$ génère une \alertw{dérive quadratique} :
+          $\Delta x(t) = \frac{1}{2} \epsilon_a \cdot t^2$
+          \item Biais de $10\,\text{mg} \implies$ erreur \alertw{$>1.7\,\text{km}$ en 10 min} !
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.2em}
+  \begin{block}{\succw{Conclusion Opérationnelle}}
+    \scriptsize
+    Une centrale inertielle MEMS seule (Navigator / Pixhawk) est \textbf{incapable} de localiser un robot sous-marin plus de quelques dizaines de secondes sans recalage externe ou odométrie DVL.
+  \end{block}
+\end{frame}
+
+\begin{frame}{2.11 L'Apport Crucial du DVL : Odométrie Doppler Fond}
+  \begin{columns}[c]
+    \begin{column}{0.55\textwidth}
+      \begin{block}{\tech{Principe du Doppler Velocity Log (DVL)}}
+        \scriptsize
+        \begin{itemize}
+          \item Émission de 4 faisceaux acoustiques inclinés (configuration Janus) vers le fond marin ($1\,\text{MHz}$).
+          \item Mesure du décalage en fréquence Doppler sur l'écho de fond :
+          \[
+            \Delta f = 2 f_0 \frac{v}{c} \cos\theta
+          \]
+          \item Restitue directement la \succw{vitesse sol 3D réelle} $\vec{v}_{\text{sol}} = (v_x, v_y, v_z)$ avec une précision millimétrique ($<0.1\,\text{cm/s}$).
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\succw{Passage d'une Dérive en $t^2$ à une Dérive Linéaire en Distance}}
+        \scriptsize
+        \begin{itemize}
+          \item L'intégration simple de la vitesse $\vec{x}(t) = \int \vec{v}_{\text{sol}} dt$ réduit la dérive à \succw{$\mathbf{0.1\%}$ à $\mathbf{0.5\%}$ de la distance parcourue} (1 à 5 m par km).
+          \item Active le mode stationnaire \textbf{Position Hold} face au courant.
+          \item \alertw{Limite} : portée fond ($<50\,\text{m}$) et sensibilité à la dérive lente de cap (effet compas).
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.43\textwidth}
+      \begin{center}
+        \includegraphics[height=2.3cm, keepaspectratio]{dvl_a50.jpg}\\
+        \vspace{0.1em}
+        \footnotesize\textbf{Water Linked DVL-A50}\\
+        \scriptsize\textit{4 faisceaux Janus 1 MHz, 270 g dans l'eau}
+      \end{center}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.68]
+          \draw[thick, fill=OceanMedium!20, rounded corners] (-1.8, 0.7) rectangle (1.8, 1.15);
+          \node at (0, 0.92) {\tiny Châssis Sous-Marin};
+          \draw[thick, fill=black!80] (-0.7, 0.25) rectangle (0.7, 0.7);
+          \node[white] at (0, 0.48) {\tiny DVL};
+          \draw[->, line width=1.1pt, OceanCyan] (-0.5, 0.25) -- (-1.4, -0.75);
+          \draw[->, line width=1.1pt, OceanCyan] (0.5, 0.25) -- (1.4, -0.75);
+          \draw[->, line width=1.1pt, OceanMedium] (-0.2, 0.25) -- (-0.5, -0.75);
+          \draw[->, line width=1.1pt, OceanMedium] (0.2, 0.25) -- (0.5, -0.75);
+          \draw[thick, fill=brown!30] (-2, -0.75) rectangle (2, -0.98);
+          \node at (0, -0.86) {\tiny Fond marin (Bottom-Track)};
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.12 Positionnement Acoustique Absolu : LBL vs USBL}
+  \begin{table}[h]
+    \centering
+    \scriptsize
+    \begin{tabularx}{\textwidth}{p{2.3cm} X X}
+      \toprule
+      \textbf{Critère} & \textbf{LBL (Long BaseLine)} & \textbf{USBL (Ultra-Short BaseLine)} \\
+      \midrule
+      \textbf{Principe géométrique} & Réseau de 3 à 4 balises transpondeuses ancrées et calibrées au fond marin autour de la zone & Antenne unique sous la coque / perche surface (matrice d'hydrophones espacés de quelques centimètres) \\
+      \textbf{Méthode de calcul} & Triangulation / multilatération par temps de vol (ToF) aller-retour avec chaque balise & Distance par temps de vol (ToF) + \textbf{Gisement \& Site par déphasage} d'onde inter-éléments \\
+      \textbf{Précision} & \succw{Centimétrique à décimétrique ($\pm 0.1\,\text{m}$)}, \textbf{indépendante de la profondeur} & Relative à la portée (\alertw{$0.2\%\text{--}1\%$ de la distance oblique}, ex: $\pm 1\,\text{m}$ à $100\,\text{m}$, $\pm 5\,\text{m}$ à $500\,\text{m}$) \\
+      \textbf{Logistique \& Déploiement} & \alertw{Très lourde} : mouillage balises, calibration bathymétrique/GNSS par bateau, récupération en fin de manip & \succw{Ultra-légère} : perche sur semi-rigide ou ASV BlueBoat, zéro matériel au fond, suit le navire \\
+      \textbf{Zone d'évolution} & Limitée au périmètre balisé ($1\text{--}2\,\text{km}^2$) & Mobile, suit le bateau support sans limite de zone \\
+      \textbf{Sensibilité attitude} & Insensible aux mouvements de surface & \alertw{Critique} : nécessite une centrale d'attitude (MRU/IMU) en surface pour compenser roulis/tangage \\
+      \bottomrule
+    \end{tabularx}
+  \end{table}
+\end{frame}
+
+\begin{frame}{2.12b Matériel Acoustique Réel : Balises LBL \& Transceivers USBL}
+  \begin{columns}[c]
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.8cm, keepaspectratio]{lbl_nano_transponder.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=1.8cm, keepaspectratio]{lbl_nano_beacon.jpg}\\
+        \vspace{0.2em}
+        \tech{Balise Transpondeuse LBL \& Ancrage}\\
+        \tiny\textit{Réseau de fond fixe $\cdot$ Triangulation ToF centimétrique}
+      \end{center}
+      \scriptsize
+      \begin{block}{Fonctionnement LBL Réel}
+        Balise autonome sur batterie immergée au fond. Répond par un ping codé lorsqu'elle est interrogée par le robot.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.8cm, keepaspectratio]{seatrac_usbl_photo.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=1.8cm, keepaspectratio]{waterlinked_ugps.jpg}\\
+        \vspace{0.2em}
+        \succw{Antenne USBL Surface \& Transpondeur ROV}\\
+        \tiny\textit{Systèmes SeaTrac X150 / Water Linked UGPS $\cdot$ Perche de surface}
+      \end{center}
+      \scriptsize
+      \begin{block}{Fonctionnement USBL Réel}
+        Matrice multi-hydrophones de surface mesurant les micro-déphasages d'angle d'arrivée ($\theta, \phi$) + temps de vol.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.13 Démocratisation USBL \& Télémétrie Acoustique ($\approx 5\,000$ €)}
+  \begin{columns}[c]
+    \begin{column}{0.54\textwidth}
+      \textbf{La rupture des USBL low-cost} :
+      \scriptsize
+      \begin{itemize}
+        \item Autrefois réservé aux grands navires offshore ($>50\text{--}100\,\text{k€}$).
+        \item Arrivée de systèmes accessibles aux laboratoires de recherche (\tech{Water Linked Underwater GPS G2 / A1 / Locator}, $\approx \mathbf{5\,000\text{--}8\,000\,\text{€}}$).
+        \item S'installe en 10 minutes sur un semi-rigide ou un drone de surface ASV (\tech{BlueBoat}).
+      \end{itemize}
+
+      \vspace{0.2em}
+      \begin{block}{\succw{Double Rôle : Localisation ET Modem Télémétrique}}
+        \scriptsize
+        \begin{itemize}
+          \item Les pings acoustiques transportent à la fois le signal de positionnement et des \textbf{paquets de données numériques modulées} (chirp / FSK / PSK).
+          \item \textbf{Débit modeste mais précieux} : de quelques dizaines d'octets à \textbf{quelques kbps}.
+          \item \textbf{Applications concrètes sans fil} :
+            \begin{itemize}\scriptsize
+              \item Remontée de l'état vital (profondeur Bar30, tension batterie, alarmes de fuite SOS).
+              \item Envoi d'ordres simples (consignes de waypoints, arrêt d'urgence).
+              \item Injection de la position absolue de surface dans l'autopilote de l'AUV pour son filtre de Kalman !
+            \end{itemize}
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.44\textwidth}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.78, every node/.style={transform shape}]
+          % Surface vessel
+          \draw[thick, fill=OceanMedium!30] (-2,1.2) -- (2,1.2) -- (1.5,0.7) -- (-1.5,0.7) -- cycle;
+          \node at (0,0.95) {\textbf{Bateau / ASV BlueBoat}};
+          \node[above] at (0,1.2) {\tiny Antenne GNSS RTK};
+          
+          % USBL Transceiver
+          \draw[line width=1.5pt, black] (0,0.7) -- (0,0.1);
+          \fill[OceanCoral] (0,0.1) circle (4pt);
+          \node[right=4pt] at (0,0.1) {\tiny\textbf{Antenne USBL (Surface)}};
+          
+          % Sea surface
+          \draw[dashed, OceanCyan, thick] (-2.5,0.7) -- (2.5,0.7);
+          \node[OceanCyan, left] at (-2.5,0.7) {\tiny Surface};
+          
+          % Acoustic waves
+          \draw[->, line width=1.2pt, OceanCyan, dashed] (0,0.1) -- (-1.2,-2.2) node[midway, left] {\tiny Pings + Télémesure};
+          \draw[<-, line width=1.2pt, OceanGreen] (0,0.1) -- (-1.0,-2.1) node[midway, right=6pt] {\tiny Données (kB/s)};
+          
+          % Underwater robot
+          \draw[thick, fill=OceanDeep!20, rounded corners] (-1.8,-2.6) rectangle (-0.6,-2.1);
+          \node at (-1.2,-2.35) {\textbf{AUV / ROV}};
+          \fill[OceanCoral] (-1.2,-2.1) circle (3pt);
+          \node[below] at (-1.2,-2.6) {\tiny\textbf{Transpondeur / Modem}};
+          
+          % Sea bottom
+          \draw[thick, fill=brown!20] (-2.5,-2.9) rectangle (2.5,-3.2);
+          \node at (0,-3.05) {\tiny Fond marin};
+        \end{tikzpicture}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.14 Propagation Acoustique \& Pièges de Terrain}
+  \begin{columns}[T]
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\tech{1. Célérité $c(z)$ \& Réfraction (Loi de Snell)}}
+        \scriptsize
+        \begin{itemize}
+          \item La célérité $c(S,T,P) \approx 1450\text{--}1540\,\text{m/s}$ varie selon la thermocline et la pycnocline.
+          \item Réfraction : les rayons acoustiques se courbent systématiquement vers les couches où le son est plus lent ($\frac{\cos\theta}{c} = \text{cte}$).
+          \item \alertw{Création de zones d'ombre} (zones de silence où aucun ping ne passe) et erreurs de distance si $c(z)$ n'est pas mesuré par sonde CTD/SVP.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\alertw{2. Multi-trajets (*Multipath*)}}
+        \scriptsize
+        \begin{itemize}
+          \item Réflexions parasites sur l'interface air-eau et sur le fond marin.
+          \item Arrivée d'échos multiples déphasés qui brouillent le signal direct : critique par \textbf{petits fonds ($<15\,\text{m}$)}, bassins et zones portuaires.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.49\textwidth}
+      \begin{block}{\alertw{3. Masquages Géométriques}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Relief sous-marin} : dômes rocheux, canyons, surplombs, épaves et piliers de quai qui coupent la ligne de visée acoustique (*Line-of-Sight*).
+          \item \textbf{Vecteur porteur} : masquage par la coque du bateau ou l'ombilical.
+        \end{itemize}
+      \end{block}
+
+      \begin{block}{\succw{4. Bruits Ambiants \& Atténuation}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Aération de surface (*wake aeration*)} : bulles d'air sous la coque formant un écran opaque aux ondes sonores.
+          \item \textbf{Cavitation \& moteurs} : bruit des hélices à forte poussée couvrant les signaux de faible amplitude.
+          \item \textbf{Atténuation avec la fréquence} : haute fréquence ($>100\,\text{kHz}$) = portée courte ($<100\,\text{m}$).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
