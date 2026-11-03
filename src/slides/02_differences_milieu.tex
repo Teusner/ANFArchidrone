@@ -28,43 +28,46 @@
 
 \begin{frame}{2.2 Hydrostatique : Flottabilité et Stabilité Passive}
   \begin{columns}[c]
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.44\textwidth}
       \begin{center}
-        \begin{tikzpicture}[scale=0.95]
+        \begin{tikzpicture}[scale=0.82]
           % Corps de drone sous-marin
-          \draw[thick, fill=OceanMedium!10, rounded corners=12pt] (-1.8,-1.8) rectangle (1.8,1.8);
+          \draw[thick, fill=OceanMedium!10, rounded corners=10pt] (-1.5,-1.3) rectangle (1.5,1.3);
           
           % Centre de carène B (haut)
-          \coordinate (B) at (0, 0.9);
-          \fill[OceanCyan] (B) circle (4pt);
-          \draw[->, line width=2pt, OceanCyan] (B) -- (0, 2.3) node[above] {Poussée d'Archimède $\vec{F}_B$};
-          \node[right=5pt of B] {\textbf{Centre de Carène $B$}};
+          \coordinate (B) at (0, 0.65);
+          \fill[OceanCyan] (B) circle (3.5pt);
+          \draw[->, line width=1.8pt, OceanCyan] (B) -- (0, 1.85) node[above] {\small Poussée d'Archimède $\vec{F}_B$};
+          \node[right=3pt of B] {\footnotesize \textbf{Centre de Carène $B$}};
 
           % Centre de gravité G (bas)
-          \coordinate (G) at (0, -0.9);
-          \fill[OceanDeep] (G) circle (4pt);
-          \draw[->, line width=2pt, OceanCoral] (G) -- (0, -2.3) node[below] {Poids $\vec{P} = m\vec{g}$};
-          \node[right=5pt of G] {\textbf{Centre de Gravité $G$}};
+          \coordinate (G) at (0, -0.65);
+          \fill[OceanDeep] (G) circle (3.5pt);
+          \draw[->, line width=1.8pt, OceanCoral] (G) -- (0, -1.85) node[below] {\small Poids $\vec{P} = m\vec{g}$};
+          \node[right=3pt of G] {\footnotesize \textbf{Centre de Gravité $G$}};
 
           % Bras de levier BG
-          \draw[<->, thick, dashed] (-0.3,-0.85) -- (-0.3,0.85) node[midway, left] {$\overline{BG} > 0$};
+          \draw[<->, thick, dashed] (-0.3,-0.6) -- (-0.3,0.6) node[midway, left] {\small $\overline{BG} > 0$};
         \end{tikzpicture}
       \end{center}
     \end{column}
 
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.54\textwidth}
+      \small
       \textbf{Règle d'or de l'ingénierie sous-marine} :
-      \begin{itemize}
-        \item Placer les masses lourdes (batteries, caisson bas) \textbf{en bas}.
-        \item Placer les mousses flottantes (mousse syntactique PEHD) \textbf{en haut}.
+      \begin{itemize}\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}
+        \item Masses lourdes (batteries, caisson bas) \textbf{en bas}.
+        \item Mousses flottantes (PEHD / syntactique) \textbf{en haut}.
         \item Couple de rappel hydrostatique :
-        \[
+        \begin{equation*}
+          \setlength{\abovedisplayskip}{2pt}
+          \setlength{\belowdisplayskip}{2pt}
           C_{\text{rappel}} = m \cdot g \cdot \overline{BG} \cdot \sin(\theta)
-        \]
-        \item Le drone est \tech{naturellement auto-redressant} en roulis ($\phi$) et tangage ($\theta$). Zéro énergie de propulsion dépensée pour rester horizontal !
+        \end{equation*}
+        \item Drone \tech{auto-redressant} en roulis ($\phi$) et tangage ($\theta$) : zéro énergie dépensée pour rester horizontal !
       \end{itemize}
 
-      \vspace{0.4em}
+      \vspace{0.2em}
       \begin{block}{Flottabilité Positive de Sécurité}
         Lestage réglé pour $+200$ à $+500\,\text{g}$ nets : en cas de coupure de batterie, le robot \succw{remonte seul en surface}.
       \end{block}
@@ -106,41 +109,41 @@
 \end{frame}
 
 \begin{frame}{2.4 Franchissement de Paroi : WetLink Standard vs Nouveau JPT}
-  \begin{columns}[c]
-    \begin{column}{0.42\textwidth}
+  \begin{block}{\succw{Révolution WetLink : La Fin Définitive du Potting Époxy}}
+    \scriptsize
+    L'ancienne coulée de résine époxy prenait 24h et était irréversible. Les pénétrateurs brevetés WetLink s'assemblent en \succw{\textbf{30 secondes}}, sans colle, et restent \succw{\textbf{100\% réutilisables}} en maintenance.
+  \end{block}
+
+  \vspace{-0.3em}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
       \begin{center}
-        \includegraphics[height=2.0cm, keepaspectratio]{wetlink_penetrator.jpg}
-        \hspace{0.2cm}
-        \includegraphics[height=2.0cm, keepaspectratio]{wetlink_jpt.jpg}\\
-        \vspace{0.2em}
-        \tech{WetLink Standard} \hspace{0.4cm} \succw{Nouveau WetLink JPT}\\
-        \tiny\textit{Dénudage gaine requis ($950\,\text{m}$)} \hspace{0.2cm} \textit{Jacket Pass-Through ($100\,\text{m}$)}
+        \includegraphics[height=1.75cm, width=\textwidth, keepaspectratio]{wetlink_penetrator_clean.jpg}\\
+        \vspace{0.15em}
+        \tech{1. WetLink Penetrator Standard (WLP)}\\
+        \tiny\textit{Compression sur isolants individuels $\cdot$ Haute pression \textbf{950 m}}
       \end{center}
       \scriptsize
-      \begin{block}{Fin du Potting Époxy}
-        L'ancienne coulée de résine époxy prenait 24h et était irréversible. WetLink s'installe en \succw{30 secondes} et reste 100\% réutilisable.
-      \end{block}
+      \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+        \item \textbf{Principe} : compression conique du joint \alertw{sur les conducteurs internes}.
+        \item \textbf{Préparation} : nécessite de \alertw{dénuder la gaine extérieure} ($\approx 15\,\text{mm}$).
+        \item \textbf{Usage cible} : thrusters T200, ombilic Fathom, traversées haute pression.
+      \end{itemize}
     \end{column}
 
-    \begin{column}{0.56\textwidth}
-      \textbf{Deux philosophies selon le type de câble} :
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[height=1.75cm, width=\textwidth, keepaspectratio]{wetlink_jpt_clean.jpg}\\
+        \vspace{0.15em}
+        \succw{2. Nouveau WetLink JPT (Jacket Pass-Through)}\\
+        \tiny\textit{Traversée intégrale directe avec gaine $\cdot$ Pression max \textbf{100 m}}
+      \end{center}
       \scriptsize
-      \begin{block}{\tech{1. WetLink Penetrator Standard (WLP)}}
-        \begin{itemize}
-          \item Principe : compression conique du joint élastomère \alertw{directement sur les isolants individuels}.
-          \item \textbf{Condition} : nécessite de \alertw{dénuder la gaine extérieure} du câble sur environ $15\,\text{mm}$.
-          \item Performance : certifié haute pression jusqu'à \textbf{$950\,\text{m}$}.
-        \end{itemize}
-      \end{block}
-
-      \begin{block}{\succw{2. Nouveau WetLink JPT (Jacket Pass-Through)}}
-        \begin{itemize}
-          \item \succw{Zéro préparation de câble, zéro dénudage !}
-          \item Le câble complet traverse avec sa gaine protectrice.
-          \item Le joint élastomère comprime directement le diamètre extérieur de la gaine ($4.5$, $5.5$ ou $6.5\,\text{mm}$).
-          \item \textbf{Indispensable} pour les câbles coaxiaux d'antenne, câbles blindés et câbles capteurs dont la gaine assure l'intégrité structurelle. Certifié à \textbf{$100\,\text{m}$}.
-        \end{itemize}
-      \end{block}
+      \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+        \item \textbf{Principe} : \succw{zéro dénudage}, le câble complet traverse avec sa gaine.
+        \item \textbf{Étanchéité} : joint conique serrant la gaine ($4.5$, $5.5$ ou $6.5\,\text{mm}$).
+        \item \textbf{Usage cible} : coaxiaux d'antenne, blindés vidéo ou capteurs modulaires.
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
@@ -199,32 +202,34 @@
       \begin{center}
         \includegraphics[height=1.7cm, keepaspectratio]{bluetrail_cobalt.jpg}
         \hspace{0.2cm}
-        \includegraphics[height=1.7cm, keepaspectratio]{bluetrail_cobalt_pair.png}\\
-        \vspace{0.2em}
-        \tech{Blue Trail Engineering --- Série Cobalt}\\
-        \tiny\textit{Embase M10 compacte, PEEK / Inox 316, 600 m (60 bar)}
+        \includegraphics[height=1.7cm, keepaspectratio]{bluetrail_cobalt_pair.png}
       \end{center}
-      \scriptsize
-      \begin{itemize}
-        \item \textbf{Compatibilité native BlueRobotics} : filetage \textbf{M10} (Cobalt 10), remplace directement un WetLink sans usinage !
-        \item Coque inox 316L, inserts PEEK rigides, contacts or.
-        \item 3 à 8 pins (M10) et jusqu'à 12 pins / Ethernet (Cobalt 14, M14).
-      \end{itemize}
+      \vspace{-0.2em}
+      \begin{block}{\tech{Blue Trail Engineering --- Série Cobalt}}
+        \scriptsize
+        \textbf{\textit{Embase M10 compacte, PEEK / Inox 316, 600\,m (60\,bar)}}\\[0.3em]
+        \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+          \item \textbf{Compatibilité native BlueRobotics} : filetage \textbf{M10} (Cobalt 10), remplace directement un WetLink sans usinage !
+          \item Coque inox 316L, inserts PEEK rigides, contacts or.
+          \item 3 à 8 pins (M10) et jusqu'à 12 pins / Ethernet (Cobalt 14, M14).
+        \end{itemize}
+      \end{block}
     \end{column}
 
     \begin{column}{0.48\textwidth}
       \begin{center}
-        \includegraphics[height=1.7cm, keepaspectratio]{subconn_micro_circular.jpg}\\
-        \vspace{0.2em}
-        \tech{SubConn (MacArtney) --- Micro Circular}\\
-        \tiny\textit{Standard mondial offshore \& océanographie, néoprène}
+        \includegraphics[height=1.7cm, keepaspectratio]{subconn_micro_circular.jpg}
       \end{center}
-      \scriptsize
-      \begin{itemize}
-        \item \textbf{Standard historique de l'industrie} : éprouvé depuis plus de 40 ans (Ifremer, navires océanographiques).
-        \item Corps surmoulé néoprène souple, bague de verrouillage (*locking sleeve*), haute résistance mécanique.
-        \item 2 à 21 contacts, haute tension ($600\,\text{V}$, $10\text{--}15\,\text{A}$).
-      \end{itemize}
+      \vspace{-0.2em}
+      \begin{block}{\tech{SubConn (MacArtney) --- Micro Circular}}
+        \scriptsize
+        \textbf{\textit{Standard mondial offshore \& océanographie, néoprène}}\\[0.3em]
+        \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+          \item \textbf{Standard historique de l'industrie} : éprouvé depuis plus de 40 ans (Ifremer, navires océanographiques).
+          \item Corps surmoulé néoprène souple, bague de verrouillage (*locking sleeve*), haute résistance mécanique.
+          \item 2 à 21 contacts, haute tension ($600\,\text{V}$, $10\text{--}15\,\text{A}$).
+        \end{itemize}
+      \end{block}
     \end{column}
   \end{columns}
 \end{frame}
@@ -257,26 +262,84 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{2.7 Validation Pré-Vol : Le Test de Vide Terrain (Vacuum Test)}
+\begin{frame}{2.7 Gestion de la Pression Caisson : Vents, PRV \& Pompes à Vide}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \begin{center}
+        \includegraphics[height=1.35cm, keepaspectratio]{vent_plug_clean.jpg}\\
+        \vspace{0.1em}
+        \tech{Enclosure Vent and Plug}\\
+        \footnotesize\textbf{Bouchon d'Évent M10}
+      \end{center}
+      \scriptsize
+      \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+        \item \textbf{Équilibrage de pression} : dévissage manuel partiel pour « casser le vide » sans forcer sur les portées ni abîmer les joints.
+        \item \textbf{Accès direct sans outil} : bouchon moleté avec double joint torique pour maintenance rapide sur le pont.
+        \item \textbf{Port de test dédié} : reçoit l'embout étanche pour le tirage au vide terrain.
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+      \begin{center}
+        \includegraphics[height=1.35cm, keepaspectratio]{pressure_relief_valve_clean.jpg}\\
+        \vspace{0.1em}
+        \alertw{Pressure Relief Valve (PRV)}\\
+        \footnotesize\textbf{Soupape de Surpression M10}
+      \end{center}
+      \scriptsize
+      \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+        \item \textbf{Sécurité passive critique} : obligatoire pour tout caisson abritant des batteries \textbf{Li-Ion / LiPo}.
+        \item \textbf{Dégazage \& emballement} : évacuation automatique de surpression ($>30\text{--}50\,\text{kPa}$) évitant l'effet « missile » (éjection brutale de flasque).
+        \item \textbf{Clapet taré à ressort} : purge les gaz et se referme immédiatement pour préserver l'étanchéité à l'eau.
+      \end{itemize}
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+      \begin{center}
+        \includegraphics[height=1.5cm, keepaspectratio]{vacuum_pump_clean.jpg}\\
+        \vspace{0.1em}
+        \succw{Pompe Manuelle à Vide}\\
+        \footnotesize\textbf{Testeur de Dépression Terrain}
+      \end{center}
+      \scriptsize
+      \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+        \item \textbf{Tirage au vide pré-vol} : création d'une dépression relative de \succw{$\mathbf{-0.5\,\text{bar}}$} pour valider l'étanchéité.
+        \item \textbf{Manomètre} : détection des micro-fuites sur 15 min.
+        \item \textbf{Précharge mécanique} : plaque et verrouille fermement les flasques avant contact avec l'eau.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.7b Validation Pré-Vol : Le Test de Vide Terrain (Vacuum Test)}
   \begin{alertblock}{La règle d'or absolue avant chaque mise à l'eau}
     Ne jamais immerger un caisson sans avoir validé son étanchéité par dépression.
   \end{alertblock}
 
-  \begin{columns}[c]
-    \begin{column}{0.55\textwidth}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
       \textbf{Procédure opératoire de terrain} :
-      \begin{enumerate}
-        \item Visser un \tech{bouchon d'évent avec raccord rapide (*Vent Plug*)} sur l'un des trous M10 du caisson.
-        \item Raccorder une pompe manuelle à dépression équipée d'un manomètre de précision.
+      \begin{enumerate}\setlength{\itemsep}{2pt}
+        \item Visser l'adaptateur \tech{Vacuum Plug} sur l'évent M10 du caisson.
+        \item Raccorder la \tech{pompe à dépression} équipée d'un manomètre de précision.
         \item Pomper pour descendre la pression interne à \succw{$\mathbf{-0.5\,\text{bar}}$ (50 kPa sous le vide relatif)}.
-        \item Patienter \textbf{15 minutes} en surveillant l'aiguille.
+        \item Relever la pression après \textbf{10 minutes} et \textbf{15 minutes} en la lisant sur le manomètre.
         \item Si la pression remonte (même de 0.02 bar) : \alertw{fuite détectée !} Ne pas plonger.
       \end{enumerate}
     \end{column}
 
-    \begin{column}{0.45\textwidth}
+    \begin{column}{0.44\textwidth}
+      \begin{center}
+        \includegraphics[height=1.9cm, keepaspectratio]{vacuum_pump_clean.jpg}
+        \hspace{0.2cm}
+        \includegraphics[height=1.3cm, keepaspectratio]{vacuum_plug_clean.jpg}\\
+        \vspace{0.1em}
+        \tiny\textit{Kit de test à dépression : pompe manuelle \& embout d'évent}
+      \end{center}
+      \vspace{-0.2em}
       \begin{block}{Causes typiques de fuite}
-        \begin{itemize}
+        \scriptsize
+        \begin{itemize}\setlength{\itemsep}{1pt}
           \item Un cheveu ou un grain de sable sur le joint torique.
           \item Excès de graisse silicone ayant piégé une impureté.
           \item Pénétrateur WetLink ou embase connecteur mal serrée sur la flasque.
@@ -305,7 +368,7 @@
         \item Tirant d'eau très faible ($\approx 15\,\text{cm}$) pour lagunes, estuaires et rivières.
         \item \textbf{Propulsion différentielle (*skid-steering*)} : 2 propulseurs T200 avec grilles anti-algues.
         \item \textbf{Baie centrale ouverte} : barres profilées pour fixer ADCP, échosondeurs, sondes CTD.
-        \item Bras démontables sans outil pour transport en break de labo.
+        \item Pliable sans outil pour transport en voiture.
       \end{itemize}
 
       \vspace{0.3em}
@@ -313,9 +376,150 @@
         \scriptsize
         \begin{itemize}
           \item Autonomie : jusqu'à \textbf{8 à 10 heures} de levé continu ($14.8\,\text{V}$ $30\text{Ah}$).
-          \item \succw{GNSS RTK permanent} : liaison Centipede pour précision centimétrique.
-          \item Télémesure WiFi longue portée ($>1\,\text{km}$) ou lien 4G.
+          \item GNSS : localisation metrique.
+          \item Télémétrie WiFi longue portée ($>500\,\text{m}$) ou lien 4G.
         \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.8b Architecture Interne du BlueBoat : Électronique \& Propulsion}
+  \centering
+  \begin{tikzpicture}[
+    scale=0.76, every node/.style={transform shape},
+    box/.style={rounded corners=3pt, align=center, line width=0.8pt},
+    pwr/.style={line width=1.3pt, OceanCoral, -{Latex[length=1.8mm]}},
+    pwr5v/.style={line width=0.9pt, OceanCoral!85!black, dashed, -{Latex[length=1.6mm]}},
+    sig/.style={line width=0.95pt, OceanCyan!90!black, dashed, -{Latex[length=1.6mm]}},
+    net/.style={line width=1.2pt, OceanLight, <->, >=Latex},
+    mot/.style={line width=1.5pt, DarkSlate, -{Latex[length=1.8mm]}},
+    wlp/.style={draw=OceanDeep, fill=yellow!45, line width=1.1pt, rounded corners=2pt, font=\bfseries, align=center}
+  ]
+
+    % 1. Zone Coques étanches (Hulls)
+    \fill[OceanGray!30, rounded corners=6pt] (-0.3, -0.3) rectangle (10.5, 4.4);
+    \draw[OceanMedium, line width=1.4pt, rounded corners=6pt] (-0.3, -0.3) rectangle (10.5, 4.4);
+    
+    \node[anchor=north west, font=\scriptsize\bfseries, text=OceanDeep] at (-0.1, 4.35) {%
+      Coque étanche du BlueBoat (\textit{Hulls} PEHD rotomoulé --- Intérieur sec 1\,atm)%
+    };
+
+    % 2. Zone Extérieure (Milieu aquatique)
+    \fill[OceanCyan!8, rounded corners=6pt] (10.9, -0.3) rectangle (14.6, 4.4);
+    \draw[OceanCyan!50, dashed, line width=1.1pt, rounded corners=6pt] (10.9, -0.3) rectangle (14.6, 4.4);
+    \node[anchor=north, font=\scriptsize\bfseries, text=OceanMedium] at (12.75, 4.35) {Milieu Marin Extérieur};
+    \node[anchor=north, font=\tiny\itshape, text=OceanCyan!80!black] at (12.75, 4.02) {(Eau de mer / Milieu immergé)};
+
+    % 3. Calcul & Télécoms (Gauche)
+    \node[box, draw=OceanLight, fill=OceanLight!15, minimum width=2.5cm, minimum height=0.75cm] (wifi) at (1.6, 3.2) {
+      \textbf{\scriptsize Routeur WiFi}\\
+      \tiny Liaison sol ($2.4/5\,\text{GHz}$)
+    };
+
+    \node[box, draw=OceanDeep, fill=OceanDeep!15, minimum width=2.5cm, minimum height=0.75cm] (rpi) at (1.6, 2.0) {
+      \textbf{\scriptsize Raspberry Pi 4}\\
+      \tiny Compagnon (BlueOS / REST)
+    };
+
+    \node[box, draw=OceanCyan, fill=OceanCyan!15, minimum width=2.5cm, minimum height=0.75cm] (nav) at (1.6, 0.8) {
+      \textbf{\scriptsize Navigator (HAT)}\\
+      \tiny Autopilote ArduRover / IMU
+    };
+
+    % 4. Énergie (Centre)
+    \node[box, draw=OceanCoral, fill=OceanCoral!15, minimum width=2.5cm, minimum height=0.8cm] (bat) at (5.3, 3.2) {
+      \textbf{\scriptsize Batteries Li-Ion}\\
+      \tiny $14.8\,\text{V}$ (4S, $18\text{--}30\,\text{Ah}$)
+    };
+
+    \node[box, draw=OceanCoral!80!black, fill=white, minimum width=2.7cm, minimum height=0.95cm] (pdb) at (5.3, 1.8) {
+      \textbf{\scriptsize Carte Distribution}\\
+      \scriptsize \textbf{de Courant (PDB)}\\
+      \tiny Shunt $U/I$ \& Régulateurs BEC
+    };
+
+    % 5. Variateurs ESC (Droite interne)
+    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_b) at (8.7, 2.7) {
+      \textbf{\scriptsize ESC Bâbord}\\
+      \tiny Basic ESC (30\,A)
+    };
+
+    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_t) at (8.7, 0.9) {
+      \textbf{\scriptsize ESC Tribord}\\
+      \tiny Basic ESC (30\,A)
+    };
+
+    % 6. Pénétrateurs WLP (Frontière de paroi)
+    \node[wlp, minimum width=1.1cm, minimum height=0.55cm] (wlp_b) at (10.5, 2.7) {
+      \textbf{\tiny WLP}\\
+      \tiny WetLink
+    };
+
+    \node[wlp, minimum width=1.1cm, minimum height=0.55cm] (wlp_t) at (10.5, 0.9) {
+      \textbf{\tiny WLP}\\
+      \tiny WetLink
+    };
+
+    % 7. Propulseurs T200 (Extérieur)
+    \node[box, draw=OceanDeep, fill=OceanDeep!20, minimum width=2.3cm, minimum height=0.85cm] (t200_b) at (12.75, 2.7) {
+      \textbf{\scriptsize Propulseur T200}\\
+      \tiny Moteur Bâbord (\textit{Port})
+    };
+
+    \node[box, draw=OceanDeep, fill=OceanDeep!20, minimum width=2.3cm, minimum height=0.85cm] (t200_t) at (12.75, 0.9) {
+      \textbf{\scriptsize Propulseur T200}\\
+      \tiny Moteur Tribord (\textit{Starboard})
+    };
+
+    % Liaisons Données / Réseau (Gauche)
+    \draw[net] (wifi) -- (rpi) node[midway, right, font=\tiny\bfseries]{Ethernet};
+    \draw[net, OceanCyan, line width=1.4pt] (rpi) -- (nav) node[midway, right, font=\tiny\bfseries]{Bus HAT};
+    \draw[->, line width=1.0pt, OceanLight] (wifi.north) -- ++(0, 0.45) node[above, font=\tiny\bfseries]{Antenne};
+
+    % Liaisons Énergie (Centre)
+    \draw[pwr, line width=1.8pt] (bat) -- (pdb) node[midway, right, font=\tiny\bfseries]{14.8\,V};
+    \draw[pwr5v] (pdb.west) -- (rpi.east) node[midway, above, font=\tiny]{5\,V BEC};
+    \draw[pwr5v] (pdb.north) ++(-0.4, 0) |- (wifi.east) node[pos=0.3, above, font=\tiny]{12\,V / 5\,V};
+    \draw[pwr] (pdb.east) ++(0, 0.15) -- ++(0.8, 0) |- ($(esc_b.west)+(0, 0.15)$) node[pos=0.35, above, font=\tiny\bfseries]{14.8\,V};
+    \draw[pwr] (pdb.east) ++(0, -0.15) -- ++(0.8, 0) |- ($(esc_t.west)+(0, 0.15)$) node[pos=0.35, below, font=\tiny\bfseries]{14.8\,V};
+
+    % Commande PWM Moteurs (Nav vers ESCs)
+    \draw[sig] (nav.south) -- ++(0, -0.15) -- ++(5.6, 0) |- ($(esc_t.west)-(0, 0.15)$) node[pos=0.6, below, font=\tiny]{PWM Tribord};
+    \draw[sig] (nav.south) -- ++(0, -0.15) -- ++(5.6, 0) |- ($(esc_b.west)-(0, 0.15)$) node[pos=0.7, above, font=\tiny]{PWM Bâbord};
+
+    % Traversée de paroi étanche WLP vers T200
+    \draw[mot] (esc_b.east) -- (wlp_b.west) node[midway, above, font=\tiny]{3 phases};
+    \draw[mot] (wlp_b.east) -- (t200_b.west);
+
+    % Note explicative WLP
+    \draw[<-] (wlp_b.north) -- ++(0, 0.4) node[above, font=\tiny\bfseries, text=OceanDeep, align=center]{Pénétrateur WLP (M10)\\(\textit{Franchissement étanche})};
+
+    \draw[mot] (esc_t.east) -- (wlp_t.west) node[midway, above, font=\tiny]{3 phases};
+    \draw[mot] (wlp_t.east) -- (t200_t.west);
+
+  \end{tikzpicture}
+
+  \vspace{-0.2em}
+  \begin{columns}[T]
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\tech{1. Calcul \& Communication}}
+        \scriptsize
+        \textbf{RPi 4} (BlueOS) surmonté du \textbf{Navigator} (ArduRover). Le \textbf{routeur WiFi} assure la télémétrie sol longue portée ($>500\,\text{m}$).
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.34\textwidth}
+      \begin{block}{\succw{2. Puissance \& Distribution}}
+        \scriptsize
+        \textbf{Batteries Li-Ion} reliées à la \textbf{PDB} : répartition forte intensité ($14.8\,\text{V}$) vers les ESCs et conversion régulée ($5\,\text{V}$) pour l'électronique.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\alertw{3. Traversée \& Propulsion}}
+        \scriptsize
+        Les \textbf{pénétrateurs WetLink (WLP)} assurent l'étanchéité des câbles moteurs triphasés traversant la coque (\textit{hulls}) vers les \textbf{T200} immergés.
       \end{block}
     \end{column}
   \end{columns}
@@ -504,62 +708,82 @@
 \end{frame}
 
 \begin{frame}{2.13 Démocratisation USBL \& Télémétrie Acoustique ($\approx 5\,000$ €)}
-  \begin{columns}[c]
-    \begin{column}{0.54\textwidth}
-      \textbf{La rupture des USBL low-cost} :
-      \scriptsize
-      \begin{itemize}
-        \item Autrefois réservé aux grands navires offshore ($>50\text{--}100\,\text{k€}$).
-        \item Arrivée de systèmes accessibles aux laboratoires de recherche (\tech{Water Linked Underwater GPS G2 / A1 / Locator}, $\approx \mathbf{5\,000\text{--}8\,000\,\text{€}}$).
-        \item S'installe en 10 minutes sur un semi-rigide ou un drone de surface ASV (\tech{BlueBoat}).
-      \end{itemize}
-
-      \vspace{0.2em}
-      \begin{block}{\succw{Double Rôle : Localisation ET Modem Télémétrique}}
+  \begin{columns}[T]
+    \begin{column}{0.51\textwidth}
+      \begin{block}{\tech{1. La Démocratisation des USBL}}
         \scriptsize
-        \begin{itemize}
-          \item Les pings acoustiques transportent à la fois le signal de positionnement et des \textbf{paquets de données numériques modulées} (chirp / FSK / PSK).
-          \item \textbf{Débit modeste mais précieux} : de quelques dizaines d'octets à \textbf{quelques kbps}.
-          \item \textbf{Applications concrètes sans fil} :
-            \begin{itemize}\scriptsize
-              \item Remontée de l'état vital (profondeur Bar30, tension batterie, alarmes de fuite SOS).
-              \item Envoi d'ordres simples (consignes de waypoints, arrêt d'urgence).
-              \item Injection de la position absolue de surface dans l'autopilote de l'AUV pour son filtre de Kalman !
-            \end{itemize}
+        \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+          \item \textbf{Rupture de coût} : autrefois réservé à l'offshore ($>50\text{--}100\,\text{k€}$), désormais accessible aux labos (\succw{$\mathbf{\approx 5\text{--}8\,\text{k€}}$}, ex. \tech{Water Linked UGPS}, \tech{SeaTrac}).
+          \item \textbf{Déploiement en 10 min} : perche légère sur semi-rigide ou drone de surface ASV (\tech{BlueBoat}).
+        \end{itemize}
+      \end{block}
+
+      \vspace{-0.2em}
+      \begin{block}{\succw{2. Double Rôle : Positionnement \& Télémesure}}
+        \scriptsize
+        \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+          \item \textbf{Modem acoustique intégré} : données numériques modulées sur les pings (chirp / FSK, débit \textbf{quelques kbps}).
+          \item \textbf{Voie montante} ($\uparrow$) : remontée de l'état vital (profondeur Bar30, tension batterie, alarmes fuite SOS).
+          \item \textbf{Voie descendante} ($\downarrow$) : consignes de navigation, waypoints et ordre d'arrêt d'urgence.
+          \item \textbf{Recalage absolu} : injection du fix GNSS de surface dans l'autopilote de l'AUV (filtre de Kalman).
         \end{itemize}
       \end{block}
     \end{column}
 
-    \begin{column}{0.44\textwidth}
+    \begin{column}{0.47\textwidth}
       \begin{center}
-        \begin{tikzpicture}[scale=0.78, every node/.style={transform shape}]
-          % Surface vessel
-          \draw[thick, fill=OceanMedium!30] (-2,1.2) -- (2,1.2) -- (1.5,0.7) -- (-1.5,0.7) -- cycle;
-          \node at (0,0.95) {\textbf{Bateau / ASV BlueBoat}};
-          \node[above] at (0,1.2) {\tiny Antenne GNSS RTK};
-          
-          % USBL Transceiver
-          \draw[line width=1.5pt, black] (0,0.7) -- (0,0.1);
-          \fill[OceanCoral] (0,0.1) circle (4pt);
-          \node[right=4pt] at (0,0.1) {\tiny\textbf{Antenne USBL (Surface)}};
-          
-          % Sea surface
-          \draw[dashed, OceanCyan, thick] (-2.5,0.7) -- (2.5,0.7);
-          \node[OceanCyan, left] at (-2.5,0.7) {\tiny Surface};
-          
-          % Acoustic waves
-          \draw[->, line width=1.2pt, OceanCyan, dashed] (0,0.1) -- (-1.2,-2.2) node[midway, left] {\tiny Pings + Télémesure};
-          \draw[<-, line width=1.2pt, OceanGreen] (0,0.1) -- (-1.0,-2.1) node[midway, right=6pt] {\tiny Données (kB/s)};
-          
-          % Underwater robot
-          \draw[thick, fill=OceanDeep!20, rounded corners] (-1.8,-2.6) rectangle (-0.6,-2.1);
-          \node at (-1.2,-2.35) {\textbf{AUV / ROV}};
-          \fill[OceanCoral] (-1.2,-2.1) circle (3pt);
-          \node[below] at (-1.2,-2.6) {\tiny\textbf{Transpondeur / Modem}};
-          
-          % Sea bottom
-          \draw[thick, fill=brown!20] (-2.5,-2.9) rectangle (2.5,-3.2);
-          \node at (0,-3.05) {\tiny Fond marin};
+        \begin{tikzpicture}[scale=0.74]
+          % 1. Fond marin et eau
+          \fill[OceanCyan!6] (-3.4, 1.0) rectangle (3.4, -2.5);
+          \draw[OceanCyan, dashed, line width=0.9pt] (-3.4, 1.0) -- (3.4, 1.0);
+          \node[OceanCyan!90, font=\tiny\bfseries, anchor=south west] at (-3.4, 1.02) {Surface (Eau de mer)};
+
+          \fill[brown!25] (-3.4, -2.5) rectangle (3.4, -2.85);
+          \draw[brown!70, thick] (-3.4, -2.5) -- (3.4, -2.5);
+          \node[brown!90, font=\tiny\bfseries, anchor=north] at (0, -2.52) {Fond marin};
+
+          % 2. Bateau support / ASV de surface
+          \draw[thick, fill=white, draw=OceanDeep, rounded corners=2pt] (0.2, 1.0) -- (0.55, 1.6) -- (3.2, 1.6) -- (2.85, 1.0) -- cycle;
+          \node[font=\footnotesize\bfseries, text=OceanDeep] at (1.7, 1.3) {Bateau / ASV};
+
+          % Mât & Antenne GNSS RTK
+          \draw[thick, DarkSlate] (2.7, 1.6) -- (2.7, 2.05);
+          \fill[OceanDeep] (2.7, 2.05) circle (3pt);
+          \node[above=1pt, font=\scriptsize\bfseries, text=OceanDeep] at (2.7, 2.06) {GNSS RTK};
+
+          % Perche & Tête USBL immergée
+          \draw[line width=2.4pt, DarkSlate] (0.8, 1.0) -- (0.8, 0.2);
+          \fill[OceanCoral] (0.8, 0.2) circle (4.8pt);
+          \node[anchor=west, font=\scriptsize\bfseries, text=OceanCoral] at (0.95, 0.2) {Antenne USBL};
+
+          % 3. Boîte explicative dans la zone libre de l'eau
+          \node[anchor=north west, fill=white, fill opacity=0.95, text opacity=1, draw=OceanMedium!40, rounded corners=3pt, inner sep=3pt] at (-3.3, 0.85) {%
+            \begin{minipage}{3.4cm}\scriptsize
+              \textcolor{OceanCyan}{\textbf{1. Mesure USBL}}\\\tiny
+              $\bullet$ Temps de vol $\rightarrow$ Distance $D$\\
+              $\bullet$ Déphasage $\rightarrow$ Direction $(\theta, \psi)$\\[0.25em]
+              \scriptsize\textcolor{OceanGreen}{\textbf{2. Modem Acoustique}}\\\tiny
+              $\uparrow$ Télémétrie vitale (prof., batt.)\\
+              $\downarrow$ Ordres \& Recalage GNSS
+            \end{minipage}
+          };
+
+          % 4. AUV / ROV sous-marin
+          \draw[thick, fill=OceanMedium!15, draw=OceanDeep, rounded corners=7pt] (-2.2, -2.4) rectangle (0.2, -1.8);
+          \node[font=\footnotesize\bfseries, text=OceanDeep] at (-1.0, -2.1) {AUV / ROV};
+          \fill[OceanCoral] (-0.3, -1.8) circle (4pt);
+          \node[anchor=south west, font=\scriptsize\bfseries, text=OceanCoral] at (-0.25, -1.75) {Transpondeur};
+
+          % 5. Faisceaux acoustiques (Positionnement & Données)
+          \draw[->, line width=1.8pt, OceanCyan] (0.7, 0.08) -- (-0.2, -1.65)
+            node[midway, above=2pt, sloped, font=\tiny\bfseries, text=OceanMedium] {Pings USBL};
+
+          \draw[<-, line width=1.8pt, OceanGreen] (0.85, 0.0) -- (-0.05, -1.72)
+            node[midway, below=2pt, sloped, font=\tiny\bfseries, text=OceanGreen!80!black] {Données numériques};
+
+          % Fronts d'ondes acoustiques stylisés
+          \draw[OceanCyan!45, line width=1pt] (0.35, -0.45) arc[start angle=200, end angle=260, radius=0.6];
+          \draw[OceanCyan!45, line width=1pt] (0.1, -0.85) arc[start angle=200, end angle=260, radius=0.9];
         \end{tikzpicture}
       \end{center}
     \end{column}

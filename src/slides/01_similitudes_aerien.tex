@@ -456,6 +456,7 @@
           \item \textbf{Résolution} : \succw{$\mathbf{0.2\,\text{mm}}$ d'eau} ($0.16\,\text{mbar}$).
           \item \textbf{Usage cible} : ROVs \& AUVs côtiers (BlueROV2).
           \item \textbf{Contrôle} : Asservissement vertical fin (\textit{Depth Hold}).
+          \item \textbf{Tarif indicatif} : \tech{$\approx 80\,\$$} (missions intermittentes).
         \end{itemize}
       \end{block}
     \end{column}
@@ -467,8 +468,58 @@
           \item \textbf{Résolution} : \succw{$<\mathbf{0.05\,\text{mm}}$ d'eau} (ultra-fine).
           \item \textbf{Technologie} : Silicium piézorésistif sous gel.
           \item \textbf{Usage cible} : Lacs, marégraphes, houle sur ASV.
+          \item \textbf{Entretien} : Rinçage eau douce post-mission obligatoire.
         \end{itemize}
       \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{1.5b Immersion Continue : Capteurs Haute Résistance BarXT}
+  \begin{columns}[c]
+    \begin{column}{0.44\textwidth}
+      \begin{center}
+        \includegraphics[height=1.65cm, keepaspectratio]{barxt_sensor_clean.jpg}\\[0.2em]
+        \footnotesize\tech{Série Blue Robotics BarXT (\textit{Extended Submersion})}\\[0.1em]
+        \scriptsize\textcolor{DarkSlate!70}{Corps Inox 316L oxyde noir, capteur soudé Keller 4LD, bus I\textsuperscript{2}C (\code{0x40}).}
+      \end{center}
+    \end{column}
+    \begin{column}{0.54\textwidth}
+      \begin{alertblock}{La Limite des Capteurs Standard ($\approx 80\,\$$)}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Gel silicone en contact} : colmatage par \textit{biofouling} et hydrolyse en immersion permanente.
+          \item \textbf{Aluminium M10} : sensibilité à la corrosion galvanique.
+          \item Rinçage eau douce et séchage obligatoires post-mission.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+
+  \vspace{0.15em}
+
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\tech{Atouts Technologiques BarXT}}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Immersion indéfinie} : conçu pour stations fond de mer, bouées \& mouillages scientifiques permanents.
+          \item \textbf{Cellule Keller 4LD scellée} : membrane inox soudée, huile isolante, zéro gel exposé.
+          \item \textbf{Protection mécanique} : capot frontal ajouré.
+          \item \textbf{Gamme étendue} : de $3\,\text{bar}$ jusqu'à \succw{$100\,\text{bar}$ ($1000\,\text{m}$)}.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{exampleblock}{Arbitrage Opérationnel : $80\,\$$ vs $380\,\$$}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Bar30 / Bar02 ($\approx 80\,\$$)} : parfait pour ROVs d'inspection, drones de surface, plongées courtes.
+          \item \textbf{Série BarXT ($\approx 380\,\$$)} : facteur \alertw{$\approx 4.7\times$} de surcoût à l'achat.
+          \item \textbf{Rentabilité terrain} : le delta de $\sim 300\,\$$ est négligeable face au coût d'une campagne navale pour remplacer un capteur dérivé ou colmaté.
+        \end{itemize}
+      \end{exampleblock}
     \end{column}
   \end{columns}
 \end{frame}
