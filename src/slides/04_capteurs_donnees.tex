@@ -4,7 +4,7 @@
 % Pratique : Ping Sonar, Ping360, DVL-A50, intégration d'une sonde scientifique tierce
 % ==============================================================================
 
-\section{Module 4 : Capteurs Pratiques \& Chaîne de Traitement de Données}
+\section{Module 4 : Intégration de Capteurs \& Chaîne de Traitement de Données}
 
 \begin{frame}{4.1 Typologie : Capteurs de Sûreté vs Recueil de Données}
   \begin{columns}[T]
@@ -159,135 +159,182 @@
   \end{columns}
 \end{frame}
 
-\begin{frame}{4.1b Imagerie Acoustique \& Sondeur Multifaisceaux (MBES)}
+\begin{frame}{4.1b Imagerie Acoustique : Sonar Latéral Omniscan \& MBES}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \begin{center}
-        \includegraphics[height=2.4cm, keepaspectratio]{cerulean_omniscan.jpg}\\
-        \vspace{0.2em}
-        \tech{Cerulean Omniscan 450 FS}\\
-        \footnotesize\textbf{Sonar d'Imagerie \& Balayage Avant}
+        \includegraphics[height=2.3cm, keepaspectratio]{cerulean_omniscan.jpg}\\
+        \vspace{0.1em}
+        \tech{Cerulean Omniscan 450 SS}\\
+        \footnotesize\textbf{Sonar à Balayage Latéral (Side-Scan Sonar)}
       \end{center}
       \scriptsize
       \begin{itemize}
-        \item \textbf{Fréquence} : $450\,\text{kHz}$, portée jusqu'à $100\,\text{m}$.
-        \item \textbf{Imagerie acoustique 2D temps réel} : restitution d'échos haute résolution type "caméra acoustique".
-        \item \textbf{Applications} : navigation en zéro visibilité, détection d'obstacles et cartographie latérale.
-        \item Intégration directe BlueOS \& logiciel \textbf{SonarView}.
+        \item \textbf{Principe} : émission bilatérale rasant le fond avec faisceaux très fins en azimut et larges en élévation.
+        \item \textbf{Cascade acoustique (*Waterfall*)} : affichage temps réel sous BlueOS / logiciel \textbf{SonarView}.
+        \item \textbf{Ombres acoustiques révélatrices} : met en évidence épaves, câbles, géométrie rocheuse et herbiers.
+        \item Portée latérale : jusqu'à $100\,\text{m}$ de chaque côté du robot.
       \end{itemize}
     \end{column}
 
     \begin{column}{0.48\textwidth}
       \begin{center}
-        \includegraphics[height=2.4cm, keepaspectratio]{cerulean_surveyor_mbes.jpg}\\
-        \vspace{0.2em}
+        \includegraphics[height=2.3cm, keepaspectratio]{cerulean_surveyor_mbes.jpg}\\
+        \vspace{0.1em}
         \tech{Cerulean Surveyor 240-16}\\
         \footnotesize\textbf{Multibeam Echosounder (MBES)}
       \end{center}
       \scriptsize
       \begin{itemize}
-        \item \textbf{Multifaisceaux bathymétrique} : $240\,\text{kHz}$, 16 éléments de réception formés numériquement.
-        \item \textbf{Fauchée 3D large} : cartographie bathymétrique surfacique (*swath*) haute densité sur \textbf{BlueBoat}.
-        \item \textbf{Données denses} : nuages de points 3D couplés au GNSS RTK Centipede.
-        \item Démocratisation des levés bathymétriques de laboratoire.
+        \item \textbf{Multifaisceaux bathymétrique} : $240\,\text{kHz}$, 16 éléments formés numériquement pour cartographie 3D dense.
+        \item \textbf{Fauchée 3D large} : relevé bathymétrique surfacique (*swath*) continu monté sous coque sur \textbf{BlueBoat}.
+        \item \textbf{Géocodage centimétrique} : couplage direct au récepteur GNSS RTK de surface (réseau Centipede).
+        \item Démocratisation des levés bathymétriques de labo.
       \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}{4.2 Le DVL Embarqué : Water Linked DVL-A50}
-  \begin{columns}[c]
+  \begin{columns}[T]
     \begin{column}{0.54\textwidth}
       \textbf{La démocratisation de l'odométrie sous-marine} :
       \scriptsize
       \begin{itemize}
-        \item Le \tech{Water Linked DVL-A50} :
-          \begin{itemize}
-            \item Poids dans l'eau : seulement \textbf{$270\,\text{g}$} (historiquement $>10\,\text{kg}$).
+        \item \tech{Water Linked DVL-A50} :
+          \begin{itemize}\scriptsize
+            \item Poids dans l'eau ultra-réduit : \textbf{$270\,\text{g}$} (contre $>10\,\text{kg}$).
             \item 4 faisceaux Janus acoustiques à $1\,\text{MHz}$.
             \item Vitesse sol ($0.05\,\text{m}$ à $50\,\text{m}$ d'altitude fond).
           \end{itemize}
         \item \succw{Intégration directe BlueOS / ArduSub} :
-          \begin{itemize}
-            \item Se branche en Ethernet ou série sur le Raspberry Pi.
-            \item Extension BlueOS dédiée disponible en 1 clic.
+          \begin{itemize}\scriptsize
+            \item Liaison Ethernet ou série vers le Raspberry Pi.
+            \item Extension BlueOS installée en 1 clic.
             \item Active le mode \textbf{Position Hold} : maintien stationnaire automatique face au courant.
           \end{itemize}
       \end{itemize}
 
       \vspace{0.2em}
-      \begin{alertblock}{Usage Réel : Capteur de Navigation (Non Payload)}
+      \begin{alertblock}{Usage Réel : Navigation Exclusive (Non Payload)}
         \scriptsize
-        \textbf{Rappel important} : Le DVL est un \alertw{capteur de navigation et d'odométrie autonome} (pour l'asservissement en boucle fermée et le maintien de position du véhicule), et \textbf{non une charge utile scientifique} de prélèvement.
+        Le DVL est un \alertw{capteur de navigation en boucle fermée} assurant le maintien de cap/position, et non une charge utile scientifique.
       \end{alertblock}
     \end{column}
 
     \begin{column}{0.44\textwidth}
       \begin{center}
-        \includegraphics[height=2.3cm, keepaspectratio]{dvl_a50.jpg}\\
-        \vspace{0.2em}
+        \includegraphics[height=1.65cm, keepaspectratio]{dvl_a50.jpg}\\
+        \vspace{0.1em}
         \footnotesize\textbf{Capteur DVL-A50}\\
-        \scriptsize\textit{Transducteur 4 faisceaux Janus 1 MHz}
+        \tiny\textit{Transducteur 4 faisceaux Janus 1 MHz}
       \end{center}
+      \vspace{-0.3em}
       \begin{center}
-        \begin{tikzpicture}[scale=0.72]
-          \draw[thick, fill=OceanMedium!20, rounded corners] (-1.8, 0.8) rectangle (1.8, 1.3);
-          \node at (0, 1.05) {\tiny Châssis BlueROV2};
+        \begin{tikzpicture}[scale=0.68]
+          \draw[thick, fill=OceanMedium!20, rounded corners] (-1.8, 0.8) rectangle (1.8, 1.25);
+          \node at (0, 1.02) {\tiny Châssis BlueROV2};
           \draw[thick, fill=black!80] (-0.7, 0.3) rectangle (0.7, 0.8);
           \node[white] at (0, 0.55) {\tiny DVL};
-          \draw[->, line width=1.2pt, OceanCyan] (-0.5, 0.3) -- (-1.5, -0.8);
-          \draw[->, line width=1.2pt, OceanCyan] (0.5, 0.3) -- (1.5, -0.8);
-          \draw[->, line width=1.2pt, OceanMedium] (-0.2, 0.3) -- (-0.6, -0.8);
-          \draw[->, line width=1.2pt, OceanMedium] (0.2, 0.3) -- (0.6, -0.8);
-          \draw[thick, fill=brown!30] (-2, -0.8) rectangle (2, -1.05);
-          \node at (0, -0.92) {\tiny Fond marin (Bottom-Track)};
+          \draw[->, line width=1.1pt, OceanCyan] (-0.5, 0.3) -- (-1.5, -0.7);
+          \draw[->, line width=1.1pt, OceanCyan] (0.5, 0.3) -- (1.5, -0.7);
+          \draw[->, line width=1.1pt, OceanMedium] (-0.2, 0.3) -- (-0.6, -0.7);
+          \draw[->, line width=1.1pt, OceanMedium] (0.2, 0.3) -- (0.6, -0.7);
+          \draw[thick, fill=brown!30] (-2, -0.7) rectangle (2, -0.95);
+          \node at (0, -0.82) {\tiny Fond marin (Bottom-Track)};
         \end{tikzpicture}
       \end{center}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}{4.3 Intégration d'un Capteur Scientifique Tiers}
+\begin{frame}{4.3 Interfaçage Capteurs : Le Standard Ethernet \& Switch Embarqué}
   \begin{columns}[T]
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\tech{1. Intégration Mécanique \& Câblage}}
-        \scriptsize
+    \begin{column}{0.50\textwidth}
+      \begin{center}
+        \includegraphics[height=1.9cm, keepaspectratio]{ethernet_switch.jpg}\\
+        \vspace{0.1em}
+        \tech{Switch Ethernet Embarqué BlueRobotics}\\
+        \tiny\textit{5 ports 10/100 Mbps $\cdot$ Alimentation 7--60V $\cdot$ Format caisson 3"/4"}
+      \end{center}
+      \scriptsize
+      \begin{block}{\tech{Pourquoi la Primauté de l'Ethernet ?}}
         \begin{itemize}
-          \item Traversée du caisson : Penetrateur \tech{WetLink M10} ou connecteur débrochable (\tech{Cobalt} / \tech{SubConn}).
-          \item Raccordement interne sur le \textbf{Raspberry Pi} :
-            \begin{itemize}\tiny
-              \item Port USB via convertisseur série RS-232 / RS-485 isolé.
-              \item Bus I2C / SPI / ADC sur la carte Navigator.
-            \end{itemize}
+          \item La plupart des capteurs modernes (MBES, sonars, LiDAR, caméras, DVL) utilisent des interfaces \textbf{Ethernet natives} (TCP/UDP).
+          \item Le switch compact permet de relier tous les équipements au Raspberry Pi sans encombrer ses ports USB.
         \end{itemize}
       \end{block}
     \end{column}
 
-    \begin{column}{0.49\textwidth}
-      \begin{block}{\succw{2. Flux Logiciel sous BlueOS}}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{\succw{Encapsulation des Signaux Séries sur IP}}
         \scriptsize
         \begin{itemize}
-          \item Démon Python lisant les trames du capteur (température, DO, turbidité).
-          \item \succw{Temps réel surface} : envoi MAVLink \code{NAMED\_VALUE\_FLOAT} pour affichage dans \textbf{Cockpit}.
-          \item \succw{Post-mission} : CSV local ou topics \textbf{ROS 2} enregistrés en \code{rosbag2}.
+          \item De nombreux capteurs de mesure (sonde CTD, capteur $\text{O}_2$, fluorimètre) restent sur liaison série (\textbf{RS-232, RS-485 ou NMEA 0183}).
+          \item \textbf{Encapsulation sur Ethernet} :
+            \begin{itemize}\scriptsize
+              \item Convertisseur matériel série-Ethernet ou pont logiciel BlueOS (socat / serial bridge).
+              \item Les trames séries sont encapsulées en paquets UDP/TCP IP transparents.
+              \item Remontent directement via l'ombilical Fathom-X ou WiFi vers le PC de surface.
+            \end{itemize}
         \end{itemize}
       \end{block}
     \end{column}
   \end{columns}
 \end{frame}
 
+\begin{frame}{4.3b Enregistrement des Données : Pourquoi ROS plutôt que les Logs .bin ?}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{La Rigidité des Logs Autopilote (.bin)}
+        \scriptsize
+        \textbf{Pourquoi NE PAS logger les capteurs scientifiques dans le fichier .bin ArduPilot ?}
+        \begin{itemize}
+          \item Les logs \code{.bin} sont écrits par le firmware temps réel de la carte Navigator/Pixhawk.
+          \item Pour y injecter une sonde spécifique, il faut :
+            \begin{itemize}\scriptsize
+              \item Écrire un driver C++ natif dans le code source d'ArduSub capable de parser le protocole propriétaire.
+              \item Déclarer de nouvelles structures de log Dataflash.
+              \item Recompiler et flasher un firmware personnalisé.
+            \end{itemize}
+          \item \alertw{Risque critique} : un bug dans le driver du capteur peut faire planter la boucle d'attitude et couler le robot !
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+
+    \begin{column}{0.50\textwidth}
+      \begin{exampleblock}{La Flexibilité Absolue de ROS 2 / BlueOS}
+        \scriptsize
+        \textbf{Le découpage architectural moderne :}
+        \begin{itemize}
+          \item Le capteur scientifique est géré en \textbf{espace utilisateur} sur le Raspberry Pi de bord (script Python simple ou conteneur Docker).
+          \item Zéro impact sur la stabilité du vol ou de la navigation.
+          \item \succw{Topics ROS standardisés} : publication sur des types de messages universels (\code{sensor\_msgs}).
+          \item \succw{Enregistrement en rosbag2 (.mcap)} :
+            \begin{itemize}\scriptsize
+              \item Horodatage synchronisé à la nanoseconde.
+              \item Fusion automatique navigation + mesures scientifiques sans toucher au firmware autopilote.
+            \end{itemize}
+        \end{itemize}
+      \end{exampleblock}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 \begin{frame}{4.4 Le C{\oe}ur Océanographique : La Mesure CTD}
   \begin{columns}[c]
-    \begin{column}{0.55\textwidth}
+    \begin{column}{0.52\textwidth}
       \textbf{CTD : \textit{Conductivity - Temperature - Depth}}
+      \scriptsize
       \begin{itemize}
         \item \textbf{Conductivité} : cellule inductive ou à électrodes.
         \item \textbf{Température} : thermistance étalonnée (précision $<0.01^\circ\text{C}$).
         \item \textbf{Pression} : assurée directement par le capteur \tech{Bar30} !
       \end{itemize}
 
-      \vspace{0.4em}
+      \vspace{0.2em}
       \begin{block}{Paramètres Dérivés Fondamentaux (TEOS-10)}
+        \scriptsize
         \begin{itemize}
           \item \textbf{Salinité absolue} $S_A$ ($\text{g/kg}$ ou PSU).
           \item \textbf{Masse volumique} $\rho(S, T, P)$.
@@ -296,21 +343,39 @@
       \end{block}
     \end{column}
 
-    \begin{column}{0.45\textwidth}
+    \begin{column}{0.47\textwidth}
       \begin{center}
-        \begin{tikzpicture}[scale=0.85]
-          \draw[->] (0,0) -- (3.5,0) node[right] {\small $T, S, \rho$};
-          \draw[->] (0,0) -- (0,-3.5) node[below] {\small Profondeur $z$};
-          
-          \draw[thick, OceanCoral] (3, 0) -- (3, -0.8) to[out=-90, in=90] (0.8, -2.2) -- (0.7, -3.4) node[right] {\small $T^\circ\text{C}$};
-          \node[OceanCoral, right] at (1.8,-1.5) {\footnotesize Thermocline};
-          
-          \draw[thick, OceanCyan] (0.8, 0) -- (0.8, -0.8) to[out=-90, in=90] (2.8, -2.2) -- (2.9, -3.4) node[right] {\small $\rho$};
-          \node[OceanCyan, left] at (2.2,-1.5) {\footnotesize Pycnocline};
+        \begin{tikzpicture}[scale=0.88]
+          % Axes
+          \draw[->, thick] (0,0) -- (4.2,0) node[right, font=\scriptsize] {Valeur};
+          \draw[->, thick] (0,0) -- (0,-3.4) node[below, font=\scriptsize] {Prof. $z$};
+
+          % Couches physiques d'eau
+          \fill[OceanCyan!6] (0,0) rectangle (4.0, -0.7);
+          \node[anchor=north west, font=\tiny\itshape, text=DarkSlate!70] at (0.05, -0.05) {Couche de mélange};
+          \draw[dashed, gray!50] (0,-0.7) -- (4.0,-0.7);
+          \draw[dashed, gray!50] (0,-2.3) -- (4.0,-2.3);
+          \node[anchor=south west, font=\tiny\itshape, text=DarkSlate!70] at (0.05, -3.3) {Eaux profondes};
+
+          % Courbe Temperature T (rouge/corail) : chaude en surface, chute, puis froid stable
+          \draw[very thick, OceanCoral] (3.6, 0) -- (3.6, -0.7) to[out=-90, in=90] (0.9, -2.3) -- (0.8, -3.2);
+          \node[OceanCoral, font=\scriptsize\bfseries, right] at (3.6, -0.35) {$T^\circ\text{C}$};
+
+          % Annotation Thermocline bien degagee avec fleche
+          \node[anchor=west, fill=white, inner sep=1.5pt, rounded corners=2pt, draw=OceanCoral!40, font=\scriptsize\bfseries, text=OceanCoral] (therm) at (2.4, -1.5) {Thermocline};
+          \draw[->, thick, OceanCoral] (therm.west) -- (2.0, -1.5);
+
+          % Courbe Densite rho (bleu cyan) : legere en surface, augmente, puis dense stable
+          \draw[very thick, OceanCyan] (0.6, 0) -- (0.6, -0.7) to[out=-90, in=90] (3.3, -2.3) -- (3.4, -3.2);
+          \node[OceanCyan, font=\scriptsize\bfseries, left] at (0.6, -0.35) {$\rho$};
+
+          % Annotation Pycnocline bien degagee avec fleche
+          \node[anchor=east, fill=white, inner sep=1.5pt, rounded corners=2pt, draw=OceanCyan!40, font=\scriptsize\bfseries, text=OceanCyan] (pycno) at (1.5, -1.5) {Pycnocline};
+          \draw[->, thick, OceanCyan] (pycno.east) -- (1.9, -1.5);
         \end{tikzpicture}
       \end{center}
-      \small
-      Le gradient de célérité du son $c(z)$ réfracte les ondes acoustiques.
+      \vspace{-0.2em}
+      \tiny\textit{Le fort gradient vertical réfracte les ondes acoustiques (*Snell-Descartes*).}
     \end{column}
   \end{columns}
 \end{frame}
@@ -321,7 +386,7 @@
       \textbf{Équipement requis pour le relevé 3D} :
       \begin{itemize}
         \item \textbf{Caméra HD Low-Light} intégrée ou caméra reflex/action cam (GoPro / Sony RX0) dans un caisson dédié.
-        \item \textbf{Projecteurs Lumen (BlueRobotics)} : $2 \times 1500\,\text{lumens}$ ou plus, montés aux extrémités du châssis (pour limiter la rétrodiffusion de la neige marine).
+        \item \textbf{Projecteurs Lumen (BlueRobotics)} : $2 \times 1500\,\text{lumens}$ ou plus, montés aux extrémités du châssis (pour limiter la rétrodiffusion des particules).
         \item Contrôle de l'altitude via le Ping Sonar ou DVL ($1.5\text{--}2.0\,\text{m}$ du fond).
         \item Recouvrement inter-images $>75\%$ en marche avant.
       \end{itemize}
@@ -349,7 +414,7 @@
       };
       \node[draw=OceanCoral, fill=OceanCoral!10, rounded corners, rectangle, minimum width=2.6cm, align=center, below=0.7cm of raw_nav] (usbl) {
         \textbf{Fixes Acoustiques}\\
-        \footnotesize USBL surface + GNSS
+        \footnotesize USBL + GNSS
       };
       \node[draw=OceanMedium, fill=OceanMedium!20, rounded corners, rectangle, minimum width=3.2cm, align=center, right=1.2cm of raw_nav] (smooth) {
         \textbf{Fusion \& Interpolation}\\
@@ -362,7 +427,7 @@
       \node[draw=OceanCyan, fill=OceanCyan!20, line width=1.5pt, rounded corners, rectangle, minimum width=3.2cm, align=center, right=1.2cm of smooth] (data_product) {
         \textbf{Produit FAIR Final}\\
         \footnotesize \textbf{NetCDF-4} (CF Metadata)\\
-        \footnotesize GeoTIFF, Nuage LAS
+        \footnotesize GeoTIFF, MCAP
       };
 
       \draw[->, thick, OceanDeep] (raw_nav) -- (smooth);

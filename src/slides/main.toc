@@ -1,7 +1,7 @@
 \babel@toc {french}{}\relax 
 \beamer@sectionintoc {1}{Introduction \& Cadrage Pédagogique}{3}{0}{1}
 \beamer@sectionintoc {2}{Module 1 : Similitudes avec l'Aérien \& Conception Concrète}{7}{0}{2}
-\beamer@sectionintoc {3}{Module 2 : Ruptures Physiques, Fabrication \& Navigation Aveugle}{26}{0}{3}
-\beamer@sectionintoc {4}{Module 3 : Communications, BlueOS, Cockpit \& Intégration ROS 2}{45}{0}{4}
-\beamer@sectionintoc {5}{Module 4 : Capteurs Pratiques \& Chaîne de Traitement de Données}{57}{0}{5}
-\beamer@sectionintoc {6}{Module 5 : Retours d'Expérience, Cas Concrets \& Atelier Projets}{68}{0}{6}
+\beamer@sectionintoc {3}{Module 2 : Différences avec l'Aérien \& Spécificités du Milieu}{26}{0}{3}
+\beamer@sectionintoc {4}{Module 3 : Communications, BlueOS, Cockpit \& Intégration ROS 2}{47}{0}{4}
+\beamer@sectionintoc {5}{Module 4 : Intégration de Capteurs \& Chaîne de Traitement de Données}{60}{0}{5}
+\beamer@sectionintoc {6}{Module 5 : Synthèse \& Discussions}{72}{0}{6}

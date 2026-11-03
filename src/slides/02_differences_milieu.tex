@@ -4,7 +4,7 @@
 % Fabrication réelle : Enceintes 3"/4", Pénétrateurs WetLink, Connecteurs Cobalt & SubConn, Test de vide, BlueBoat, DVL-A50
 % ==============================================================================
 
-\section{Module 2 : Ruptures Physiques, Fabrication \& Navigation Aveugle}
+\section{Module 2 : Différences avec l'Aérien \& Spécificités du Milieu}
 
 \begin{frame}{2.1 Deux Mondes Physiques Opposés}
   \begin{table}[h]
@@ -324,7 +324,7 @@
         \item Raccorder la \tech{pompe à dépression} équipée d'un manomètre de précision.
         \item Pomper pour descendre la pression interne à \succw{$\mathbf{-0.5\,\text{bar}}$ (50 kPa sous le vide relatif)}.
         \item Relever la pression après \textbf{10 minutes} et \textbf{15 minutes} en la lisant sur le manomètre.
-        \item Si la pression remonte (même de 0.02 bar) : \alertw{fuite détectée !} Ne pas plonger.
+        \item Si la pression remonte : \alertw{fuite détectée !} Ne pas plonger.
       \end{enumerate}
     \end{column}
 
@@ -366,7 +366,7 @@
       \begin{itemize}
         \item \textbf{Coque catamaran} en polyéthylène rotomoulé : quasi-insensible aux impacts contre roches et quais.
         \item Tirant d'eau très faible ($\approx 15\,\text{cm}$) pour lagunes, estuaires et rivières.
-        \item \textbf{Propulsion différentielle (*skid-steering*)} : 2 propulseurs T200 avec grilles anti-algues.
+        \item \textbf{Propulsion différentielle (*skid-steering*)} : 2 propulseurs T200 avec pâles anti-algues.
         \item \textbf{Baie centrale ouverte} : barres profilées pour fixer ADCP, échosondeurs, sondes CTD.
         \item Pliable sans outil pour transport en voiture.
       \end{itemize}
@@ -387,139 +387,442 @@
 \begin{frame}{2.8b Architecture Interne du BlueBoat : Électronique \& Propulsion}
   \centering
   \begin{tikzpicture}[
-    scale=0.76, every node/.style={transform shape},
+    scale=0.74, every node/.style={transform shape},
     box/.style={rounded corners=3pt, align=center, line width=0.8pt},
-    pwr/.style={line width=1.3pt, OceanCoral, -{Latex[length=1.8mm]}},
-    pwr5v/.style={line width=0.9pt, OceanCoral!85!black, dashed, -{Latex[length=1.6mm]}},
-    sig/.style={line width=0.95pt, OceanCyan!90!black, dashed, -{Latex[length=1.6mm]}},
-    net/.style={line width=1.2pt, OceanLight, <->, >=Latex},
-    mot/.style={line width=1.5pt, DarkSlate, -{Latex[length=1.8mm]}},
-    wlp/.style={draw=OceanDeep, fill=yellow!45, line width=1.1pt, rounded corners=2pt, font=\bfseries, align=center}
+    pwr/.style={line width=1.6pt, OceanCoral, -{Latex[length=2.0mm]}},
+    pwr5v/.style={line width=1.1pt, OceanCoral!85!black, dashed, -{Latex[length=1.7mm]}},
+    sig/.style={line width=1.0pt, OceanCyan!90!black, dashed, -{Latex[length=1.7mm]}},
+    net/.style={line width=1.3pt, OceanLight, <->, >=Latex},
+    mot/.style={line width=1.6pt, DarkSlate, -{Latex[length=2.0mm]}},
+    wlp/.style={draw=OceanDeep, fill=yellow!45, line width=1.1pt, rounded corners=2pt, font=\bfseries, align=center},
+    badge/.style={fill=white, rounded corners=2pt, inner sep=1.1pt, font=\tiny\bfseries}
   ]
 
     % 1. Zone Coques étanches (Hulls)
-    \fill[OceanGray!30, rounded corners=6pt] (-0.3, -0.3) rectangle (10.5, 4.4);
-    \draw[OceanMedium, line width=1.4pt, rounded corners=6pt] (-0.3, -0.3) rectangle (10.5, 4.4);
+    \fill[OceanGray!35, rounded corners=6pt] (-0.45, 0.32) rectangle (10.35, 5.05);
+    \draw[OceanMedium, line width=1.4pt, rounded corners=6pt] (-0.45, 0.32) rectangle (10.35, 5.05);
     
-    \node[anchor=north west, font=\scriptsize\bfseries, text=OceanDeep] at (-0.1, 4.35) {%
-      Coque étanche du BlueBoat (\textit{Hulls} PEHD rotomoulé --- Intérieur sec 1\,atm)%
+    % Titre bandeau de la coque étanche
+    \node[anchor=south west, fill=OceanMedium, text=white, font=\tiny\bfseries, rounded corners=2pt, inner sep=2.5pt] at (-0.20, 5.05) {%
+      ~COQUE ÉTANCHE DU BLUEBOAT (PEHD rotomoulé --- 1\,atm sec)~%
     };
 
     % 2. Zone Extérieure (Milieu aquatique)
-    \fill[OceanCyan!8, rounded corners=6pt] (10.9, -0.3) rectangle (14.6, 4.4);
-    \draw[OceanCyan!50, dashed, line width=1.1pt, rounded corners=6pt] (10.9, -0.3) rectangle (14.6, 4.4);
-    \node[anchor=north, font=\scriptsize\bfseries, text=OceanMedium] at (12.75, 4.35) {Milieu Marin Extérieur};
-    \node[anchor=north, font=\tiny\itshape, text=OceanCyan!80!black] at (12.75, 4.02) {(Eau de mer / Milieu immergé)};
+    \fill[OceanCyan!8, rounded corners=6pt] (10.75, 0.32) rectangle (14.55, 5.05);
+    \draw[OceanCyan!60, dashed, line width=1.2pt, rounded corners=6pt] (10.75, 0.32) rectangle (14.55, 5.05);
+    
+    % Titre bandeau milieu extérieur
+    \node[anchor=south, fill=OceanCyan!85!black, text=white, font=\tiny\bfseries, rounded corners=2pt, inner sep=2.5pt] at (12.65, 5.05) {%
+      ~MILIEU MARIN EXTÉRIEUR (Immergé)~%
+    };
+    \node[anchor=north, font=\tiny\itshape, text=OceanCyan!85!black] at (12.65, 4.95) {(Eau de mer / Pression hydrostatique)};
 
-    % 3. Calcul & Télécoms (Gauche)
-    \node[box, draw=OceanLight, fill=OceanLight!15, minimum width=2.5cm, minimum height=0.75cm] (wifi) at (1.6, 3.2) {
+    % 3. Calcul, GNSS & Télécoms (x = 0.40 à 2.10)
+    \node[box, draw=OceanDeep, fill=white, minimum width=1.45cm, minimum height=0.72cm] (gnss) at (0.40, 3.90) {
+      \textbf{\scriptsize GNSS}
+    };
+
+    \node[box, draw=OceanLight, fill=OceanLight!15, minimum width=1.45cm, minimum height=0.72cm] (wifi) at (2.10, 3.90) {
       \textbf{\scriptsize Routeur WiFi}\\
-      \tiny Liaison sol ($2.4/5\,\text{GHz}$)
+      \tiny Liaison sol $2.4/5\,$G
     };
 
-    \node[box, draw=OceanDeep, fill=OceanDeep!15, minimum width=2.5cm, minimum height=0.75cm] (rpi) at (1.6, 2.0) {
+    \node[box, draw=OceanDeep, fill=OceanDeep!15, minimum width=2.5cm, minimum height=0.72cm] (rpi) at (1.25, 2.40) {
       \textbf{\scriptsize Raspberry Pi 4}\\
-      \tiny Compagnon (BlueOS / REST)
+      \tiny Compagnon (BlueOS)
     };
 
-    \node[box, draw=OceanCyan, fill=OceanCyan!15, minimum width=2.5cm, minimum height=0.75cm] (nav) at (1.6, 0.8) {
+    \node[box, draw=OceanCyan, fill=OceanCyan!15, minimum width=2.5cm, minimum height=0.72cm] (nav) at (1.25, 0.95) {
       \textbf{\scriptsize Navigator (HAT)}\\
-      \tiny Autopilote ArduRover / IMU
+      \tiny Autopilote ArduRover
     };
 
-    % 4. Énergie (Centre)
-    \node[box, draw=OceanCoral, fill=OceanCoral!15, minimum width=2.5cm, minimum height=0.8cm] (bat) at (5.3, 3.2) {
+    % Antennes sur le pont (vers le ciel)
+    \draw[line width=1.2pt, OceanDeep] (gnss.north) -- ++(0, 0.38);
+    \node[anchor=south, badge, draw=OceanDeep!60, fill=white, text=OceanDeep] at ($(gnss.north)+(0, 0.38)$) {Antenne GNSS};
+
+    \draw[line width=1.2pt, OceanLight] (wifi.north) -- ++(0, 0.38);
+    \node[anchor=south, badge, draw=OceanLight!60, fill=OceanLight!10, text=OceanLight] at ($(wifi.north)+(0, 0.38)$) {Antenne WiFi};
+
+    % Liaisons internes Calcul (Gauche) : strictement verticales
+    \draw[sig, OceanDeep, line width=1.1pt] (gnss.south) -- ($(rpi.north)-(0.85, 0)$) 
+      node[midway, badge, draw=OceanDeep!40, text=OceanDeep]{USB/NMEA};
+    \draw[net] (wifi.south) -- ($(rpi.north)+(0.85, 0)$) 
+      node[midway, badge, draw=OceanLight!40, text=OceanLight]{Ethernet};
+    \draw[net, OceanCyan, line width=1.4pt] (rpi) -- (nav) 
+      node[midway, badge, draw=OceanCyan!40, text=OceanCyan!90!black]{Bus HAT (GPIO)};
+
+    % 4. Énergie (Colonne 2, x = 4.75)
+    \node[box, draw=OceanCoral, fill=OceanCoral!15, minimum width=2.5cm, minimum height=0.75cm] (bat) at (4.75, 3.90) {
       \textbf{\scriptsize Batteries Li-Ion}\\
       \tiny $14.8\,\text{V}$ (4S, $18\text{--}30\,\text{Ah}$)
     };
 
-    \node[box, draw=OceanCoral!80!black, fill=white, minimum width=2.7cm, minimum height=0.95cm] (pdb) at (5.3, 1.8) {
-      \textbf{\scriptsize Carte Distribution}\\
-      \scriptsize \textbf{de Courant (PDB)}\\
+    \node[box, draw=OceanCoral!85!black, fill=white, minimum width=2.6cm, minimum height=0.90cm] (pdb) at (4.75, 2.40) {
+      \textbf{\scriptsize Carte Distribution (PDB)}\\
       \tiny Shunt $U/I$ \& Régulateurs BEC
     };
 
-    % 5. Variateurs ESC (Droite interne)
-    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_b) at (8.7, 2.7) {
+    % Liaison Batterie vers PDB
+    \draw[pwr, line width=2.0pt] (bat) -- (pdb) node[midway, badge, draw=OceanCoral!40, text=OceanCoral!90!black]{14.8\,V (VBAT)};
+
+    % Alimentations régulées depuis PDB
+    % 5V BEC vers RPi : horizontal direct à y = 2.22
+    \draw[pwr5v] ($(pdb.west)-(0, 0.18)$) -- ($(rpi.east)-(0, 0.18)$) 
+      node[midway, badge, draw=OceanCoral!40, text=OceanCoral!85!black]{5\,V BEC};
+    
+    % 12V vers WiFi : sort à y = 2.62, monte par x = 3.15 dégagé
+    \draw[pwr5v] ($(pdb.west)+(0, 0.22)$) -- (3.15, 2.62) -- (3.15, 3.90) -- (wifi.east);
+    \node[badge, draw=OceanCoral!40, text=OceanCoral!85!black] at (3.15, 3.25) {12\,V};
+
+    % 5. Variateurs ESC (Colonne 3, x = 7.95)
+    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_b) at (7.95, 3.90) {
       \textbf{\scriptsize ESC Bâbord}\\
       \tiny Basic ESC (30\,A)
     };
 
-    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_t) at (8.7, 0.9) {
+    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=2.0cm, minimum height=0.75cm] (esc_t) at (7.95, 0.95) {
       \textbf{\scriptsize ESC Tribord}\\
       \tiny Basic ESC (30\,A)
     };
 
-    % 6. Pénétrateurs WLP (Frontière de paroi)
-    \node[wlp, minimum width=1.1cm, minimum height=0.55cm] (wlp_b) at (10.5, 2.7) {
+    % Alimentation puissance 14.8V PDB vers ESCs (Couloir x in [6.05, 6.95])
+    % Vers ESC Bâbord (monte par x = 6.45, entre par le haut à y = 4.05)
+    \draw[pwr] ($(pdb.east)+(0, 0.20)$) -- (6.45, 2.60) -- (6.45, 4.05) -- ($(esc_b.west)+(0, 0.15)$);
+    \node[badge, draw=OceanCoral!40, text=OceanCoral!90!black] at (6.45, 3.35) {14.8\,V};
+
+    % Vers ESC Tribord (descend par x = 6.45, entre par le haut à y = 1.10)
+    \draw[pwr] ($(pdb.east)-(0, 0.20)$) -- (6.45, 2.20) -- (6.45, 1.10) -- ($(esc_t.west)+(0, 0.15)$);
+    \node[badge, draw=OceanCoral!40, text=OceanCoral!90!black] at (6.45, 1.65) {14.8\,V};
+
+    % Commandes PWM Moteurs (Nav vers ESCs) : aucun croisement, cheminements strictement horizontaux puis verticaux
+    % PWM Tribord : direct horizontalement sous la PDB à y = 0.80
+    \draw[sig] ($(nav.east)-(0, 0.15)$) -- ($(esc_t.west)-(0, 0.15)$)
+      node[pos=0.68, badge, draw=OceanCyan!50, text=OceanCyan!90!black]{PWM Tribord (Servo 2)};
+
+    % PWM Bâbord : horizontal direct à y = 1.20 puis monte par x = 6.75 (entre sous la ligne 14.8V à y = 3.75)
+    \draw[sig] ($(nav.east)+(0, 0.25)$) -- (6.75, 1.20) 
+      node[pos=0.45, badge, draw=OceanCyan!50, text=OceanCyan!90!black]{PWM Bâbord (Servo 1)}
+      -- (6.75, 3.75) -- ($(esc_b.west)-(0, 0.15)$);
+
+    % 6. Pénétrateurs WLP (Frontière de paroi, x = 10.35)
+    \node[wlp, minimum width=1.15cm, minimum height=0.62cm] (wlp_b) at (10.35, 3.90) {
       \textbf{\tiny WLP}\\
-      \tiny WetLink
+      \tiny M10
     };
 
-    \node[wlp, minimum width=1.1cm, minimum height=0.55cm] (wlp_t) at (10.5, 0.9) {
+    \node[wlp, minimum width=1.15cm, minimum height=0.62cm] (wlp_t) at (10.35, 0.95) {
       \textbf{\tiny WLP}\\
-      \tiny WetLink
+      \tiny M10
     };
 
-    % 7. Propulseurs T200 (Extérieur)
-    \node[box, draw=OceanDeep, fill=OceanDeep!20, minimum width=2.3cm, minimum height=0.85cm] (t200_b) at (12.75, 2.7) {
+    % Encadré d'explication des Pénétrateurs WLP (centré sur la paroi)
+    \node[badge, draw=OceanDeep, fill=yellow!25, line width=0.8pt, align=center, text=OceanDeep] (wlp_info) at (10.35, 2.40) {%
+      \textbf{\tiny Traversée Étanche}\\[-0.2ex]
+      \tiny Pénétrateurs WetLink\\[-0.2ex]
+      \tiny (\textit{Écrou M10 étanche})%
+    };
+    \draw[line width=0.7pt, OceanDeep, ->] (wlp_info.north) -- (wlp_b.south);
+    \draw[line width=0.7pt, OceanDeep, ->] (wlp_info.south) -- (wlp_t.north);
+
+    % 7. Propulseurs T200 (Extérieur, x = 12.65)
+    \node[box, draw=OceanDeep, fill=OceanDeep!18, minimum width=2.4cm, minimum height=0.85cm] (t200_b) at (12.65, 3.90) {
       \textbf{\scriptsize Propulseur T200}\\
       \tiny Moteur Bâbord (\textit{Port})
     };
 
-    \node[box, draw=OceanDeep, fill=OceanDeep!20, minimum width=2.3cm, minimum height=0.85cm] (t200_t) at (12.75, 0.9) {
+    \node[box, draw=OceanDeep, fill=OceanDeep!18, minimum width=2.4cm, minimum height=0.85cm] (t200_t) at (12.65, 0.95) {
       \textbf{\scriptsize Propulseur T200}\\
       \tiny Moteur Tribord (\textit{Starboard})
     };
 
-    % Liaisons Données / Réseau (Gauche)
-    \draw[net] (wifi) -- (rpi) node[midway, right, font=\tiny\bfseries]{Ethernet};
-    \draw[net, OceanCyan, line width=1.4pt] (rpi) -- (nav) node[midway, right, font=\tiny\bfseries]{Bus HAT};
-    \draw[->, line width=1.0pt, OceanLight] (wifi.north) -- ++(0, 0.45) node[above, font=\tiny\bfseries]{Antenne};
-
-    % Liaisons Énergie (Centre)
-    \draw[pwr, line width=1.8pt] (bat) -- (pdb) node[midway, right, font=\tiny\bfseries]{14.8\,V};
-    \draw[pwr5v] (pdb.west) -- (rpi.east) node[midway, above, font=\tiny]{5\,V BEC};
-    \draw[pwr5v] (pdb.north) ++(-0.4, 0) |- (wifi.east) node[pos=0.3, above, font=\tiny]{12\,V / 5\,V};
-    \draw[pwr] (pdb.east) ++(0, 0.15) -- ++(0.8, 0) |- ($(esc_b.west)+(0, 0.15)$) node[pos=0.35, above, font=\tiny\bfseries]{14.8\,V};
-    \draw[pwr] (pdb.east) ++(0, -0.15) -- ++(0.8, 0) |- ($(esc_t.west)+(0, 0.15)$) node[pos=0.35, below, font=\tiny\bfseries]{14.8\,V};
-
-    % Commande PWM Moteurs (Nav vers ESCs)
-    \draw[sig] (nav.south) -- ++(0, -0.15) -- ++(5.6, 0) |- ($(esc_t.west)-(0, 0.15)$) node[pos=0.6, below, font=\tiny]{PWM Tribord};
-    \draw[sig] (nav.south) -- ++(0, -0.15) -- ++(5.6, 0) |- ($(esc_b.west)-(0, 0.15)$) node[pos=0.7, above, font=\tiny]{PWM Bâbord};
-
-    % Traversée de paroi étanche WLP vers T200
-    \draw[mot] (esc_b.east) -- (wlp_b.west) node[midway, above, font=\tiny]{3 phases};
+    % Traversée de paroi étanche WLP vers T200 (Câbles moteurs triphasés)
+    \draw[mot] (esc_b.east) -- (wlp_b.west) node[midway, badge, draw=DarkSlate!30, text=DarkSlate]{3 phases};
     \draw[mot] (wlp_b.east) -- (t200_b.west);
 
-    % Note explicative WLP
-    \draw[<-] (wlp_b.north) -- ++(0, 0.4) node[above, font=\tiny\bfseries, text=OceanDeep, align=center]{Pénétrateur WLP (M10)\\(\textit{Franchissement étanche})};
-
-    \draw[mot] (esc_t.east) -- (wlp_t.west) node[midway, above, font=\tiny]{3 phases};
+    \draw[mot] (esc_t.east) -- (wlp_t.west) node[midway, badge, draw=DarkSlate!30, text=DarkSlate]{3 phases};
     \draw[mot] (wlp_t.east) -- (t200_t.west);
+
+    % Légende synthétique en bas
+    \node[anchor=west, font=\tiny, text=DarkSlate] at (-0.35, 0.08) {%
+      \textbf{Flux :}~
+      \textcolor{OceanCoral}{\rule[0.5ex]{8pt}{1.8pt}}~\textbf{14.8\,V (VBAT)}\quad
+      \textcolor{OceanCoral!85!black}{\textbf{- -}~\textbf{BEC 5V/12V}}\quad
+      \textcolor{OceanCyan!90!black}{\textbf{- -}~\textbf{PWM}}\quad
+      \textcolor{OceanDeep}{\textbf{- -}~\textbf{USB/NMEA}}\quad
+      \textcolor{OceanLight}{\textbf{$\leftrightarrow$}~\textbf{Ethernet/HAT}}\quad
+      \textcolor{DarkSlate}{\rule[0.5ex]{8pt}{1.6pt}}~\textbf{Triphasé}%
+    };
 
   \end{tikzpicture}
 
-  \vspace{-0.2em}
-  \begin{columns}[T]
+  \vspace{0.1em}
+  \begin{columns}[T, onlytextwidth]
     \begin{column}{0.32\textwidth}
-      \begin{block}{\tech{1. Calcul \& Communication}}
+      \begin{block}{\tech{1. Calcul, GNSS \& Sol}}
         \scriptsize
-        \textbf{RPi 4} (BlueOS) surmonté du \textbf{Navigator} (ArduRover). Le \textbf{routeur WiFi} assure la télémétrie sol longue portée ($>500\,\text{m}$).
+        \textbf{RPi 4} (BlueOS) + \textbf{Navigator} (ArduRover). Le \textbf{GNSS/RTK} assure le cap et positionnement métrique ; le \textbf{routeur WiFi} la liaison sol ($>500\,\text{m}$).
       \end{block}
     \end{column}
 
-    \begin{column}{0.34\textwidth}
+    \begin{column}{0.32\textwidth}
       \begin{block}{\succw{2. Puissance \& Distribution}}
         \scriptsize
-        \textbf{Batteries Li-Ion} reliées à la \textbf{PDB} : répartition forte intensité ($14.8\,\text{V}$) vers les ESCs et conversion régulée ($5\,\text{V}$) pour l'électronique.
+        \textbf{Batteries Li-Ion} reliées à la \textbf{PDB} : bus forte intensité ($14.8\,\text{V}$) vers ESCs et conversion régulée ($5\,\text{V}$) pour l'électronique.
       \end{block}
     \end{column}
 
     \begin{column}{0.32\textwidth}
       \begin{block}{\alertw{3. Traversée \& Propulsion}}
         \scriptsize
-        Les \textbf{pénétrateurs WetLink (WLP)} assurent l'étanchéité des câbles moteurs triphasés traversant la coque (\textit{hulls}) vers les \textbf{T200} immergés.
+        Les \textbf{pénétrateurs WetLink (WLP)} assurent l'étanchéité des phases moteurs traversant la coque (\textit{hulls}) vers les \textbf{T200} immergés.
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}{2.8c Conception d'un Vecteur Sous-Marin : Le BlueROV2 (ROV)}
+  \begin{columns}[c]
+    \begin{column}{0.42\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth, height=4.2cm, keepaspectratio]{bluerov2.jpg}\\
+        \vspace{0.2em}
+        \small\textbf{BlueROV2} (BlueRobotics)\\
+        \scriptsize\textit{Châssis modulaire PEHD, double caisson étanche (4" \& 3"), 6 à 8x T200, ombilical Fathom}
+      \end{center}
+    \end{column}
+
+    \begin{column}{0.56\textwidth}
+      \textbf{Architecture \& Parties Constituantes} :
+      \scriptsize
+      \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+        \item \textbf{Châssis modulaire en PEHD} : berceau insensible à la corrosion, supportant les blocs de mousse de flottabilité haute ($\overline{BG} > 0$).
+        \item \textbf{Double enceinte étanche} : caisson supérieur (tube 4") pour l'électronique \& caisson inférieur (tube 3") pour la batterie.
+        \item \textbf{Propulsion vectorisée} : 6 à 8 propulseurs \textbf{T200} (moteurs brushless à rotor noyé) offrant jusqu'à \succw{6 degrés de liberté}.
+        \item \textbf{Liaison ombilicale filaire (Tether)} : câble fin à flottabilité neutre transportant le flux réseau haut débit (Fathom-X).
+        \item \textbf{Franchissements de flasques} : pénétrateurs \textbf{WetLink (WLP M10)} assurant l'étanchéité jusqu'à $100\text{--}300\,\text{m}$.
+      \end{itemize}
+
+      \vspace{0.25em}
+      \begin{block}{Atouts pour la Recherche \& l'Observation}
+        \scriptsize
+        \begin{itemize}\setlength{\itemsep}{1pt}\setlength{\parskip}{0pt}
+          \item \textbf{Téléopération temps réel} : flux vidéo HD/4K à faible latence et télémétrie complète sous MAVLink (QGroundControl).
+          \item \textbf{Stationnarité parfaite} : tenue de cap et maintien de profondeur automatiques (\textit{Depth Hold} via capteur Bar30).
+          \item \textbf{Payload modulaire} : intégration simple de capteurs scientifiques (sonde CTD, sonar Ping360, DVL-A50, balise USBL).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{2.8d Architecture Globale du BlueROV2 : Électronique, Ombilical \& Propulsion}
+  \centering
+  \begin{tikzpicture}[
+    scale=0.72, every node/.style={transform shape},
+    box/.style={rounded corners=3pt, align=center, line width=0.8pt},
+    pwr/.style={line width=1.6pt, OceanCoral, -{Latex[length=2.0mm]}},
+    pwr5v/.style={line width=1.1pt, OceanCoral!85!black, dashed, -{Latex[length=1.7mm]}},
+    sig/.style={line width=1.0pt, OceanCyan!90!black, dashed, -{Latex[length=1.7mm]}},
+    net/.style={line width=1.3pt, OceanLight, <->, >=Latex},
+    mot/.style={line width=1.6pt, DarkSlate, -{Latex[length=2.0mm]}},
+    wlp/.style={draw=OceanDeep, fill=yellow!45, line width=1.1pt, rounded corners=2pt, font=\bfseries, align=center},
+    badge/.style={fill=white, rounded corners=2pt, inner sep=1.1pt, font=\tiny\bfseries}
+  ]
+
+    % 1. Zone Surface / Sol (Topside)
+    \fill[OceanGray!35, rounded corners=6pt] (-0.40, 0.70) rectangle (2.30, 5.05);
+    \draw[DarkSlate!35, dashed, line width=1.1pt, rounded corners=6pt] (-0.40, 0.70) rectangle (2.30, 5.05);
+    \node[anchor=south, fill=DarkSlate, text=white, font=\tiny\bfseries, rounded corners=2pt, inner sep=2.5pt] at (0.95, 5.05) {%
+      ~SURFACE (POSTE SOL)~%
+    };
+    \node[anchor=north, font=\tiny\itshape, text=DarkSlate] at (0.95, 4.95) {(Air / Topside)};
+
+    % 2. Zone Caisson Électronique (Tube 4")
+    \fill[OceanGray!35, rounded corners=6pt] (3.90, 0.70) rectangle (11.20, 5.05);
+    \draw[OceanMedium, line width=1.4pt, rounded corners=6pt] (3.90, 0.70) rectangle (11.20, 5.05);
+    \node[anchor=south west, fill=OceanMedium, text=white, font=\tiny\bfseries, rounded corners=2pt, inner sep=2.5pt] at (4.10, 5.05) {%
+      ~CAISSON ÉLECTRONIQUE (Tube 4'' --- Intérieur sec 1\,atm)~%
+    };
+
+    % 3. Zone Caisson Batterie (Tube 3")
+    \fill[OceanGray!35, rounded corners=6pt] (5.90, -0.80) rectangle (9.50, 0.35);
+    \draw[OceanMedium, line width=1.3pt, rounded corners=6pt] (5.90, -0.80) rectangle (9.50, 0.35);
+    \node[anchor=north west, font=\tiny\bfseries, text=OceanDeep] at (6.05, 0.30) {Caisson Batterie (Tube 3'' --- $G$ bas)};
+
+    % 4. Zone Milieu Marin Extérieur (Immergé)
+    \fill[OceanCyan!8, rounded corners=6pt] (11.60, 0.70) rectangle (15.00, 5.05);
+    \draw[OceanCyan!60, dashed, line width=1.2pt, rounded corners=6pt] (11.60, 0.70) rectangle (15.00, 5.05);
+    \node[anchor=south, fill=OceanCyan!85!black, text=white, font=\tiny\bfseries, rounded corners=2pt, inner sep=2.5pt] at (13.30, 5.05) {%
+      ~MILIEU MARIN EXTÉRIEUR~%
+    };
+    \node[anchor=north, font=\tiny\itshape, text=OceanCyan!85!black] at (13.30, 4.95) {(Eau de mer / Immersion)};
+
+    % --- Composants Surface / Poste Sol ---
+    \node[box, draw=OceanLight, fill=OceanLight!15, minimum width=2.2cm, minimum height=0.75cm] (fxti) at (0.95, 3.90) {
+      \textbf{\scriptsize Fathom-X Sol}\\
+      \tiny Boîtier FXTI (CPL)
+    };
+
+    \node[box, draw=OceanDeep, fill=OceanDeep!10, minimum width=2.2cm, minimum height=0.75cm] (pc) at (0.95, 2.30) {
+      \textbf{\scriptsize PC Sol (QGC)}\\
+      \tiny Station de pilotage \& Vidéo
+    };
+
+    \draw[net] (pc) -- (fxti) node[midway, badge, draw=OceanLight!40, text=OceanLight]{Ethernet};
+
+    \node[anchor=center, font=\tiny, text=DarkSlate!75, align=center] at (0.95, 1.25) {%
+      \textbf{QGroundControl (QGC)}\\%
+      \textit{Joystick \& MAVLink}%
+    };
+
+    % --- Ombilical & Traversée WLP Tether ---
+    \node[wlp, minimum width=0.90cm, minimum height=0.55cm] (wlp_tet) at (3.90, 3.90) {\textbf{\tiny WLP}};
+
+    \draw[line width=1.8pt, OceanMedium] (fxti.east) -- (wlp_tet.west)
+      node[midway, badge, draw=OceanMedium!40, fill=OceanCyan!10, text=OceanMedium]{Tether (Ombilical)};
+
+    % --- Composants Caisson Électronique ---
+    % Colonne 1 : Fathom-X (haut) & RPi 4 (bas)
+    \node[box, draw=OceanLight, fill=OceanLight!15, minimum width=1.9cm, minimum height=0.72cm] (fathom_rov) at (5.10, 3.90) {
+      \textbf{\scriptsize Fathom-X}\\
+      \tiny Modem HomePlug CPL
+    };
+
+    \node[box, draw=OceanDeep, fill=OceanDeep!15, minimum width=2.1cm, minimum height=0.75cm] (rpi) at (5.10, 2.35) {
+      \textbf{\scriptsize Raspberry Pi 4}\\
+      \tiny Compagnon (BlueOS)
+    };
+
+    \draw[mot, line width=1.2pt] (wlp_tet.east) -- (fathom_rov.west);
+    \draw[net] (fathom_rov) -- (rpi) node[midway, badge, draw=OceanLight!40, text=OceanLight]{RJ45};
+
+    % Colonne 2 : Caméra HD (haut), Navigator HAT (milieu), PDB (bas)
+    \node[box, draw=DarkSlate, fill=white, minimum width=2.0cm, minimum height=0.72cm] (cam) at (7.70, 3.90) {
+      \textbf{\scriptsize Caméra HD}\\
+      \tiny Tilt orientable (Servo)
+    };
+
+    \node[box, draw=OceanCyan, fill=OceanCyan!15, minimum width=2.1cm, minimum height=0.75cm] (nav) at (7.70, 2.35) {
+      \textbf{\scriptsize Navigator (HAT)}\\
+      \tiny Autopilote ArduSub
+    };
+
+    \node[box, draw=OceanCoral!85!black, fill=white, minimum width=2.1cm, minimum height=0.68cm] (pdb) at (7.70, 1.15) {
+      \textbf{\scriptsize Carte PDB / BEC}\\
+      \tiny Shunt $U/I$ \& 5\,V
+    };
+
+    % Liaisons RPi <-> Navigator & Caméra
+    \draw[net, OceanCyan, line width=1.4pt] (rpi) -- (nav) node[midway, badge, draw=OceanCyan!40, text=OceanCyan!90!black]{Bus HAT (GPIO)};
+    \draw[sig] (nav.north) -- (cam.south) node[midway, badge, draw=OceanCyan!40, text=OceanCyan!90!black]{PWM Tilt};
+    \draw[sig, OceanDeep] ($(cam.west)-(0, 0.12)$) -| ($(rpi.north)+(0.45, 0)$) 
+      node[pos=0.25, badge, draw=OceanDeep!40, text=OceanDeep]{USB Vidéo};
+
+    % Alimentation 5V BEC depuis PDB vers Navigator (qui alimente la RPi par le HAT)
+    \draw[pwr5v] ($(pdb.north)-(0.25, 0)$) -- ($(nav.south)-(0.25, 0)$) 
+      node[midway, badge, draw=OceanCoral!40, text=OceanCoral!85!black]{5\,V BEC};
+
+    % Colonne 3 : ESCs
+    \node[box, draw=OceanGreen, fill=OceanGreen!15, minimum width=1.9cm, minimum height=0.75cm] (esc) at (10.05, 2.35) {
+      \textbf{\scriptsize 6--8x ESCs}\\
+      \tiny Basic ESCs (30\,A)
+    };
+
+    % Commandes PWM Moteurs (Nav -> ESCs)
+    \draw[sig] (nav.east) -- (esc.west) node[midway, badge, draw=OceanCyan!40, text=OceanCyan!90!black]{PWM Moteurs};
+
+    % Alimentation puissance 14.8V PDB -> ESCs
+    \draw[pwr] ($(pdb.east)+(0, 0.10)$) -- (9.80, 1.25) -- ($(esc.south)-(0.25, 0)$);
+    \node[badge, draw=OceanCoral!40, text=OceanCoral!90!black] at (9.25, 1.25) {14.8\,V};
+
+    % --- Pénétrateurs Flasque Arrière (x = 11.20) ---
+    \node[wlp, minimum width=0.85cm, minimum height=0.48cm] (wlp_lum) at (11.20, 3.90) {\textbf{\tiny WLP}};
+    \node[wlp, minimum width=0.85cm, minimum height=0.48cm] (wlp_mot) at (11.20, 2.35) {\textbf{\tiny WLP}};
+    \node[wlp, minimum width=0.85cm, minimum height=0.48cm] (wlp_bar) at (11.20, 1.15) {\textbf{\tiny WLP}};
+
+    \node[font=\tiny\bfseries, text=OceanDeep, align=center] at (11.20, 4.65) {Pénétrateurs\\WetLink (M10)};
+    \draw[->, line width=0.7pt, OceanDeep] (11.20, 4.38) -- (wlp_lum.north);
+
+    % Commande PWM Lumen (passe dans le couloir supérieur à y = 3.90)
+    \draw[sig] ($(nav.east)+(0, 0.22)$) -- (8.90, 2.57) -- (8.90, 3.90) -- (wlp_lum.west);
+    \node[badge, draw=OceanCyan!40, text=OceanCyan!90!black] at (9.85, 3.90) {PWM Lumen};
+
+    % Bus I2C Capteur Bar30 (passe dans le couloir inférieur)
+    \draw[sig] ($(nav.east)-(0, 0.22)$) -- (8.90, 2.13) -- (8.90, 0.85) -- (10.65, 0.85) -- (10.65, 1.15) -- (wlp_bar.west);
+    \node[badge, draw=OceanCyan!40, text=OceanCyan!90!black] at (9.80, 0.85) {Bus I2C};
+
+    % --- Caisson Batterie & Traversée Puissance ---
+    \node[box, draw=OceanCoral, fill=OceanCoral!15, minimum width=3.2cm, minimum height=0.65cm] (bat) at (7.70, -0.25) {
+      \textbf{\scriptsize Batterie Li-Ion 4S ($14.8\,\text{V}$)}\\
+      \tiny 18\,Ah (266\,Wh) + Switch M10
+    };
+
+    \node[wlp, minimum width=0.80cm, minimum height=0.32cm] (wlp_bat) at (7.70, 0.35) {\textbf{\tiny WLP}};
+    \node[wlp, minimum width=0.80cm, minimum height=0.32cm] (wlp_pwr) at (7.70, 0.70) {\textbf{\tiny WLP}};
+
+    \draw[pwr, line width=1.8pt] (bat.north) -- (wlp_bat.south);
+    \draw[pwr, line width=1.8pt] (wlp_bat.north) -- (wlp_pwr.south)
+      node[midway, right=3pt, badge, draw=OceanCoral!40, text=OceanCoral!90!black]{14.8\,V};
+    \draw[pwr, line width=1.8pt] (wlp_pwr.north) -- (pdb.south);
+
+    % --- Composants Milieu Marin Extérieur ---
+    \node[box, draw=DarkSlate, fill=white, minimum width=2.4cm, minimum height=0.72cm] (lumen) at (13.30, 3.90) {
+      \textbf{\scriptsize Phares Lumen}\\
+      \tiny LEDs ($2\times 1500\,\text{lm}$)
+    };
+    \draw[sig] (wlp_lum.east) -- (lumen.west);
+
+    \node[box, draw=OceanDeep, fill=OceanDeep!18, minimum width=2.4cm, minimum height=0.75cm] (t200) at (13.30, 2.35) {
+      \textbf{\scriptsize 6 à 8x Propulseurs T200}\\
+      \tiny Propulsion vectorisée 6-DDL
+    };
+    \draw[mot] (esc.east) -- (wlp_mot.west);
+    \draw[mot] (wlp_mot.east) -- (t200.west) node[midway, badge, draw=DarkSlate!30, text=DarkSlate]{3 phases};
+
+    \node[box, draw=OceanCyan!90!black, fill=white, minimum width=2.4cm, minimum height=0.72cm] (bar) at (13.30, 1.15) {
+      \textbf{\scriptsize Capteur Bar30}\\
+      \tiny Pression / Profondeur (30\,bar)
+    };
+    \draw[sig] (wlp_bar.east) -- (bar.west);
+
+    \node[box, draw=OceanMedium, fill=white, dashed, minimum width=2.4cm, minimum height=0.60cm] (usbl) at (13.30, -0.25) {
+      \textbf{\scriptsize Payload / USBL}\\
+      \tiny Balise UGPS / Sonar Ping360
+    };
+
+    % Légende synthétique en bas
+    \node[anchor=west, font=\tiny, text=DarkSlate] at (-0.35, -0.55) {%
+      \textbf{Flux :}~
+      \textcolor{OceanCoral}{\rule[0.5ex]{8pt}{1.8pt}}~\textbf{14.8\,V (VBAT)}\quad
+      \textcolor{OceanCoral!85!black}{\textbf{- -}~\textbf{BEC 5V}}\quad
+      \textcolor{OceanCyan!90!black}{\textbf{- -}~\textbf{PWM / I2C}}\quad
+      \textcolor{OceanDeep}{\textbf{- -}~\textbf{USB}}\quad
+      \textcolor{OceanLight}{\textbf{$\leftrightarrow$}~\textbf{Ethernet/HAT}}\quad
+      \textcolor{DarkSlate}{\rule[0.5ex]{8pt}{1.6pt}}~\textbf{Triphasé}%
+    };
+
+  \end{tikzpicture}
+
+  \vspace{0.1em}
+  \begin{columns}[T, onlytextwidth]
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\tech{1. Topside \& Liaison Ombilicale}}
+        \scriptsize
+        Station sol (\textbf{PC / QGC}) pour le contrôle \& retour vidéo HD. Le boîtier sol \textbf{Fathom-X} injecte l'Ethernet haut débit sur le \textbf{Tether} bifilaire fin.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\succw{2. Double Caisson \& Énergie}}
+        \scriptsize
+        \textbf{Caisson 3'' bas} abritant la batterie Li-Ion ($14.8\,\text{V}$) pour abaisser $G$ ($\overline{BG}>0$). Câble de puissance traversant étanche vers la \textbf{PDB} du caisson 4''.
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.32\textwidth}
+      \begin{block}{\alertw{3. Traversées WLP \& Actionneurs}}
+        \scriptsize
+        \textbf{RPi 4} (BlueOS) + \textbf{Navigator} (ArduSub) pilotant les ESCs. Les pénétrateurs \textbf{WetLink (WLP)} scellent chaque traversée moteur \textbf{T200}, phares \textbf{Lumen} et capteur \textbf{Bar30}.
       \end{block}
     \end{column}
   \end{columns}
@@ -529,7 +832,7 @@
   \begin{alertblock}{La rupture physique fondamentale sous la surface}
     L'eau salée absorbe les ondes électromagnétiques GNSS ($1.5\,\text{GHz}$) en quelques millimètres ($\delta \approx 6\,\text{mm}$).
   \end{alertblock}
-
+  \vspace{-2.5mm}
   \begin{columns}[T]
     \begin{column}{0.5\textwidth}
       \begin{block}{\tech{1. Le Fix GNSS Initial en Surface ($t_0$)}}
@@ -547,7 +850,6 @@
           \[
             \vec{x}(t) = \vec{x}_0 + \int_{t_0}^t \vec{v}(\tau) \, d\tau
           \]
-          \item L'erreur s'accumule sans jamais se corriger seule !
         \end{itemize}
       \end{block}
     \end{column}
@@ -708,84 +1010,121 @@
 \end{frame}
 
 \begin{frame}{2.13 Démocratisation USBL \& Télémétrie Acoustique ($\approx 5\,000$ €)}
-  \begin{columns}[T]
-    \begin{column}{0.51\textwidth}
-      \begin{block}{\tech{1. La Démocratisation des USBL}}
+  \begin{columns}[T, onlytextwidth]
+    \begin{column}{0.44\textwidth}
+      \begin{block}{\tech{1. Démocratisation des USBL}}
         \scriptsize
-        \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
+        \begin{itemize}\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}
           \item \textbf{Rupture de coût} : autrefois réservé à l'offshore ($>50\text{--}100\,\text{k€}$), désormais accessible aux labos (\succw{$\mathbf{\approx 5\text{--}8\,\text{k€}}$}, ex. \tech{Water Linked UGPS}, \tech{SeaTrac}).
-          \item \textbf{Déploiement en 10 min} : perche légère sur semi-rigide ou drone de surface ASV (\tech{BlueBoat}).
+          \item \textbf{Déploiement léger} : perche sur semi-rigide ou drone de surface ASV (\tech{BlueBoat}).
         \end{itemize}
       \end{block}
 
-      \vspace{-0.2em}
-      \begin{block}{\succw{2. Double Rôle : Positionnement \& Télémesure}}
+      \vspace{-0.15em}
+      \begin{block}{\succw{2. Double Rôle : Position \& Télémesure}}
         \scriptsize
-        \begin{itemize}\setlength{\itemsep}{1.5pt}\setlength{\parskip}{0pt}
-          \item \textbf{Modem acoustique intégré} : données numériques modulées sur les pings (chirp / FSK, débit \textbf{quelques kbps}).
-          \item \textbf{Voie montante} ($\uparrow$) : remontée de l'état vital (profondeur Bar30, tension batterie, alarmes fuite SOS).
-          \item \textbf{Voie descendante} ($\downarrow$) : consignes de navigation, waypoints et ordre d'arrêt d'urgence.
-          \item \textbf{Recalage absolu} : injection du fix GNSS de surface dans l'autopilote de l'AUV (filtre de Kalman).
+        \begin{itemize}\setlength{\itemsep}{2pt}\setlength{\parskip}{0pt}
+          \item \textbf{Modem acoustique intégré} : données numériques modulées sur les pings (chirp / FSK, \textbf{quelques kbps}).
+          \item \textbf{Voie montante} ($\uparrow$) : télémétrie vitale (profondeur Bar30, tension batterie, alarmes SOS / fuite).
+          \item \textbf{Voie descendante} ($\downarrow$) : recalage fix GNSS absolu, ordres et waypoints de navigation.
         \end{itemize}
       \end{block}
     \end{column}
 
-    \begin{column}{0.47\textwidth}
-      \begin{center}
-        \begin{tikzpicture}[scale=0.74]
-          % 1. Fond marin et eau
-          \fill[OceanCyan!6] (-3.4, 1.0) rectangle (3.4, -2.5);
-          \draw[OceanCyan, dashed, line width=0.9pt] (-3.4, 1.0) -- (3.4, 1.0);
-          \node[OceanCyan!90, font=\tiny\bfseries, anchor=south west] at (-3.4, 1.02) {Surface (Eau de mer)};
+    \begin{column}{0.54\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.92, every node/.style={transform shape}]
+        % 1. Environnement : Ciel, Eau et Fond marin
+        \fill[blue!4!white] (-4.0, 1.45) rectangle (4.0, 3.10);
+        \fill[OceanCyan!8] (-4.0, -2.40) rectangle (4.0, 1.45);
+        \fill[brown!22] (-4.0, -2.85) rectangle (4.0, -2.40);
+        \draw[OceanMedium!40, line width=0.8pt, rounded corners=4pt] (-4.0, -2.85) rectangle (4.0, 3.10);
 
-          \fill[brown!25] (-3.4, -2.5) rectangle (3.4, -2.85);
-          \draw[brown!70, thick] (-3.4, -2.5) -- (3.4, -2.5);
-          \node[brown!90, font=\tiny\bfseries, anchor=north] at (0, -2.52) {Fond marin};
+        % Ligne de surface (eau)
+        \draw[OceanCyan, dashed, line width=0.9pt] (-4.0, 1.45) -- (4.0, 1.45);
+        \node[OceanCyan!85!black, font=\fontsize{5}{6}\selectfont\bfseries, anchor=north west] at (-3.85, 1.35) {Surface (Eau de mer)};
 
-          % 2. Bateau support / ASV de surface
-          \draw[thick, fill=white, draw=OceanDeep, rounded corners=2pt] (0.2, 1.0) -- (0.55, 1.6) -- (3.2, 1.6) -- (2.85, 1.0) -- cycle;
-          \node[font=\footnotesize\bfseries, text=OceanDeep] at (1.7, 1.3) {Bateau / ASV};
+        % Ligne de fond marin
+        \draw[brown!60!black, thick] (-4.0, -2.40) -- (4.0, -2.40);
+        \node[brown!80!black, font=\fontsize{5.5}{6.5}\selectfont\bfseries, anchor=west] at (-3.85, -2.62) {Fond marin (Bathymétrie)};
+        \node[DarkSlate, font=\fontsize{4.8}{5.8}\selectfont, anchor=east] at (3.80, -2.62) {Portée : 50 à 500\,m};
 
-          % Mât & Antenne GNSS RTK
-          \draw[thick, DarkSlate] (2.7, 1.6) -- (2.7, 2.05);
-          \fill[OceanDeep] (2.7, 2.05) circle (3pt);
-          \node[above=1pt, font=\scriptsize\bfseries, text=OceanDeep] at (2.7, 2.06) {GNSS RTK};
+        % 2. Cartouche 1 : Géoréférencement USBL (Dans le ciel / surface en haut à gauche)
+        \node[anchor=north west, fill=white, fill opacity=0.96, text opacity=1, draw=OceanCyan, line width=0.8pt, rounded corners=3pt, inner sep=3pt, drop shadow={opacity=0.08}] at (-3.9, 3.02) {%
+          \begin{minipage}{4.0cm}
+            \textcolor{OceanDeep}{\textbf{\scriptsize 1. Géoréférencement USBL}}\\[1pt]
+            \centering
+            {\scriptsize\succw{$\vec{X}_{\text{AUV}} = \vec{X}_{\text{GNSS}} + \mathbf{R}_{\text{bateau}} \cdot \vec{P}_{\text{USBL}}$}}\\[2pt]
+            \raggedright\fontsize{5}{6}\selectfont
+            $\bullet$ \textbf{Distance $D$} : temps de vol aller-retour ($\Delta t$)\\
+            $\bullet$ \textbf{Direction $(\theta, \psi)$} : déphasage hydrophones\\
+            $\implies$ Fix GNSS absolu injecté dans l'AUV
+          \end{minipage}
+        };
 
-          % Perche & Tête USBL immergée
-          \draw[line width=2.4pt, DarkSlate] (0.8, 1.0) -- (0.8, 0.2);
-          \fill[OceanCoral] (0.8, 0.2) circle (4.8pt);
-          \node[anchor=west, font=\scriptsize\bfseries, text=OceanCoral] at (0.95, 0.2) {Antenne USBL};
+        % 3. Bateau support / ASV de surface (BlueBoat)
+        \draw[thick, fill=white, draw=OceanDeep, rounded corners=2pt] (0.8, 1.4) -- (1.2, 2.15) -- (3.8, 2.15) -- (3.4, 1.4) -- cycle;
+        \node[font=\scriptsize\bfseries, text=OceanDeep] at (2.4, 1.78) {ASV Surface};
 
-          % 3. Boîte explicative dans la zone libre de l'eau
-          \node[anchor=north west, fill=white, fill opacity=0.95, text opacity=1, draw=OceanMedium!40, rounded corners=3pt, inner sep=3pt] at (-3.3, 0.85) {%
-            \begin{minipage}{3.4cm}\scriptsize
-              \textcolor{OceanCyan}{\textbf{1. Mesure USBL}}\\\tiny
-              $\bullet$ Temps de vol $\rightarrow$ Distance $D$\\
-              $\bullet$ Déphasage $\rightarrow$ Direction $(\theta, \psi)$\\[0.25em]
-              \scriptsize\textcolor{OceanGreen}{\textbf{2. Modem Acoustique}}\\\tiny
-              $\uparrow$ Télémétrie vitale (prof., batt.)\\
-              $\downarrow$ Ordres \& Recalage GNSS
-            \end{minipage}
-          };
+        % Mât et antenne GNSS RTK
+        \draw[line width=1.4pt, DarkSlate] (3.2, 2.15) -- (3.2, 2.75);
+        \fill[OceanDeep] (3.2, 2.75) circle (2.8pt);
+        \draw[OceanDeep, line width=0.6pt] (3.06, 2.82) arc[start angle=150, end angle=30, radius=0.16];
+        \draw[OceanDeep, line width=0.6pt] (2.96, 2.89) arc[start angle=150, end angle=30, radius=0.27];
+        \node[anchor=south east, font=\tiny\bfseries, text=OceanDeep] at (3.05, 2.5) {GNSS};
+        \node[anchor=south east, font=\fontsize{5}{6}\selectfont, text=OceanMedium] at (3.05, 2.22) {Fix $\vec{X}_{\text{surf}}$};
 
-          % 4. AUV / ROV sous-marin
-          \draw[thick, fill=OceanMedium!15, draw=OceanDeep, rounded corners=7pt] (-2.2, -2.4) rectangle (0.2, -1.8);
-          \node[font=\footnotesize\bfseries, text=OceanDeep] at (-1.0, -2.1) {AUV / ROV};
-          \fill[OceanCoral] (-0.3, -1.8) circle (4pt);
-          \node[anchor=south west, font=\scriptsize\bfseries, text=OceanCoral] at (-0.25, -1.75) {Transpondeur};
+        % Perche rigide et Antenne USBL immergée
+        \draw[line width=2.6pt, DarkSlate] (1.35, 1.4) -- (1.35, 0.42);
+        \draw[line width=0.8pt, fill=DarkSlate, rounded corners=1pt] (1.10, 0.30) rectangle (1.60, 0.44);
+        \fill[OceanCoral] (1.35, 0.26) circle (4.2pt);
+        \fill[white] (1.23, 0.26) circle (1pt);
+        \fill[white] (1.47, 0.26) circle (1pt);
+        \node[anchor=west, font=\tiny\bfseries, text=OceanCoral] at (1.75, 0.40) {Tête USBL};
+        \node[anchor=west, font=\fontsize{4.8}{5.8}\selectfont, text=DarkSlate] at (1.75, 0.20) {(4 hydrophones)};
 
-          % 5. Faisceaux acoustiques (Positionnement & Données)
-          \draw[->, line width=1.8pt, OceanCyan] (0.7, 0.08) -- (-0.2, -1.65)
-            node[midway, above=2pt, sloped, font=\tiny\bfseries, text=OceanMedium] {Pings USBL};
+        % 4. Véhicule sous-marin (AUV / BlueROV2)
+        \draw[line width=1.1pt, fill=OceanMedium!15, draw=OceanDeep, rounded corners=4pt] (-3.5, -2.25) rectangle (-1.5, -1.65);
+        \node[font=\scriptsize\bfseries, text=OceanDeep] at (-2.5, -1.95) {AUV};
+        % Propulseurs
+        \fill[DarkSlate] (-3.68, -2.18) rectangle (-3.5, -2.04);
+        \fill[DarkSlate] (-3.68, -1.86) rectangle (-3.5, -1.72);
+        % Capteur Bar30
+        \fill[OceanCyan] (-1.5, -1.95) circle (2.2pt);
+        \node[anchor=west, font=\fontsize{4.8}{5.8}\selectfont, text=OceanMedium] at (-1.45, -1.95) {Bar30 ($z$)};
+        % Transpondeur acoustique
+        \draw[line width=1pt, fill=DarkSlate] (-2.25, -1.65) rectangle (-1.95, -1.40);
+        \fill[OceanCoral] (-2.1, -1.33) circle (3.5pt);
+        \node[anchor=south east, font=\tiny\bfseries, text=OceanCoral] at (-2.2, -1.35) {Transpondeur};
 
-          \draw[<-, line width=1.8pt, OceanGreen] (0.85, 0.0) -- (-0.05, -1.72)
-            node[midway, below=2pt, sloped, font=\tiny\bfseries, text=OceanGreen!80!black] {Données numériques};
+        % 5. Fronts d'ondes acoustiques stylisés
+        \draw[OceanCyan!30, line width=1pt] (0.95, 0.05) arc[start angle=195, end angle=235, radius=0.6];
+        \draw[OceanCyan!30, line width=1.1pt] (0.45, -0.18) arc[start angle=195, end angle=235, radius=1.2];
+        \draw[OceanCyan!30, line width=1.2pt] (-0.05, -0.42) arc[start angle=195, end angle=235, radius=1.8];
 
-          % Fronts d'ondes acoustiques stylisés
-          \draw[OceanCyan!45, line width=1pt] (0.35, -0.45) arc[start angle=200, end angle=260, radius=0.6];
-          \draw[OceanCyan!45, line width=1pt] (0.1, -0.85) arc[start angle=200, end angle=260, radius=0.9];
-        \end{tikzpicture}
-      \end{center}
+        % 6. Faisceaux acoustiques (Pings & Modem)
+        % Faisceau USBL
+        \draw[{Latex[length=2.2mm]}-{Latex[length=2.2mm]}, line width=2.0pt, OceanCyan] (1.10, 0.12) -- (-1.80, -1.22);
+        \node[pos=0.44, sloped, above=3pt, fill=white, fill opacity=0.94, text opacity=1, draw=OceanCyan!70, rounded corners=2pt, inner sep=1.6pt, font=\fontsize{5.2}{6.2}\selectfont\bfseries, text=OceanMedium] {1. Pings USBL (ToF + Déphasage)};
+
+        % Faisceau Modem
+        \draw[{Latex[length=1.8mm]}-{Latex[length=1.8mm]}, line width=1.6pt, OceanGreen, dashed] (1.25, -0.06) -- (-1.65, -1.38);
+        \node[pos=0.44, sloped, below=3pt, fill=white, fill opacity=0.94, text opacity=1, draw=OceanGreen!70, rounded corners=2pt, inner sep=1.6pt, font=\fontsize{5.2}{6.2}\selectfont\bfseries, text=OceanGreen!80!black] {2. Modem Acoustique ($\uparrow\downarrow$ Données \& Ordres)};
+
+        % 7. Cartouche 2 : Modem Acoustique (Coin inférieur droit)
+        \node[anchor=north west, fill=white, fill opacity=0.96, text opacity=1, draw=OceanGreen, line width=0.8pt, rounded corners=3pt, inner sep=3pt, drop shadow={opacity=0.08}] at (0.5, -0.60) {%
+          \begin{minipage}{3.3cm}
+            \textcolor{OceanDeep}{\textbf{\scriptsize 2. Liaison Acoustique Sans Fil}}\\[1pt]
+            \fontsize{5}{6}\selectfont
+            \succw{$\blacktriangledown$} \textbf{Descendant (Surface $\rightarrow$ Robot)} :\\
+            \quad $\cdot$ Recalage Kalman (fix GNSS absolu)\\
+            \quad $\cdot$ Consignes, waypoints, arrêt SOS\\[1.5pt]
+            \alertw{$\blacktriangle$} \textbf{Montant (Robot $\rightarrow$ Surface)} :\\
+            \quad $\cdot$ Profondeur Bar30 ($z$), tension Li-Ion,\\
+            \quad $\cdot$ Alarmes SOS \& détection de fuite
+          \end{minipage}
+        };
+      \end{tikzpicture}
     \end{column}
   \end{columns}
 \end{frame}
@@ -802,7 +1141,7 @@
         \end{itemize}
       \end{block}
 
-      \begin{block}{\alertw{2. Multi-trajets (*Multipath*)}}
+      \begin{block}{\alertw{2. Multi-trajets}}
         \scriptsize
         \begin{itemize}
           \item Réflexions parasites sur l'interface air-eau et sur le fond marin.
@@ -823,7 +1162,7 @@
       \begin{block}{\succw{4. Bruits Ambiants \& Atténuation}}
         \scriptsize
         \begin{itemize}
-          \item \textbf{Aération de surface (*wake aeration*)} : bulles d'air sous la coque formant un écran opaque aux ondes sonores.
+          \item \textbf{Aération de surface} : bulles d'air sous la coque formant un écran opaque aux ondes sonores.
           \item \textbf{Cavitation \& moteurs} : bruit des hélices à forte poussée couvrant les signaux de faible amplitude.
           \item \textbf{Atténuation avec la fréquence} : haute fréquence ($>100\,\text{kHz}$) = portée courte ($<100\,\text{m}$).
         \end{itemize}

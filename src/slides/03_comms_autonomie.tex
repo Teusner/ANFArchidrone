@@ -247,34 +247,83 @@
 
 \begin{frame}{3.4 Interfaces de Contrôle : QGroundControl vs Cockpit}
   \begin{columns}[T]
-    \begin{column}{0.5\textwidth}
-      \begin{block}{\tech{QGroundControl (QGC)}}
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth, height=2.45cm, keepaspectratio]{qgroundcontrol_interface.jpg}\\
+        \vspace{0.15em}
+        \tech{QGroundControl (QGC)}\\
+        \tiny\textit{Station sol native (C++ / Qt) --- Vue Télémétrie \& HUD}
+      \end{center}
+      \vspace{-0.4em}
+      \begin{block}{QGroundControl : Le Standard Éprouvé}
+        \scriptsize
         \begin{itemize}
-          \item L'application native historique (C++ / Qt).
-          \item Robuste, éprouvée depuis 15 ans.
-          \item Affichage vidéo avec télémétrie incrustée (HUD), calibrage des joysticks et capteurs.
-          \item Planification de waypoints sur carte satellite.
-          \item \alertw{Limite} : difficile d'ajouter des widgets personnalisés pour des capteurs scientifiques complexes.
+          \item \textbf{Application native historique} (15 ans) : multiplateforme (PC, Mac, Linux, tablettes).
+          \item \textbf{Fonctions} : calibrage joysticks/capteurs, incrustation vidéo HUD, planification de waypoints.
+          \item \alertw{Limite} : rigide, difficile d'intégrer des widgets pour sondes océanographiques sur-mesure.
         \end{itemize}
       \end{block}
     \end{column}
 
-    \begin{column}{0.5\textwidth}
-      \begin{block}{\succw{Cockpit (Nouvelle Génération)}}
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth, height=2.45cm, keepaspectratio]{sub-video-view.png}\\
+        \vspace{0.15em}
+        \succw{Cockpit (BlueRobotics)}\\
+        \tiny\textit{Interface web moderne (HTML5 / Vue.js) --- Vue Vidéo ROV}
+      \end{center}
+      \vspace{-0.4em}
+      \begin{block}{Cockpit : La Nouvelle Génération Web}
+        \scriptsize
         \begin{itemize}
-          \item Interface web moderne conçue par BlueRobotics (HTML5 / Vue.js / WebGL).
-          \item S'exécute directement dans Google Chrome ou Firefox.
-          \item \textbf{100\% modulaire et personnalisable} :
-            \begin{itemize}
-              \item L'utilisateur arrange ses panneaux en glisser-déposer.
-              \item Permet d'ajouter des \textbf{widgets scientifiques sur-mesure} (ex: courbe de température CTD en direct à côté de la caméra).
-            \end{itemize}
+          \item \textbf{Zéro installation client} : tourne directement dans le navigateur (Chrome / Firefox) via BlueOS.
+          \item \textbf{100\% modulaire} : organisation des vues et panneaux en glisser-déposer (\textit{drag \& drop}).
+          \item \succw{Personnalisable} : développement facile de widgets scientifiques (sonde CTD, sonar, etc.).
         \end{itemize}
       \end{block}
     \end{column}
   \end{columns}
 \end{frame}
 
+\begin{frame}{3.4b Cockpit en Pratique : Vues Métier Dédiées (ROV vs ASV)}
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth, height=2.35cm, keepaspectratio]{sub-video-view.png}\\
+        \vspace{0.15em}
+        \tech{Vue Vidéo \& Pilotage ROV (BlueROV2)}\\
+        \tiny\textit{Inspection subaquatique, capteurs de sûreté et commandes directes}
+      \end{center}
+      \vspace{-0.4em}
+      \begin{block}{Pilotage Subaquatique Immergé}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Flux vidéo temps réel} : caméra grand angle, contrôle de tilt ($\pm 90^\circ$) et variateur des projecteurs Lumen.
+          \item \textbf{Incrustation vitale} : profondeur Bar30, cap, température de l'eau, assiette et tension/courant batterie.
+          \item \textbf{Modes de vol} : bascule directe Manuel / Stabilize / Depth Hold.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth, height=2.35cm, keepaspectratio]{boat-map-view.png}\\
+        \vspace{0.15em}
+        \succw{Vue Cartographique ASV (BlueBoat)}\\
+        \tiny\textit{Suivi de mission, géoréférencement GNSS RTK et bathymétrie}
+      \end{center}
+      \vspace{-0.4em}
+      \begin{block}{Navigation \& Relevé Surfacique}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Fond de carte satellite} : centrage automatique sur la trace GPS haute précision du navire.
+          \item \textbf{Planification autonome} : tracé de transects réguliers pour fauchée acoustique ou profils CTD.
+          \item \textbf{Surveillance distante} : vitesse sol, satellites GNSS, télémétrie sol WiFi ($>500\,\text{m}$).
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+\end{frame}
 \begin{frame}{3.5 L'Intégration ROS / ROS 2 pour les Data Scientists}
   \begin{center}
     \begin{tikzpicture}[scale=0.85, auto, node distance=1.2cm, >=Latex]
@@ -323,18 +372,30 @@
           \item Indispensables pour l'expertise post-incident et la reconstruction exacte de la plongée.
         \end{itemize}
       \end{block}
-    \end{column}
 
-    \begin{column}{0.50\textwidth}
-      \begin{block}{\succw{Rejeu de Mission \& Visualisation en Ligne}}
+      \begin{block}{\succw{Rejeu \& Traitement Hors-Ligne}}
         \scriptsize
         \begin{itemize}
-          \item \textbf{UAV Log Viewer} (\href{https://logs.auterion.com}{\code{logs.auterion.com}} / \code{plot.ardupilot.org}) :
-            \begin{itemize}\scriptsize
-              \item Glisser-déposer d'un fichier \code{.bin} pour visualiser graphiquement en 3D la trajectoire, les vibrations IMU et la consommation électrique.
-            \end{itemize}
-          \item \textbf{Rejeu MAVLink dans QGroundControl} : rejouer la mission entière seconde par seconde comme en direct sur le terrain.
-          \item \textbf{Conversion Python} : export facile vers \code{pandas} / CSV via \code{pymavlink}.
+          \item \textbf{Rejeu MAVLink (QGC)} : rejouer la mission entière seconde par seconde comme en direct sur le terrain.
+          \item \textbf{Pipeline Python (\code{pymavlink})} : export direct vers \code{pandas} / CSV pour traitement scientifique.
+        \end{itemize}
+      \end{block}
+    \end{column}
+
+    \begin{column}{0.48\textwidth}
+      \begin{center}
+        \includegraphics[width=\linewidth, height=2.6cm, keepaspectratio]{uav_logviewer.png}\\
+        \vspace{0.15em}
+        \succw{UAV Log Viewer (\href{https://plot.ardupilot.org}{\code{plot.ardupilot.org}})}\\
+        \tiny\textit{Visualisation 3D, spectres de vibrations IMU \& analyse temporelle}
+      \end{center}
+      \vspace{-0.4em}
+      \begin{block}{Diagnostic Visuel \& Rejeu en Ligne}
+        \scriptsize
+        \begin{itemize}
+          \item \textbf{Zéro installation} : glisser-déposer direct du fichier \code{.bin} dans le navigateur web.
+          \item \textbf{Trajectoire 3D dynamique} : suivi spatial synchronisé avec les graphes de capteurs (batterie, cap, profondeur).
+          \item \textbf{Analyse fréquentielle (FFT)} : détection des résonances mécaniques et vibrations propulseurs.
         \end{itemize}
       \end{block}
     \end{column}
@@ -350,7 +411,7 @@
       \textbf{Capteur de Sûreté} & \textbf{Principe \& Implantation} & \textbf{Réaction Automatique (Fail-Safe)} \\
       \midrule
       \alertw{SOS Leak Sensor} & Bandes conductimétriques au point le plus bas des caissons (électronique \& batterie) & Alerte sonore QGC/Cockpit, clignotement des feux Lumen, désarmement propulsion, remontée passive \\
-      \alertw{Pression interne (Bar02)} & Surveillance de la dépression post-test de vide ($<-0.4\,\text{bar}$) & Détection d'infiltration d'air/eau \succw{avant tout contact liquide avec l'électronique} \\
+      \alertw{Pression interne} & Surveillance de la dépression post-test de vide ($<-0.4\,\text{bar}$) & Détection d'infiltration d'air/eau \succw{avant tout contact liquide avec l'électronique} \\
       \alertw{Sonde Power Sense} & Mesure courant crête ($<60\,\text{A}$) et tension cellule Li-ion ($>3.3\,\text{V}$) & Alerte tension basse, coupure préventive des charges utiles secondaires \\
       \alertw{Heartbeat MAVLink} & Perte de communication ombilical ou WiFi ($>5\,\text{s}$) & Mode \textbf{Disarm} automatique, coupure moteurs et retour de surface par flottabilité positive \\
       \bottomrule
@@ -363,7 +424,7 @@
   \end{block}
 \end{frame}
 
-\begin{frame}{3.6b Focus Matériel : Le SOS Leak Sensor \& Purge Switch}
+\begin{frame}{3.6b Focus Matériel : Le SOS Leak Sensor}
   \begin{columns}[c]
     \begin{column}{0.40\textwidth}
       \begin{center}
@@ -381,14 +442,6 @@
           \item Circuit comparateur connecté directement sur une entrée GPIO de l'autopilote (carte Navigator / Pixhawk).
           \item Rubans adhésifs à pistes interdigitées tapissant le fond du tube : la moindre goutte salée ou douce ferme le circuit par conduction.
           \item Déclenche l'alerte sonore Cockpit/QGC et le clignotement d'urgence des feux Lumen.
-        \end{itemize}
-      \end{block}
-
-      \begin{block}{\succw{Interrupteur Étanche de Sécurité (*Purge / Switch*)}}
-        \scriptsize
-        \begin{itemize}
-          \item Le caisson batterie intègre un \textbf{interrupteur étanche à vis}.
-          \item Permet d'isoler physiquement les cellules Li-ion sans jamais ouvrir le caisson étanche entre deux plongées.
         \end{itemize}
       \end{block}
     \end{column}
